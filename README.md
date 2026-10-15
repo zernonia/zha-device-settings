@@ -16,7 +16,12 @@ ZHA can already talk to almost any Zigbee setting, but only through raw cluster 
 
 ## Install
 
-**HACS:** HACS → ⋮ → Custom repositories → add this repo as *Integration* → install → restart.
+**HACS (recommended):**
+1. HACS → ⋮ (top right) → **Custom repositories**
+2. Repository: `https://github.com/zernonia/zha-device-settings` — Type: **Integration** → Add
+3. Search *ZHA Device Settings* in HACS → **Download** → restart Home Assistant
+
+Updates then appear in **Settings → Updates** like any other HACS integration.
 
 **Manual:** copy `custom_components/zha_device_settings` into `/config/custom_components/` → restart.
 
@@ -52,6 +57,10 @@ To find attribute IDs, open the device's converter in [zigbee-herdsman-converter
 
 - **Decoupled mode** stops the rocker from switching its relay. ZHA needs to receive the press as an event for automations; check *Logbook* / `zha_event` after switching. If presses don't show up, the device needs a quirk for its multistate input — that's the next piece to add.
 - Mains-powered switches answer reads immediately. Sleepy battery devices may not respond until woken.
+
+## Releasing an update
+
+Bump `version` in `custom_components/zha_device_settings/manifest.json` and push to `main`. The *Release* workflow creates a `vX.Y.Z` tag and GitHub release, and HACS offers it as an update. Pushes that don't change the version stay unreleased.
 
 ## Development
 
