@@ -1,0 +1,13 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ZHA Device Settings",
+        "description": "Adds a 'Zigbee Settings' page to the sidebar for configuring advanced device options over ZHA."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Already configured."
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "domain": "zha_device_settings",
+  "name": "ZHA Device Settings",
+  "codeowners": ["@zernonia"],
+  "config_flow": true,
+  "dependencies": ["http", "panel_custom", "zha"],
+  "documentation": "https://github.com/zernonia/zha-device-settings",
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/zernonia/zha-device-settings/issues",
+  "requirements": [],
+  "single_config_entry": true,
+  "version": "0.1.0"
+}
