@@ -7,6 +7,10 @@
 
 <p align="center">A Zigbee2MQTT-style settings page for <b>ZHA</b> in Home Assistant.</p>
 
+<p align="center">
+  <a href="https://buymeacoffee.com/zernonia"><img src="https://img.shields.io/badge/Buy%20me%20a%20coffee-support-FFDD00?logo=buymeacoffee&logoColor=000" alt="Buy me a coffee"></a>
+</p>
+
 ## Why I built this
 
 My home runs on a Home Assistant Green with ZHA, and most of the wall switches are Aqara Z1 and Z1 Pro. The settings I actually wanted (decoupled mode so smart bulbs stay powered, the LED at night, power-on behaviour) are one click away in Zigbee2MQTT, but in ZHA they don't show up at all.
@@ -130,3 +134,7 @@ tools/generate.js    # generates definitions by running Z2M converters against a
 ```
 
 After editing a definition, call the `zha_device_settings/reload_definitions` websocket command or restart.
+
+## Support
+
+If this saved you a Zigbee2MQTT migration, you can [buy me a coffee](https://buymeacoffee.com/zernonia). It helps me keep the device definitions up to date.
