@@ -1,22 +1,5 @@
 {
- "ZBMINI-L": [
-  "power_on_behavior: already a ZHA entity"
- ],
- "ZBMINIL2": [
-  "power_on_behavior: already a ZHA entity"
- ],
- "SA-028/SA-029": [
-  "power_on_behavior: already a ZHA entity"
- ],
- "SNZB-03P": [
-  "motion_timeout: already a ZHA entity"
- ],
- "SNZB-06P": [
-  "occupancy_timeout: already a ZHA entity",
-  "occupancy_sensitivity: already a ZHA entity"
- ],
  "TRVZB": [
-  "local_temperature_calibration: already a ZHA entity",
   "weekly_schedule_sunday: type text",
   "weekly_schedule_monday: type text",
   "weekly_schedule_tuesday: type text",
@@ -26,7 +9,6 @@
   "weekly_schedule_saturday: type text"
  ],
  "TRV-ZBT": [
-  "local_temperature_calibration: already a ZHA entity",
   "temporary_mode_duration: unsupported write shape",
   "temporary_mode_target_temperature: unsupported write shape",
   "schedule_group_to_edit: unsupported write shape",
@@ -42,7 +24,6 @@
   "bluetooth_pairing: unsupported write shape"
  ],
  "TP-WGZBA": [
-  "local_temperature_calibration: already a ZHA entity",
   "schedule_group_to_edit: unsupported write shape",
   "weekly_schedule_sunday: type text",
   "weekly_schedule_monday: type text",
@@ -59,7 +40,6 @@
   "factory_reset: unsupported write shape"
  ],
  "TRV-ZBL": [
-  "local_temperature_calibration: already a ZHA entity",
   "temporary_mode_duration: unsupported write shape",
   "temporary_mode_target_temperature: unsupported write shape",
   "schedule_group_to_edit: unsupported write shape",
@@ -73,40 +53,7 @@
   "remote_temperature_linkage: unsupported write shape",
   "remote_setpoint_temperature: unsupported write shape"
  ],
- "S60ZBTPF": [
-  "power_on_behavior: already a ZHA entity"
- ],
- "S60ZBTPG": [
-  "power_on_behavior: already a ZHA entity"
- ],
- "ZBMicro": [
-  "power_on_behavior: already a ZHA entity"
- ],
- "ZBMINIR2": [
-  "power_on_behavior: already a ZHA entity"
- ],
- "ZBM5-1C-120": [
-  "power_on_behavior: already a ZHA entity"
- ],
- "ZBM5-2C-120": [
-  "power_on_behavior_l1: already a ZHA entity",
-  "power_on_behavior_l2: already a ZHA entity"
- ],
- "ZBM5-3C-120": [
-  "power_on_behavior_l1: already a ZHA entity",
-  "power_on_behavior_l2: already a ZHA entity",
-  "power_on_behavior_l3: already a ZHA entity"
- ],
- "MINI-ZB2GS": [
-  "power_on_behavior_l1: already a ZHA entity",
-  "power_on_behavior_l2: already a ZHA entity"
- ],
- "MINI-ZB2GS-L": [
-  "power_on_behavior_l1: already a ZHA entity",
-  "power_on_behavior_l2: already a ZHA entity"
- ],
  "MINI-ZBDIM": [
-  "power_on_behavior: already a ZHA entity",
   "set_calibration_action: unsupported write shape"
  ],
  "SWV-ZFE": [
@@ -119,33 +66,18 @@
   "rain_delay: type text"
  ],
  "BASIC-ZB1GSP": [
-  "power_on_behavior: already a ZHA entity",
   "clear_history: unsupported write shape"
  ],
  "SNZB-06P24": [
-  "pir_o_to_u_delay: already a ZHA entity",
   "spatial_learning: unsupported write shape"
- ],
- "MINI-ZB1GSP": [
-  "power_on_behavior: already a ZHA entity"
  ],
  "SNZB-09P": [
   "siren_on: unsupported write shape"
- ],
- "SNZB-03PR2": [
-  "pir_occupied_to_unoccupied_delay: already a ZHA entity"
- ],
- "MINI-ZB1GS": [
-  "power_on_behavior: already a ZHA entity"
  ],
  "SNZB-02UL": [
   "remote_sensors_state: unsupported write shape"
  ],
  "S61SZBTPB": [
-  "power_on_behavior: already a ZHA entity",
   "clear_history: unsupported write shape"
- ],
- "SNZT-03P": [
-  "pir_occupied_to_unoccupied_delay: already a ZHA entity"
  ]
 }

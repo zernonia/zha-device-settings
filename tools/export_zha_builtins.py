@@ -1,6 +1,6 @@
 """Export the (cluster, attribute) pairs ZHA already exposes as entities.
 
-generate.js drops matching settings so the panel only shows what ZHA lacks.
+generate.js tags matching settings so the panel can note they're also ZHA entities.
 
     pip install zha    # plus its radio libraries for imports to succeed
     python3 export_zha_builtins.py > zha_builtin_attributes.json

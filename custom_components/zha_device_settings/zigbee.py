@@ -101,6 +101,24 @@ def _get_cluster(device, endpoint_id: int, cluster_id: int):
     return cluster
 
 
+def _sync_cache(cluster, attrid: int, value: Any) -> None:
+    """Update zigpy's attribute cache so ZHA's own entities reflect the new value.
+
+    The raw read/write calls bypass the cache, so without this a setting changed here
+    would show a stale value on the matching ZHA entity until its next poll.
+    """
+    try:
+        attr_def = cluster.attributes.get(attrid)
+        if attr_def is not None:
+            try:
+                value = attr_def.type(value)
+            except (TypeError, ValueError):
+                pass
+        cluster.update_attribute(attrid, value)
+    except Exception as err:  # noqa: BLE001 - cache sync is best effort
+        _LOGGER.debug("Cache update for 0x%04x/0x%04x failed: %s", cluster.cluster_id, attrid, err)
+
+
 def _status_records(rsp: Any) -> list:
     """Extract status records from a zigpy response (shape varies by version)."""
     if rsp is None:
@@ -162,6 +180,8 @@ async def read_attributes(
         status = getattr(rec, "status", None)
         ok = status == foundation.Status.SUCCESS
         tv = getattr(rec, "value", None)
+        if ok:
+            _sync_cache(cluster, attrid, getattr(tv, "value", tv))
         out[attrid] = {
             "value": _plain(getattr(tv, "value", tv)) if ok else None,
             "status": "SUCCESS" if ok else str(status),
@@ -206,6 +226,10 @@ async def write_attribute(
     if not records:
         # DefaultResponse or empty success list
         status = getattr(rsp, "status", foundation.Status.SUCCESS)
-        return "SUCCESS" if status == foundation.Status.SUCCESS else str(status)
-    bad = [r for r in records if getattr(r, "status", None) != foundation.Status.SUCCESS]
-    return "SUCCESS" if not bad else str(bad[0].status)
+        result = "SUCCESS" if status == foundation.Status.SUCCESS else str(status)
+    else:
+        bad = [r for r in records if getattr(r, "status", None) != foundation.Status.SUCCESS]
+        result = "SUCCESS" if not bad else str(bad[0].status)
+    if result == "SUCCESS" and not raw:
+        _sync_cache(cluster, attribute_id, zvalue)
+    return result

@@ -617,6 +617,27 @@
    "name": "SONOFF Smart Motion Sensor",
    "settings": [
     {
+     "key": "pir_occupied_to_unoccupied_delay",
+     "label": "Detection Duration",
+     "description": "Detection Duration",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 16,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 60,
+     "step": 1,
+     "unit": "s",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "illumination_compensation_offset",
      "label": "Illumination calibration",
      "description": "Light intensity calibration offset",
@@ -635,6 +656,49 @@
      "unit": "lx",
      "scale": 1,
      "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SA-029-1",
+    "SA-028-1"
+   ],
+   "model": "SA-028/SA-029",
+   "name": "SONOFF Smart Plug",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
     }
    ]
   },
@@ -1309,6 +1373,72 @@
    "name": "SONOFF Zigbee dual-channel smart switch",
    "settings": [
     {
+     "key": "power_on_behavior_l1",
+     "label": "Power-on behaviour (L1)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior_l2",
+     "label": "Power-on behaviour (L2)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 2,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
      "key": "external_trigger_mode_l1",
      "label": "External trigger mode (L1)",
      "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
@@ -1517,6 +1647,72 @@
    "model": "MINI-ZB2GS-L",
    "name": "SONOFF Zigbee dual-channel smart switch",
    "settings": [
+    {
+     "key": "power_on_behavior_l1",
+     "label": "Power-on behaviour (L1)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior_l2",
+     "label": "Power-on behaviour (L2)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 2,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
     {
      "key": "external_trigger_mode_l1",
      "label": "External trigger mode (L1)",
@@ -2073,11 +2269,91 @@
   },
   {
    "models": [
+    "SNZB-06P"
+   ],
+   "model": "SNZB-06P",
+   "name": "SONOFF Zigbee occupancy sensor",
+   "settings": [
+    {
+     "key": "occupancy_timeout",
+     "label": "Occupancy timeout",
+     "description": "Occupied to unoccupied delay",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 32,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 15,
+     "max": 65535,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "occupancy_sensitivity",
+     "label": "Occupancy sensitivity",
+     "description": "Sensitivity of human presence detection",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 34,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Low",
+       "raw": 1
+      },
+      {
+       "label": "Medium",
+       "raw": 2
+      },
+      {
+       "label": "High",
+       "raw": 3
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
     "SNZB-06P24"
    ],
    "model": "SNZB-06P24",
    "name": "SONOFF Zigbee occupancy sensor with illuminance",
    "settings": [
+    {
+     "key": "pir_o_to_u_delay",
+     "label": "Occupancy timeout",
+     "description": "Occupied to Unoccupied Delay (30 s+ recommended to reduce missed detection.)",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 16,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 15,
+     "max": 65535,
+     "step": 1,
+     "unit": "s",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
     {
      "key": "enable_occupancy_zone_1",
      "label": "Zone 1 (0m-1m)",
@@ -2290,11 +2566,62 @@
   },
   {
    "models": [
+    "SNZB-03P"
+   ],
+   "model": "SNZB-03P",
+   "name": "SONOFF Zigbee PIR sensor",
+   "settings": [
+    {
+     "key": "motion_timeout",
+     "label": "Motion timeout",
+     "description": "Occupied to unoccupied delay",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 32,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 60,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
     "SNZB-03PR2"
    ],
    "model": "SNZB-03PR2",
    "name": "SONOFF Zigbee PIR sensor",
    "settings": [
+    {
+     "key": "pir_occupied_to_unoccupied_delay",
+     "label": "Detection Duration",
+     "description": "Detection Duration",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 16,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 60,
+     "step": 1,
+     "unit": "s",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
     {
      "key": "illumination_compensation_offset",
      "label": "Illumination calibration",
@@ -2324,6 +2651,39 @@
    "model": "MINI-ZBDIM",
    "name": "SONOFF Zigbee smart mini dimmer switch",
    "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
     {
      "key": "delayed_power_on_state",
      "label": "Delayed power on state",
@@ -2507,6 +2867,39 @@
    "name": "SONOFF Zigbee Smart one-channel wall switch (type 120)",
    "settings": [
     {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
      "key": "network_indicator",
      "label": "Network indicator",
      "description": "Network indicator settings, turn off/on the blue online status network indicator.",
@@ -2539,6 +2932,39 @@
    "model": "S60ZBTPF",
    "name": "SONOFF Zigbee smart plug",
    "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
     {
      "key": "network_indicator",
      "label": "Network indicator",
@@ -2597,6 +3023,39 @@
    "name": "SONOFF Zigbee smart plug",
    "settings": [
     {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
      "key": "network_indicator",
      "label": "Network indicator",
      "description": "Network indicator settings, turn off/on the blue online status network indicator.",
@@ -2653,6 +3112,39 @@
    "model": "BASIC-ZB1GSP",
    "name": "SONOFF Zigbee smart plug with power monitoring",
    "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
     {
      "key": "network_indicator",
      "label": "Network indicator",
@@ -2842,6 +3334,39 @@
    "model": "S61SZBTPB",
    "name": "SONOFF Zigbee smart plug with power monitoring",
    "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
     {
      "key": "network_indicator",
      "label": "Network indicator",
@@ -3171,6 +3696,39 @@
    "name": "SONOFF Zigbee smart switch",
    "settings": [
     {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
      "key": "network_indicator",
      "label": "Network indicator",
      "description": "Network indicator Settings, turn off/turn on the online network indicator.",
@@ -3328,6 +3886,39 @@
    "name": "SONOFF Zigbee smart switch",
    "settings": [
     {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
      "key": "network_indicator",
      "label": "Network indicator",
      "description": "Turn the blue network status indicator on or off.",
@@ -3455,11 +4046,128 @@
   },
   {
    "models": [
+    "ZBMINI-L"
+   ],
+   "model": "ZBMINI-L",
+   "name": "SONOFF Zigbee smart switch (no neutral)",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "ZBMINIL2"
+   ],
+   "model": "ZBMINIL2",
+   "name": "SONOFF Zigbee smart switch (no neutral)",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
     "MINI-ZB1GSP"
    ],
    "model": "MINI-ZB1GSP",
    "name": "SONOFF Zigbee smart switch with power monitoring",
    "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
     {
      "key": "network_indicator",
      "label": "Network indicator",
@@ -3595,6 +4303,105 @@
    "name": "SONOFF Zigbee Smart three-channel wall switch (type 120)",
    "settings": [
     {
+     "key": "power_on_behavior_l1",
+     "label": "Power-on behaviour (L1)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior_l2",
+     "label": "Power-on behaviour (L2)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 2,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior_l3",
+     "label": "Power-on behaviour (L3)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 3,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
      "key": "network_indicator",
      "label": "Network indicator",
      "description": "Network indicator settings, turn off/on the blue online status network indicator.",
@@ -3628,6 +4435,72 @@
    "model": "ZBM5-2C-120",
    "name": "SONOFF Zigbee Smart two-channel wall switch (type 120)",
    "settings": [
+    {
+     "key": "power_on_behavior_l1",
+     "label": "Power-on behaviour (L1)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior_l2",
+     "label": "Power-on behaviour (L2)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 2,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
     {
      "key": "network_indicator",
      "label": "Network indicator",
@@ -4102,6 +4975,27 @@
    "model": "TP-WGZBA",
    "name": "SONOFF Zigbee thermostat panel",
    "settings": [
+    {
+     "key": "local_temperature_calibration",
+     "label": "Local temperature calibration",
+     "description": "Offset to add/subtract to the local temperature",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 513,
+      "attribute": 16,
+      "type": 40,
+      "manufacturer": null
+     },
+     "min": -10,
+     "max": 10,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
     {
      "key": "child_lock",
      "label": "Child lock",
@@ -4704,6 +5598,27 @@
    "name": "SONOFF Zigbee thermostatic radiator valve",
    "settings": [
     {
+     "key": "local_temperature_calibration",
+     "label": "Local temperature calibration",
+     "description": "Offset to add/subtract to the local temperature",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 513,
+      "attribute": 16,
+      "type": 40,
+      "manufacturer": null
+     },
+     "min": -12.7,
+     "max": 12.7,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "timer_mode_target_temp",
      "label": "Timer mode target temp",
      "description": "In timer mode, the temperature can be set to 4-35 ℃.",
@@ -4976,6 +5891,27 @@
    "model": "TRV-ZBT",
    "name": "SONOFF Zigbee thermostatic radiator valve",
    "settings": [
+    {
+     "key": "local_temperature_calibration",
+     "label": "Local temperature calibration",
+     "description": "Offset to add/subtract to the local temperature",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 513,
+      "attribute": 16,
+      "type": 40,
+      "manufacturer": null
+     },
+     "min": -10,
+     "max": 10,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
     {
      "key": "screen_direction",
      "label": "Screen direction",
@@ -5370,6 +6306,27 @@
    "model": "TRV-ZBL",
    "name": "SONOFF Zigbee thermostatic radiator valve",
    "settings": [
+    {
+     "key": "local_temperature_calibration",
+     "label": "Local temperature calibration",
+     "description": "Offset to add/subtract to the local temperature",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 513,
+      "attribute": 16,
+      "type": 40,
+      "manufacturer": null
+     },
+     "min": -10,
+     "max": 10,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
     {
      "key": "screen_orientation",
      "label": "Screen orientation",
@@ -5842,6 +6799,39 @@
    "model": "ZBMicro",
    "name": "SONOFF Zigbee USB repeater plug",
    "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
     {
      "key": "rf_turbo_mode",
      "label": "Rf turbo mode",

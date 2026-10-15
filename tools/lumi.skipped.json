@@ -1,7 +1,6 @@
 {
  "ZNYB01LM": [
   "identify: unsupported write shape",
-  "color_temp_startup: already a ZHA entity",
   "swing_mode: converter error: Aqara Bathroom Heater T1 did not return attribute 0x24f",
   "operating_mode: unsupported write shape",
   "night_light_mode: converter error: Aqara Bathroom Heater T1 did not return attribute 0x518",
@@ -19,8 +18,6 @@
  ],
  "LGYCDD01LM": [
   "identify: unsupported write shape",
-  "on_off_duration: already a ZHA entity",
-  "off_on_duration: already a ZHA entity",
   "effect_segments: type text",
   "effect_colors: type list",
   "segment_colors: type list"
@@ -49,31 +46,16 @@
  "ZNCLBL01LM": [
   "identify: unsupported write shape"
  ],
- "ZNTGMK11LM": [
-  "color_temp_startup: already a ZHA entity",
-  "power_on_behavior: already a ZHA entity"
- ],
- "HLQDQ01LM": [
-  "power_on_behavior: already a ZHA entity"
- ],
  "ZNDDQDQ11LM": [
-  "identify: unsupported write shape",
-  "off_on_duration: already a ZHA entity",
-  "on_off_duration: already a ZHA entity"
+  "identify: unsupported write shape"
  ],
  "ZNDDQDQ12LM": [
-  "identify: unsupported write shape",
-  "off_on_duration: already a ZHA entity",
-  "on_off_duration: already a ZHA entity"
+  "identify: unsupported write shape"
  ],
  "ZNDDQDQ13LM": [
-  "identify: unsupported write shape",
-  "off_on_duration: already a ZHA entity",
-  "on_off_duration: already a ZHA entity"
+  "identify: unsupported write shape"
  ],
  "GDSD12LM": [
-  "color_temp_startup: already a ZHA entity",
-  "power_on_behavior: already a ZHA entity",
   "identify: unsupported write shape"
  ],
  "WXKG15LM": [
@@ -98,21 +80,15 @@
  ],
  "CL-L02D": [
   "identify: unsupported write shape",
-  "on_off_duration: already a ZHA entity",
-  "off_on_duration: already a ZHA entity",
   "effect_colors: type list",
   "segment_colors: type list"
  ],
  "T2_E27": [
   "identify: unsupported write shape",
-  "off_on_duration: already a ZHA entity",
-  "on_off_duration: already a ZHA entity",
   "effect_colors: type list"
  ],
  "T2_E27_CCT": [
-  "identify: unsupported write shape",
-  "off_on_duration: already a ZHA entity",
-  "on_off_duration: already a ZHA entity"
+  "identify: unsupported write shape"
  ],
  "WS-K08E": [
   "identify: unsupported write shape"
@@ -123,12 +99,7 @@
   "external_humidity: unsupported write shape",
   "identify: unsupported write shape"
  ],
- "H1-EU": [
-  "color_temp_startup: already a ZHA entity",
-  "power_on_behavior: already a ZHA entity"
- ],
  "WT-A03E": [
-  "local_temperature_calibration: already a ZHA entity",
   "preset: unsupported write shape",
   "external_temperature_input: numeric without a single attribute",
   "preset_home_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
@@ -148,9 +119,6 @@
   "identify: unsupported write shape"
  ],
  "UT-A01E": [
-  "local_temperature_calibration: already a ZHA entity",
-  "max_heat_setpoint_limit: already a ZHA entity",
-  "min_heat_setpoint_limit: already a ZHA entity",
   "ntc_sensor_type: converter error: ntc_r25 must be a whole number between 1 and 999, got '10000'",
   "ntc_beta: non-linear numeric",
   "identify: unsupported write shape"

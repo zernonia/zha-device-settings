@@ -1,0 +1,5935 @@
+{
+ "id": "innr",
+ "name": "innr (generated from zigbee-herdsman-converters 26.119.0)",
+ "generated": true,
+ "devices": [
+  {
+   "models": [
+    "BY 266"
+   ],
+   "model": "BY 266",
+   "name": "Innr B22 (Bayonet) bulb, dimmable",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BY 165",
+    "BY 265"
+   ],
+   "model": "BY 165",
+   "name": "Innr B22 bulb dimmable",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BF 265"
+   ],
+   "model": "BF 265",
+   "name": "Innr B22 bulb filament clear",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BY 185 C"
+   ],
+   "model": "BY 185 C",
+   "name": "Innr B22 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BY 285 C"
+   ],
+   "model": "BY 285 C",
+   "name": "Innr B22 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BB 282 C"
+   ],
+   "model": "BB 282 C",
+   "name": "Innr B22 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BY 286 C"
+   ],
+   "model": "BY 286 C",
+   "name": "Innr B22 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BF 263"
+   ],
+   "model": "BF 263",
+   "name": "Innr B22 filament bulb dimmable",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "FL 130 C"
+   ],
+   "model": "FL 130 C",
+   "name": "Innr Color Flex LED strip",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "FL 120 C"
+   ],
+   "model": "FL 120 C",
+   "name": "Innr Color Flex LED strip",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "FL 140 C"
+   ],
+   "model": "FL 140 C",
+   "name": "Innr Color Flex LED strip 4m 1200lm",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 250 C"
+   ],
+   "model": "RB 250 C",
+   "name": "Innr E14 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 251 C"
+   ],
+   "model": "RB 251 C",
+   "name": "Innr E14 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 145"
+   ],
+   "model": "RB 145",
+   "name": "Innr E14 candle",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 245"
+   ],
+   "model": "RB 245",
+   "name": "Innr E14 candle",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 243"
+   ],
+   "model": "RB 243",
+   "name": "Innr E14 candle",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 248 T"
+   ],
+   "model": "RB 248 T",
+   "name": "Innr E14 candle with white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 148 T"
+   ],
+   "model": "RB 148 T",
+   "name": "Innr E14 candle with white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 247 T"
+   ],
+   "model": "RB 247 T",
+   "name": "Innr E14 candle, dimmable with, color temp",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 200,
+     "max": 454,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 249 T"
+   ],
+   "model": "RB 249 T",
+   "name": "Innr E14 candle, dimmable with, color temp",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 200,
+     "max": 454,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 255 C"
+   ],
+   "model": "RB 255 C",
+   "name": "Innr E14 mini bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 246 T"
+   ],
+   "model": "RB 246 T",
+   "name": "Innr E14 mini bulb, dimmable with, color temp",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 500,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "AE 287 C"
+   ],
+   "model": "AE 287 C",
+   "name": "Innr E26 bulb 1100lm, RGBCW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "AE 280 C"
+   ],
+   "model": "AE 280 C",
+   "name": "Innr E26 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "AE 260"
+   ],
+   "model": "AE 260",
+   "name": "Innr E26/24 bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "AE 270 T"
+   ],
+   "model": "AE 270 T",
+   "name": "Innr E26/24 bulb 1100lm, dimmable, white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 154,
+     "max": 500,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "AE 270 T-2"
+   ],
+   "model": "AE 270 T-2",
+   "name": "Innr E26/24 bulb 1100lm, dimmable, white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 154,
+     "max": 500,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BE 220"
+   ],
+   "model": "BE 220",
+   "name": "Innr E26/E24 white bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 265"
+   ],
+   "model": "RB 265",
+   "name": "Innr E27 bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 266"
+   ],
+   "model": "RB 266",
+   "name": "Innr E27 bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 165"
+   ],
+   "model": "RB 165",
+   "name": "Innr E27 bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 162"
+   ],
+   "model": "RB 162",
+   "name": "Innr E27 bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RF 265"
+   ],
+   "model": "RF 265",
+   "name": "Innr E27 bulb filament clear",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 282 C"
+   ],
+   "model": "RB 282 C",
+   "name": "Innr E27 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 185 C"
+   ],
+   "model": "RB 185 C",
+   "name": "Innr E27 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 285 C"
+   ],
+   "model": "RB 285 C",
+   "name": "Innr E27 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 286 C"
+   ],
+   "model": "RB 286 C",
+   "name": "Innr E27 bulb RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 175 W"
+   ],
+   "model": "RB 175 W",
+   "name": "Innr E27 bulb warm dimming",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RF 261"
+   ],
+   "model": "RF 261",
+   "name": "Innr E27 filament bulb dimmable",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RF 263"
+   ],
+   "model": "RF 263",
+   "name": "Innr E27 filament bulb dimmable",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RF 264"
+   ],
+   "model": "RF 264",
+   "name": "Innr E27 filament bulb dimmable",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 267"
+   ],
+   "model": "RB 267",
+   "name": "Innr E27 smart bulb white 1100",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RF 262"
+   ],
+   "model": "RF 262",
+   "name": "Innr E27 smart filament LED light bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "FL 122 C"
+   ],
+   "model": "FL 122 C",
+   "name": "Innr Flex light colour LED strip 2m, 1440lm, RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 100,
+     "max": 350,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 122"
+   ],
+   "model": "RS 122",
+   "name": "Innr GU10 spot",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 125"
+   ],
+   "model": "RS 125",
+   "name": "Innr GU10 spot",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 225"
+   ],
+   "model": "RS 225",
+   "name": "Innr GU10 Spot",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 226"
+   ],
+   "model": "RS 226",
+   "name": "Innr GU10 Spot",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 230 C"
+   ],
+   "model": "RS 230 C",
+   "name": "Innr GU10 spot 350 lm, dimmable, RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 128 T"
+   ],
+   "model": "RS 128 T",
+   "name": "Innr GU10 spot 350 lm, dimmable, white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 228 T"
+   ],
+   "model": "RS 228 T",
+   "name": "Innr GU10 spot 350 lm, dimmable, white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 200,
+     "max": 454,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 229 T"
+   ],
+   "model": "RS 229 T",
+   "name": "Innr GU10 spot 350 lm, dimmable, white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 200,
+     "max": 454,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 227 T"
+   ],
+   "model": "RS 227 T",
+   "name": "Innr GU10 spot 420 lm, dimmable, white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 200,
+     "max": 454,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 241 T"
+   ],
+   "model": "RS 241 T",
+   "name": "Innr GU10 spot 420 lm, dimmable, white spectrum",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 455,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 232 C"
+   ],
+   "model": "RS 232 C",
+   "name": "Innr GU10 spot, dimmable, RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "FL 230 C"
+   ],
+   "model": "FL 230 C",
+   "name": "Innr Lightstrip colour, 3m",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 50,
+     "max": 1000,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "FL 250 C"
+   ],
+   "model": "FL 250 C",
+   "name": "Innr Lightstrip colour, 5m",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 50,
+     "max": 1000,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OFL 122 C"
+   ],
+   "model": "OFL 122 C",
+   "name": "Innr Outdoor flex light colour LED strip 2m, 1440lm, RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 100,
+     "max": 350,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OFL 120 C"
+   ],
+   "model": "OFL 120 C",
+   "name": "Innr Outdoor flex light colour LED strip 2m, 550lm, RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 150,
+     "max": 500,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OFL 140 C"
+   ],
+   "model": "OFL 140 C",
+   "name": "Innr Outdoor flex light colour LED strip 4m, 1000lm, RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 150,
+     "max": 500,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OFL 142 C"
+   ],
+   "model": "OFL 142 C",
+   "name": "Innr Outdoor flex light colour LED strip 4m, 1440lm, RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 100,
+     "max": 350,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OGL 130 C"
+   ],
+   "model": "OGL 130 C",
+   "name": "Innr Outdoor smart globe lights",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 100,
+     "max": 1000,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OPL 130 C"
+   ],
+   "model": "OPL 130 C",
+   "name": "Innr Outdoor smart pedestal light colour",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OSP 210"
+   ],
+   "model": "OSP 210",
+   "name": "Innr Outdoor smart plug",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OSP 240"
+   ],
+   "model": "OSP 240",
+   "name": "Innr Outdoor smart plug",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OSL 132 C"
+   ],
+   "model": "OSL 132 C",
+   "name": "Innr Outdoor smart spot color",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 100,
+     "max": 1000,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OSL 130 C"
+   ],
+   "model": "OSL 130 C",
+   "name": "Innr Outdoor smart spot colour, 230lm/spot, RGBW",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OSL 232 C"
+   ],
+   "model": "OSL 232 C",
+   "name": "Innr Outdoor Smart Spot White & Colour",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 50,
+     "max": 1000,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OSL 140 C"
+   ],
+   "model": "OSL 140 C",
+   "name": "Innr Outdoor smart spot XL color",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 100,
+     "max": 1000,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "PL 110"
+   ],
+   "model": "PL 110",
+   "name": "Innr Puck Light",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "PL 115"
+   ],
+   "model": "PL 115",
+   "name": "Innr Puck Light",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RSL 110"
+   ],
+   "model": "RSL 110",
+   "name": "Innr Recessed spot light",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RSL 115"
+   ],
+   "model": "RSL 115",
+   "name": "Innr Recessed spot light",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RCL 110"
+   ],
+   "model": "RCL 110",
+   "name": "Innr Round ceiling light",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RCL 231 T"
+   ],
+   "model": "RCL 231 T",
+   "name": "Innr Round Ceiling Light - Warm to Cool White",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 500,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RCL 241 T"
+   ],
+   "model": "RCL 241 T",
+   "name": "Innr Round Ceiling Light (42cm)- Warm to Cool White",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 500,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RCL 232 C"
+   ],
+   "model": "RCL 232 C",
+   "name": "Innr Round ceilng light - white and colour",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RCL 242 C"
+   ],
+   "model": "RCL 242 C",
+   "name": "Innr Round ceilng light (42cm) - white and colour",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 252 C"
+   ],
+   "model": "RB 252 C",
+   "name": "Innr Smart bulb Candle Colour E14",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "AE 282 C"
+   ],
+   "model": "AE 282 C",
+   "name": "Innr Smart Bulb Colour E27 (800lm)",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 287 C"
+   ],
+   "model": "RB 287 C",
+   "name": "Innr Smart Bulb Colour E27 1200lm",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BB 287 C-2"
+   ],
+   "model": "BB 287 C-2",
+   "name": "Innr Smart Bulb Colour E27 1210lm",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BB 287 C"
+   ],
+   "model": "BB 287 C",
+   "name": "Innr Smart Bulb Colour E27 1210lm",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BY 178 T"
+   ],
+   "model": "BY 178 T",
+   "name": "Innr Smart bulb tunable white B22",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 272 T"
+   ],
+   "model": "RB 272 T",
+   "name": "Innr Smart bulb tunable white E27",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 278 T"
+   ],
+   "model": "RB 278 T",
+   "name": "Innr Smart bulb tunable white E27",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 279 T"
+   ],
+   "model": "RB 279 T",
+   "name": "Innr Smart bulb tunable white E27",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 200,
+     "max": 454,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 178 T"
+   ],
+   "model": "RB 178 T",
+   "name": "Innr Smart bulb tunable white E27",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 555,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "BB 262"
+   ],
+   "model": "BB 262",
+   "name": "Innr Smart Bulb White 800lm B22",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 262"
+   ],
+   "model": "RB 262",
+   "name": "Innr Smart Bulb White 800lm E27",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "AE 262"
+   ],
+   "model": "AE 262",
+   "name": "Innr Smart E26 LED bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "AE 264"
+   ],
+   "model": "AE 264",
+   "name": "Innr Smart E26 LED bulb",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RF 271 T"
+   ],
+   "model": "RF 271 T",
+   "name": "Innr Smart E27 filament LED globe light bulb",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RF 273 T"
+   ],
+   "model": "RF 273 T",
+   "name": "Innr Smart E27 filament LED light bulb",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RF 274 T"
+   ],
+   "model": "RF 274 T",
+   "name": "Innr Smart filament bulb E27 tunable edison",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 256 C"
+   ],
+   "model": "RB 256 C",
+   "name": "Innr Smart Mini Bulb Colour E14",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "OLS 210"
+   ],
+   "model": "OLS 210",
+   "name": "Innr Smart outdoor light string",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SP 110"
+   ],
+   "model": "SP 110",
+   "name": "Innr Smart plug",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SP 220"
+   ],
+   "model": "SP 220",
+   "name": "Innr Smart plug",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SP 222"
+   ],
+   "model": "SP 222",
+   "name": "Innr Smart plug",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SP 224"
+   ],
+   "model": "SP 224",
+   "name": "Innr Smart plug",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SP 234"
+   ],
+   "model": "SP 234",
+   "name": "Innr Smart plug",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SP 240",
+    "SP 242",
+    "SP 244"
+   ],
+   "model": "SP 240",
+   "name": "Innr Smart plug (EU)",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RCL 240 T"
+   ],
+   "model": "RCL 240 T",
+   "name": "Innr Smart round ceiling lamp comfort",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 200,
+     "max": 454,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 242 C"
+   ],
+   "model": "RS 242 C",
+   "name": "Innr Smart spot colour GU10",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 556,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RS 240"
+   ],
+   "model": "RS 240",
+   "name": "Innr Smart spot white GU10 ",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SL 110 M"
+   ],
+   "model": "SL 110 M",
+   "name": "Innr Spot Flex medium",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SL 110 N"
+   ],
+   "model": "SL 110 N",
+   "name": "Innr Spot Flex narrow",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "SL 110 W"
+   ],
+   "model": "SL 110 W",
+   "name": "Innr Spot Flex wide",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "DL 110 N"
+   ],
+   "model": "DL 110 N",
+   "name": "Innr Spot narrow",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "DL 110 W"
+   ],
+   "model": "DL 110 W",
+   "name": "Innr Spot wide",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "ST 110"
+   ],
+   "model": "ST 110",
+   "name": "Innr Strip Light",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "UC 110"
+   ],
+   "model": "UC 110",
+   "name": "Innr Under cabinet light",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
+    "RB 172 W"
+   ],
+   "model": "RB 172 W",
+   "name": "Innr Zigbee E27 retrofit bulb, warm dimmable 2200-2700K, 806 Lm",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  }
+ ]
+}

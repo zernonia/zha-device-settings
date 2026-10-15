@@ -272,7 +272,9 @@ class ZhaDeviceSettingsPanel extends HTMLElement {
     return `
       <div class="setting">
         <div class="setting-text">
-          <div class="setting-label">${esc(s.label)} ${busy ? `<span class="muted">saving…</span>` : ""}</div>
+          <div class="setting-label">${esc(s.label)}
+            ${s.zha_entity ? `<span class="chip" title="ZHA also shows this as an entity. Changes here update it too.">Also in ZHA</span>` : ""}
+            ${busy ? `<span class="muted">saving…</span>` : ""}</div>
           ${s.description ? `<div class="setting-desc">${esc(s.description)}</div>` : ""}
           ${unread ? `<div class="warn">Couldn't read current value (${esc(s.status || "no response")}). You can still set it.</div>` : ""}
           ${writeOnly ? `<div class="setting-desc">The device can't report this one, so the value shown is the last one set from here.</div>` : ""}
@@ -414,6 +416,8 @@ const STYLES = `
   .warn { color:var(--warning-color, #ff9800); font-size:12px; margin-top:4px; }
   select, input[type=number], .grid input { padding:8px 10px; border-radius:8px; border:1px solid var(--divider-color);
     background:var(--primary-background-color); color:inherit; font:inherit; min-width:160px; }
+  .chip { font-size:11px; font-weight:400; padding:1px 7px; border-radius:9px; margin-left:6px; vertical-align:1px;
+    border:1px solid var(--divider-color); color:var(--secondary-text-color); white-space:nowrap; }
   .num { display:inline-flex; align-items:center; gap:6px; }
   .num input { min-width:110px; width:120px; }
   .unit { color:var(--secondary-text-color); font-size:13px; }

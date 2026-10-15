@@ -170,6 +170,48 @@
      "offset": 0
     },
     {
+     "key": "on_off_duration",
+     "label": "On off duration",
+     "description": "Duration for light to gradually dim when turning off",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 19,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "off_on_duration",
+     "label": "Off on duration",
+     "description": "Duration for light to gradually brighten when turning on",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 18,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "effect",
      "label": "Effect",
      "description": "RGB dynamic effect type",
@@ -2397,6 +2439,48 @@
      "offset": 0
     },
     {
+     "key": "off_on_duration",
+     "label": "Off on duration",
+     "description": "Duration for light to gradually brighten when turning on",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 18,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "on_off_duration",
+     "label": "On off duration",
+     "description": "Duration for light to gradually dim when turning off",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 19,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "transition_curve_curvature",
      "label": "Transition curve curvature",
      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast)",
@@ -2521,6 +2605,48 @@
      "offset": 0
     },
     {
+     "key": "off_on_duration",
+     "label": "Off on duration",
+     "description": "Duration for light to gradually brighten when turning on",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 18,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "on_off_duration",
+     "label": "On off duration",
+     "description": "Duration for light to gradually dim when turning off",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 19,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "transition_curve_curvature",
      "label": "Transition curve curvature",
      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast)",
@@ -2623,6 +2749,27 @@
    "name": "Aqara Floor heating thermostat W500",
    "settings": [
     {
+     "key": "local_temperature_calibration",
+     "label": "Local temperature calibration",
+     "description": "Offset to add/subtract to the local temperature",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 513,
+      "attribute": 16,
+      "type": 40,
+      "manufacturer": null
+     },
+     "min": -2.5,
+     "max": 2.5,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "temperature_setpoint_hold",
      "label": "Temperature setpoint hold",
      "description": "Prevent changes. `false` = run normally. `true` = prevent from making changes.",
@@ -2665,6 +2812,48 @@
      "unit": null,
      "scale": 1,
      "offset": 0
+    },
+    {
+     "key": "max_heat_setpoint_limit",
+     "label": "Max heat setpoint limit",
+     "description": "Maximum Heating set point limit",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 513,
+      "attribute": 22,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 30,
+     "step": 0.5,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "min_heat_setpoint_limit",
+     "label": "Min heat setpoint limit",
+     "description": "Minimum Heating set point limit",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 513,
+      "attribute": 21,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 30,
+     "step": 0.5,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0,
+     "zha_entity": true
     },
     {
      "key": "preset",
@@ -2979,6 +3168,48 @@
      "unit": "%",
      "scale": 1,
      "offset": 0
+    },
+    {
+     "key": "on_off_duration",
+     "label": "On off duration",
+     "description": "Duration for light to gradually dim when turning off",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 19,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "off_on_duration",
+     "label": "Off on duration",
+     "description": "Duration for light to gradually brighten when turning on",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 18,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
     },
     {
      "key": "length",
@@ -6223,11 +6454,95 @@
   },
   {
    "models": [
+    "lumi.light.acn006"
+   ],
+   "model": "H1-EU",
+   "name": "Aqara Pro track light",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 166,
+     "max": 370,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
     "lumi.airrtc.aeu005"
    ],
    "model": "WT-A03E",
    "name": "Aqara Radiator thermostat W600",
    "settings": [
+    {
+     "key": "local_temperature_calibration",
+     "label": "Local temperature calibration",
+     "description": "Offset to add/subtract to the local temperature",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 513,
+      "attribute": 16,
+      "type": 40,
+      "manufacturer": null
+     },
+     "min": -5,
+     "max": 5,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
     {
      "key": "temperature_setpoint_hold_duration",
      "label": "Manual Override Duration",
@@ -7007,6 +7322,27 @@
    "name": "Aqara Smart bathroom heater T1",
    "settings": [
     {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 370,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "mute_prompt_tone",
      "label": "Mute prompt tone",
      "description": "Mute device operation prompt tones",
@@ -7086,6 +7422,48 @@
        "raw": 1
       }
      ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "lumi.light.cbacn1"
+   ],
+   "model": "HLQDQ01LM",
+   "name": "Aqara Smart LED controller",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
     }
    ]
   },
@@ -8569,6 +8947,69 @@
        "raw": 1
       }
      ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "lumi.light.rgbac1"
+   ],
+   "model": "ZNTGMK11LM",
+   "name": "Aqara Smart RGBW light controller",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 150,
+     "max": 500,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
     }
    ]
   },
@@ -17939,6 +18380,48 @@
      "offset": 0
     },
     {
+     "key": "off_on_duration",
+     "label": "Off on duration",
+     "description": "Duration for light to gradually brighten when turning on",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 18,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "on_off_duration",
+     "label": "On off duration",
+     "description": "Duration for light to gradually dim when turning off",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 19,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "transition_curve_curvature",
      "label": "Transition curve curvature",
      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast)",
@@ -18034,6 +18517,48 @@
      "unit": "%",
      "scale": 1,
      "offset": 0
+    },
+    {
+     "key": "off_on_duration",
+     "label": "Off on duration",
+     "description": "Duration for light to gradually brighten when turning on",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 18,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "on_off_duration",
+     "label": "On off duration",
+     "description": "Duration for light to gradually dim when turning off",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 19,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
     },
     {
      "key": "transition_curve_curvature",
@@ -18133,6 +18658,48 @@
      "offset": 0
     },
     {
+     "key": "off_on_duration",
+     "label": "Off on duration",
+     "description": "Duration for light to gradually brighten when turning on",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 18,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "on_off_duration",
+     "label": "On off duration",
+     "description": "Duration for light to gradually dim when turning off",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 8,
+      "attribute": 19,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 10,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
      "key": "transition_curve_curvature",
      "label": "Transition curve curvature",
      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast)",
@@ -18151,6 +18718,69 @@
      "unit": null,
      "scale": 1,
      "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "lumi.light.acn037"
+   ],
+   "model": "GDSD12LM",
+   "name": "Aqara Track light V1",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 166,
+     "max": 370,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
     }
    ]
   },

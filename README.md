@@ -4,22 +4,25 @@ A Zigbee2MQTT-style settings page for **ZHA** in Home Assistant.
 
 ZHA can already talk to almost any Zigbee setting, but only through raw cluster IDs in *Manage Zigbee device*, and its write service silently drops attributes that the cluster class doesn't know about (common with manufacturer clusters). This integration adds a **Zigbee Settings** sidebar page with:
 
-- **Friendly settings ZHA doesn't offer** for Aqara/Xiaomi, Sonoff, Philips Hue and IKEA devices: dropdowns, toggles and number fields, with live values read from the device.
+- **Every setting in one place** for Aqara/Xiaomi, Sonoff, Philips Hue, IKEA and Innr devices: dropdowns, toggles and number fields, with live values read from the device.
 - **Raw attributes tab** for any device: read/write any attribute with an explicit data type and manufacturer code.
 - Writes go straight through zigpy as typed ZCL frames, then read back so the UI shows what the device actually holds.
 
 ## Supported devices
 
-**184 device types, 847 settings**, generated from [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) (Zigbee2MQTT's device library). Settings ZHA already exposes as entities (start-up behaviour, transition times, thermostat calibration and limits, occupancy delays …) are left out, so everything here is something ZHA is missing.
+**971 device types, 2288 settings**, generated from [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) (Zigbee2MQTT's device library).
+
+Settings ZHA *also* exposes as entities (start-up behaviour, transition times, thermostat calibration …, 1441 in total) are included too, marked **Also in ZHA**, so you can configure a device completely from one page. Changing one here updates ZHA's entity as well.
 
 | Brand | Device types | Settings | Highlights |
 |---|---|---|---|
-| Aqara / Xiaomi | 137 | 629 | Wall switches (H1, Z1, Z1 Pro, D1, E1, T1 …) decoupled mode, click mode, LED at night; plugs; FP1/FP1E presence; curtain motors; thermostats incl. external sensor switching |
-| Sonoff | 37 | 199 | TRVZB/TRV-ZBT valve opening, frost protection, external temperature; SWV water valve duration, amount, fail-safe; SNZB presence and sensors |
-| Philips Hue | 6 | 10 | Motion sensor LED and sensitivity, wall switch module device mode |
-| IKEA | 4 | 9 | INSPELNING / TRETAKT plug child lock and LED, STARKVIND purifier, VALLHORN motion timer |
+| Aqara / Xiaomi | 141 | 655 | Wall switches (H1, Z1, Z1 Pro, D1, E1, T1 …) decoupled mode, click mode, LED at night; plugs; FP1/FP1E presence; curtain motors; thermostats incl. external sensor switching |
+| Philips Hue | 596 | 1099 | Power-on behaviour and colour, motion sensor LED and sensitivity, wall switch module device mode |
+| Sonoff | 42 | 231 | TRVZB/TRV-ZBT valve opening, frost protection, external temperature; SWV water valve duration, amount, fail-safe; SNZB presence and sensors |
+| Innr | 114 | 171 | Power-on behaviour and colour temperature |
+| IKEA | 78 | 132 | Power-on behaviour; INSPELNING / TRETAKT plug child lock and LED, STARKVIND purifier, VALLHORN motion timer |
 
-**Innr** is covered too, in the sense that every setting Zigbee2MQTT offers for it is already a ZHA entity. Philips and IKEA lights likewise have nothing extra; their remaining Zigbee2MQTT options are light *controls* (Hue effects and gradients, identify), not settings.
+Light *controls* (Hue effects and gradients, identify) aren't settings and are left to ZHA's light entities.
 
 Not included: schedules and other text/list values, actions (factory reset, clear history, pairing), and settings whose converter needs a read-modify-write of current device state. `tools/<vendor>.skipped.json` lists every skipped option with the reason.
 
@@ -45,7 +48,9 @@ Then **Settings → Devices & services → Add integration → ZHA Device Settin
 - **Composite types**: ZCL arrays and structs are pre-serialized and sent verbatim.
 - **Numbers inside payloads**: captures at several values locate the changing bytes and fit a linear encoding, so the integration can patch any value into the frame.
 - **Device-specific bytes**: each capture runs with a different device address *and* a different frozen clock and random source. Payloads that differ only by the device's IEEE address or the current Unix time get those slots filled at write time; anything else that varies (counters, randomness) is dropped as unsafe to replay.
-- **ZHA overlap**: `tools/zha_builtin_attributes.json` (from `export_zha_builtins.py`, which introspects ZHA's entity classes) lists attributes ZHA already exposes; matching settings are skipped.
+- **ZHA overlap**: `tools/zha_builtin_attributes.json` (from `export_zha_builtins.py`, which introspects ZHA's entity classes) lists attributes ZHA already exposes; matching settings are tagged `zha_entity` and shown with an *Also in ZHA* chip.
+
+Reads and writes from the panel also update zigpy's attribute cache, so ZHA's own entities stay in sync immediately.
 
 ```sh
 cd tools && npm install && node generate.js   # writes custom_components/.../definitions/<vendor>.json

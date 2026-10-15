@@ -268,9 +268,38 @@ def test_raw_composite_write_serializes_verbatim():
     assert captured[0].serialize().hex() == "1d50" + "48" + "2002000709"
 
 
-def test_philips_and_ikea_only_keep_settings_zha_lacks():
+def test_settings_zha_also_exposes_are_kept_and_tagged():
     hue_motion = next(d for d in INDEX.values() if d["model"] == "9290012607")
-    keys = {s["key"] for s in hue_motion["settings"]}
-    assert "led_indication" in keys
-    assert not any(s["target"] and (s["target"]["cluster"], s["target"]["attribute"]) == (6, 0x4003)
-                   for d in INDEX.values() for s in d["settings"])  # start-up on/off is a ZHA entity
+    assert "led_indication" in {s["key"] for s in hue_motion["settings"]}
+    startup = [s for d in INDEX.values() for s in d["settings"]
+               if s.get("target") and (s["target"]["cluster"], s["target"]["attribute"]) == (6, 0x4003)]
+    assert startup, "start-up on/off should be included"
+    assert all(s.get("zha_entity") for s in startup)
+    z1 = INDEX["lumi.switch.acn049"]
+    assert not _setting("lumi.switch.acn049", "operation_mode_top").get("zha_entity")
+    assert len(z1["settings"]) >= 7
+
+
+def test_write_updates_zigpy_cache_for_zha_entities():
+    """ZHA entities read zigpy's attribute cache; a write here must update it."""
+    from zigpy.zcl import Cluster
+    from zigpy.zcl.clusters.general import OnOff
+
+    ep = FakeEndpoint()
+    ep.device = SimpleNamespace(ieee=IEEE)
+    ep.endpoint_id = 1
+    cluster = OnOff(ep, is_server=True)
+    ep.in_clusters[OnOff.cluster_id] = cluster
+    device = SimpleNamespace(ieee=IEEE, endpoints={1: ep}, model="x")
+    events = []
+    from zigpy.zcl import AttributeUpdatedEvent
+
+    cluster.on_event(AttributeUpdatedEvent.event_type, events.append)  # what ZHA subscribes to
+
+    async def fake_write(self, attrs, manufacturer=None, **kw):
+        return foundation.WriteAttributesResponse.deserialize(b"\x00")[0]
+
+    with patch.object(zigbee, "get_zigpy_device", return_value=device), patch.object(Cluster, "_write_attributes", fake_write):
+        run(zigbee.write_attribute(None, IEEE, 1, 0x0006, 0x4003, 0x30, 2, None))
+    assert cluster.get("start_up_on_off") == OnOff.StartUpOnOff.Toggle
+    assert events and events[0].attribute_id == 0x4003

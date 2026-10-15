@@ -22,8 +22,8 @@ const ZHC_VERSION = require(path.join(ZHC_DIST, "..", "package.json")).version;
 
 const OUT_DIR = path.join(__dirname, "..", "custom_components", "zha_device_settings", "definitions");
 
-// Attributes ZHA already exposes as entities (from export_zha_builtins.py); skipped so the
-// panel only shows what ZHA is missing.
+// Attributes ZHA already exposes as entities (from export_zha_builtins.py). They're kept,
+// so everything is configurable in one place, but tagged so the panel can show it.
 const ZHA_BUILTINS = require("./zha_builtin_attributes.json");
 const BUILTIN_GENERIC = new Set(ZHA_BUILTINS.generic.map(([c, a]) => `${c}:${a}`));
 function zhaAlreadyExposes(models, target) {
@@ -589,9 +589,10 @@ async function processVendor(file) {
             if (!f.property || !(f.access & SET)) continue;
             if (RUNTIME_PROPS.has(f.name) && f.category !== "config") continue;
             const r = await buildSetting(def, zigbeeModel, f);
-            if (r.setting && zhaAlreadyExposes(raw.zigbeeModel, r.setting.target)) {
-                (skipped[raw.model] ||= []).push(`${f.property}: already a ZHA entity`);
-            } else if (r.setting) settings.push(polish(f, r.setting));
+            if (r.setting) {
+                if (zhaAlreadyExposes(raw.zigbeeModel, r.setting.target)) r.setting.zha_entity = true;
+                settings.push(polish(f, r.setting));
+            }
             else (skipped[raw.model] ||= []).push(`${f.property}: ${r.skip}`);
         }
         if (!settings.length) continue;
