@@ -10,41 +10,91 @@ import zigpy.types as t
 from zigpy.zcl import foundation
 from zigpy.zcl.clusters.general import Basic
 
-from custom_components.zha_device_settings import definitions as defs_mod
+from custom_components.zha_device_settings import definitions as defs_mod  # noqa: E402
 from custom_components.zha_device_settings import zigbee
 
 ROOT = Path(__file__).parent.parent / "custom_components/zha_device_settings"
 IEEE = "00:11:22:33:44:55:66:77"
 
 
-def load_z1():
-    return json.loads((ROOT / "definitions/aqara_z1_pro.json").read_text())
+def load_index():
+    index = {}
+    for f in (ROOT / "definitions").glob("*.json"):
+        for dev in json.loads(f.read_text())["devices"]:
+            for m in dev["models"]:
+                index[m] = dev
+    return index
 
 
-def test_expand_double_rocker():
-    d = load_z1()
-    variant = d["match"]["models"]["lumi.switch.acn057"]
-    settings = defs_mod.expand_settings(d, variant)
-    ids = [s["id"] for s in settings]
-    assert "operation_mode@1" in ids and "operation_mode@2" in ids
-    assert "lock_relay@2" in ids
-    assert "operation_mode@3" not in ids
-    pob = next(s for s in settings if s["id"] == "power_on_behavior@1")
-    assert (pob["cluster"], pob["attribute"], pob["type"], pob["manufacturer"]) == (0xFCC0, 0x0517, 0x20, 0x115F)
-    assert next(s for s in settings if s["id"] == "operation_mode@2")["label"] == "Button mode (Bottom)"
+INDEX = load_index()
 
 
-def test_expand_single_rocker_has_no_suffix():
-    d = load_z1()
-    settings = defs_mod.expand_settings(d, d["match"]["models"]["lumi.switch.acn056"])
-    assert next(s for s in settings if s["id"] == "operation_mode@1")["label"] == "Button mode"
+def _setting(model, key):
+    return defs_mod.find_setting(INDEX[model], key)
 
 
-def test_match():
-    d = load_z1()
-    m = defs_mod.match_definition({d["id"]: d}, "lumi.switch.acn059")
-    assert m and m[1]["relay_endpoints"] == {"Top": 1, "Center": 2, "Bottom": 3}
-    assert defs_mod.match_definition({d["id"]: d}, "lumi.other") is None
+def test_z1_double_rocker_generated_correctly():
+    dev = defs_mod.match_definition(INDEX, "lumi.switch.acn049")
+    assert dev["model"] == "ZNQBKG39LM"
+    keys = {s["key"] for s in dev["settings"]}
+    assert {"operation_mode_top", "operation_mode_bottom", "lock_relay_top", "power_on_behavior",
+            "led_disabled_night", "click_mode"} <= keys
+    top = _setting("lumi.switch.acn049", "operation_mode_top")["target"]
+    bottom = _setting("lumi.switch.acn049", "operation_mode_bottom")["target"]
+    assert (top["endpoint"], top["cluster"], top["attribute"], top["type"], top["manufacturer"]) == (1, 0xFCC0, 0x0200, 0x20, 0x115F)
+    assert bottom["endpoint"] == 2
+    # the Z1 overrides click_mode's attribute to 0x0286
+    assert _setting("lumi.switch.acn049", "click_mode")["target"]["attribute"] == 0x0286
+
+
+def test_z1_pro_has_anti_flicker():
+    s = _setting("lumi.switch.acn057", "mode_switch")
+    assert s["target"]["attribute"] == 0x0004 and s["target"]["type"] == 0x21
+    assert [o["raw"] for o in s["options"]] == [1, 4]
+
+
+def test_all_definitions_well_formed():
+    assert len(INDEX) > 100
+    for model, dev in INDEX.items():
+        keys = [s["key"] for s in dev["settings"]]
+        assert len(keys) == len(set(keys)), model
+        for s in dev["settings"]:
+            assert s["control"] in ("select", "toggle", "number"), (model, s["key"])
+            if s["control"] == "number":
+                assert s["target"], (model, s["key"])
+            else:
+                for o in s["options"]:
+                    assert ("raw" in o) == bool(s["target"]), (model, s["key"])
+                    for w in o.get("writes", []):
+                        assert w["type"] in zigbee.DATA_TYPES, (model, s["key"], w["type"])
+            if s["target"]:
+                assert s["target"]["type"] in zigbee.DATA_TYPES, (model, s["key"])
+
+
+def test_raw_ui_roundtrip_select():
+    s = _setting("lumi.switch.acn049", "power_on_behavior")
+    assert defs_mod.raw_to_ui(s, 1)["value"] == 1  # "Previous"
+    w = defs_mod.writes_for(s, 2)
+    assert w == [{**s["target"], "value": 2}]
+
+
+def test_number_scaling_roundtrip():
+    s = {"control": "number", "target": {"endpoint": 1, "cluster": 1, "attribute": 2, "type": 0x21, "manufacturer": None},
+         "scale": 10, "offset": 0}
+    assert defs_mod.writes_for(s, 2.5)[0]["value"] == 25
+    assert defs_mod.raw_to_ui(s, 25)["value"] == 2.5
+
+
+def test_float_number_not_rounded():
+    s = {"control": "number", "target": {"endpoint": 1, "cluster": 1, "attribute": 2, "type": 0x39, "manufacturer": None},
+         "scale": 1, "offset": 0}
+    assert defs_mod.writes_for(s, 12.5)[0]["value"] == 12.5
+
+
+def test_write_only_option_returns_its_writes():
+    s = {"control": "select", "target": None,
+         "options": [{"label": "A", "writes": [{"endpoint": 1, "cluster": 0, "attribute": 0xFFF0, "type": 0x41, "manufacturer": 0x115F, "value": [1, 2]}]}]}
+    assert defs_mod.writes_for(s, 0)[0]["value"] == [1, 2]
 
 
 class FakeEndpoint:
@@ -139,3 +189,20 @@ def test_read_timeout_is_reported_not_raised():
     ):
         out = run(zigbee.read_attributes(None, IEEE, 1, 0xFCC0, [0x0517], 0x115F))
     assert out[0x0517]["status"].startswith("ERROR")
+
+
+def test_write_float_and_bytes_serialize():
+    device = make_device()
+    captured = []
+
+    async def fake_write(self, attrs, manufacturer=None, **kw):
+        captured.append(attrs[0])
+        return foundation.WriteAttributesResponse.deserialize(b"\x00")[0]
+
+    from zigpy.zcl import Cluster
+
+    with patch.object(zigbee, "get_zigpy_device", return_value=device), patch.object(Cluster, "_write_attributes", fake_write):
+        run(zigbee.write_attribute(None, IEEE, 1, 0xFCC0, 0x020B, 0x39, 2300, 0x115F))
+        run(zigbee.write_attribute(None, IEEE, 1, 0x0000, 0xFFF0, 0x41, [0xAA, 0x10], 0x115F))
+    assert captured[0].serialize().hex() == "0b0239" + "00c00f45"  # 2300.0 as float32 LE
+    assert captured[1].serialize().hex() == "f0ff4102aa10"

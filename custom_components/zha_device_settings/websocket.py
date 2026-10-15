@@ -14,7 +14,13 @@ from homeassistant.helpers import area_registry as ar, device_registry as dr
 
 from . import zigbee
 from .const import DOMAIN
-from .definitions import expand_settings, load_definitions, match_definition
+from .definitions import (
+    find_setting,
+    load_definitions,
+    match_definition,
+    raw_to_ui,
+    writes_for,
+)
 
 
 @callback
@@ -37,15 +43,17 @@ def _ha_device(hass: HomeAssistant, ieee: str):
     )
 
 
-def _find_setting(hass: HomeAssistant, ieee: str, setting_id: str) -> dict[str, Any]:
+def _device_def(hass: HomeAssistant, ieee: str) -> dict[str, Any]:
     device = zigbee.get_zigpy_device(hass, ieee)
-    matched = match_definition(_definitions(hass), device.model)
-    if matched is None:
+    device_def = match_definition(_definitions(hass), device.model)
+    if device_def is None:
         raise HomeAssistantError(f"No definition for model {device.model}")
-    for s in expand_settings(*matched):
-        if s["id"] == setting_id:
-            return s
-    raise HomeAssistantError(f"Unknown setting {setting_id}")
+    return device_def
+
+
+def _last_written(hass: HomeAssistant) -> dict[tuple[str, str], Any]:
+    """Values written this session for write-only settings (they can't be read back)."""
+    return hass.data[DOMAIN].setdefault("last_written", {})
 
 
 @websocket_api.require_admin
@@ -66,7 +74,7 @@ def ws_devices(hass: HomeAssistant, connection, msg: dict[str, Any]) -> None:
             continue
         ieee_s = str(ieee)
         ha_dev = _ha_device(hass, ieee_s)
-        matched = match_definition(_definitions(hass), dev.model)
+        device_def = match_definition(_definitions(hass), dev.model)
         area = areas.async_get_area(ha_dev.area_id) if ha_dev and ha_dev.area_id else None
         result.append(
             {
@@ -75,8 +83,9 @@ def ws_devices(hass: HomeAssistant, connection, msg: dict[str, Any]) -> None:
                 "area": area.name if area else None,
                 "manufacturer": dev.manufacturer,
                 "model": dev.model,
-                "definition": matched[0]["name"] if matched else None,
-                "variant": matched[1].get("label") if matched else None,
+                "definition": device_def["name"] if device_def else None,
+                "variant": device_def.get("model") if device_def else None,
+                "setting_count": len(device_def["settings"]) if device_def else 0,
                 "endpoints": {
                     ep_id: sorted(ep.in_clusters)
                     for ep_id, ep in dev.endpoints.items()
@@ -94,38 +103,42 @@ def ws_devices(hass: HomeAssistant, connection, msg: dict[str, Any]) -> None:
 )
 @websocket_api.async_response
 async def ws_device_settings(hass: HomeAssistant, connection, msg: dict[str, Any]) -> None:
-    """Return the definition's settings for a device, with live values read from it."""
+    """Return the device's settings, with live values read from it where possible."""
+    ieee = msg["ieee"]
     try:
-        device = zigbee.get_zigpy_device(hass, msg["ieee"])
+        device = zigbee.get_zigpy_device(hass, ieee)
     except HomeAssistantError as err:
         connection.send_error(msg["id"], "not_found", str(err))
         return
 
-    matched = match_definition(_definitions(hass), device.model)
-    if matched is None:
+    device_def = match_definition(_definitions(hass), device.model)
+    if device_def is None:
         connection.send_result(msg["id"], {"definition": None, "settings": []})
         return
 
-    settings = expand_settings(*matched)
+    settings = [{**s, "id": s["key"]} for s in device_def["settings"]]
+    last = _last_written(hass)
 
     # Batch reads per (endpoint, cluster, manufacturer).
     groups: dict[tuple, list[dict[str, Any]]] = defaultdict(list)
     for s in settings:
-        groups[(s["endpoint"], s["cluster"], s["manufacturer"])].append(s)
+        target = s.get("target")
+        if target:
+            groups[(target["endpoint"], target["cluster"], target.get("manufacturer"))].append(s)
+        else:
+            s["status"] = "WRITE_ONLY"
+            s["value"] = last.get((ieee, s["key"]))
     for (ep, cluster, mfr), items in groups.items():
-        values = await zigbee.read_attributes(
-            hass, msg["ieee"], ep, cluster, [s["attribute"] for s in items], mfr
-        )
+        attr_ids = sorted({s["target"]["attribute"] for s in items})
+        values = await zigbee.read_attributes(hass, ieee, ep, cluster, attr_ids, mfr)
         for s in items:
-            s.update(values.get(s["attribute"], {}))
+            res = values.get(s["target"]["attribute"], {})
+            s["status"] = res.get("status", "NO_RESPONSE")
+            s.update(raw_to_ui(s, res.get("value")))
 
     connection.send_result(
         msg["id"],
-        {
-            "definition": matched[0]["name"],
-            "variant": matched[1].get("label"),
-            "settings": settings,
-        },
+        {"definition": device_def["name"], "variant": device_def.get("model"), "settings": settings},
     )
 
 
@@ -135,27 +148,50 @@ async def ws_device_settings(hass: HomeAssistant, connection, msg: dict[str, Any
         vol.Required("type"): f"{DOMAIN}/write_setting",
         vol.Required("ieee"): str,
         vol.Required("setting_id"): str,
-        vol.Required("value"): vol.Any(int, bool),
+        vol.Required("value"): vol.Any(int, float, bool),
     }
 )
 @websocket_api.async_response
 async def ws_write_setting(hass: HomeAssistant, connection, msg: dict[str, Any]) -> None:
+    ieee = msg["ieee"]
     try:
-        s = _find_setting(hass, msg["ieee"], msg["setting_id"])
-        value = int(msg["value"])
-        status = await zigbee.write_attribute(
-            hass, msg["ieee"], s["endpoint"], s["cluster"], s["attribute"], s["type"], value, s["manufacturer"]
-        )
+        setting = find_setting(_device_def(hass, ieee), msg["setting_id"])
+        if setting is None:
+            raise HomeAssistantError(f"Unknown setting {msg['setting_id']}")
+        try:
+            writes = writes_for(setting, msg["value"])
+        except (ValueError, TypeError) as err:
+            raise HomeAssistantError(str(err)) from err
+
+        status = "SUCCESS"
+        for w in writes:
+            status = await zigbee.write_attribute(
+                hass, ieee, w["endpoint"], w["cluster"], w["attribute"], w["type"], w["value"], w.get("manufacturer")
+            )
+            if status != "SUCCESS":
+                break
+
+        target = setting.get("target")
+        if target is None:
+            if status == "SUCCESS":
+                _last_written(hass)[(ieee, setting["key"])] = msg["value"]
+            connection.send_result(msg["id"], {"status": status, "value": msg["value"] if status == "SUCCESS" else None})
+            return
+
         # Read back so the UI shows what the device actually holds.
         readback = await zigbee.read_attributes(
-            hass, msg["ieee"], s["endpoint"], s["cluster"], [s["attribute"]], s["manufacturer"]
+            hass, ieee, target["endpoint"], target["cluster"], [target["attribute"]], target.get("manufacturer")
         )
     except HomeAssistantError as err:
         connection.send_error(msg["id"], "write_failed", str(err))
         return
-    connection.send_result(
-        msg["id"], {"status": status, **readback.get(s["attribute"], {})}
-    )
+
+    res = readback.get(target["attribute"], {})
+    if res.get("status") == "SUCCESS":
+        connection.send_result(msg["id"], {"status": status, **raw_to_ui(setting, res.get("value"))})
+    else:
+        # Some devices don't answer reads for every attribute; trust the write status.
+        connection.send_result(msg["id"], {"status": status, "value": msg["value"] if status == "SUCCESS" else None})
 
 
 RAW_SCHEMA = {
@@ -213,6 +249,6 @@ async def ws_raw_write(hass: HomeAssistant, connection, msg: dict[str, Any]) -> 
 @websocket_api.websocket_command({vol.Required("type"): f"{DOMAIN}/reload_definitions"})
 @websocket_api.async_response
 async def ws_reload_definitions(hass: HomeAssistant, connection, msg: dict[str, Any]) -> None:
-    defs = await hass.async_add_executor_job(load_definitions, hass)
-    hass.data[DOMAIN]["definitions"] = defs
-    connection.send_result(msg["id"], {"count": len(defs)})
+    index = await hass.async_add_executor_job(load_definitions, hass)
+    hass.data[DOMAIN]["definitions"] = index
+    connection.send_result(msg["id"], {"models": len(index)})

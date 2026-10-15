@@ -1,0 +1,143 @@
+{
+ "ZNYB01LM": [
+  "identify: unsupported write shape",
+  "swing_mode: converter error: Aqara Bathroom Heater T1 did not return attribute 0x24f",
+  "operating_mode: unsupported write shape",
+  "night_light_mode: converter error: Aqara Bathroom Heater T1 did not return attribute 0x518",
+  "mute_prompt_start_time: type text",
+  "mute_prompt_end_time: type text"
+ ],
+ "ZNMHLDJ01LM": [
+  "identify: unsupported write shape"
+ ],
+ "JWSP001A": [
+  "power_outage_memory: converter error: Not supported"
+ ],
+ "WXKG11LM": [
+  "identify: unsupported write shape"
+ ],
+ "LGYCDD01LM": [
+  "identify: unsupported write shape",
+  "effect_segments: type text",
+  "effect_colors: type list",
+  "segment_colors: type list"
+ ],
+ "FP1E": [
+  "identify: unsupported write shape"
+ ],
+ "MCCGQ11LM": [
+  "identify: unsupported write shape"
+ ],
+ "JT-BZ-01AQ/A": [
+  "buzzer: unsupported write shape"
+ ],
+ "JY-GZ-01AQ": [
+  "buzzer: unsupported write shape"
+ ],
+ "DWZTCGQ11LM": [
+  "identify: unsupported write shape"
+ ],
+ "ZNCLDJ01LM": [
+  "identify: unsupported write shape"
+ ],
+ "C200": [
+  "identify: unsupported write shape"
+ ],
+ "ZNCLBL01LM": [
+  "identify: unsupported write shape"
+ ],
+ "ZNDDQDQ11LM": [
+  "identify: unsupported write shape"
+ ],
+ "ZNDDQDQ12LM": [
+  "identify: unsupported write shape"
+ ],
+ "ZNDDQDQ13LM": [
+  "identify: unsupported write shape"
+ ],
+ "GDSD12LM": [
+  "identify: unsupported write shape"
+ ],
+ "WXKG15LM": [
+  "identify: unsupported write shape"
+ ],
+ "GZCGQ11LM": [
+  "identify: unsupported write shape"
+ ],
+ "SRTS-A01": [
+  "sensor: device-specific payload",
+  "external_temperature_input: unsupported write shape",
+  "schedule_settings: type text",
+  "identify: unsupported write shape"
+ ],
+ "ZNCWWSQ01LM": [
+  "schedule: type list",
+  "serving_size: numeric without a single attribute",
+  "portion_weight: numeric without a single attribute"
+ ],
+ "CTP-R01": [
+  "operation_mode: converter error: Invalid entity type"
+ ],
+ "WP-P09D": [
+  "identify: unsupported write shape"
+ ],
+ "CL-L02D": [
+  "identify: unsupported write shape",
+  "effect_colors: type list",
+  "segment_colors: type list"
+ ],
+ "T2_E27": [
+  "identify: unsupported write shape",
+  "effect_colors: type list"
+ ],
+ "T2_E27_CCT": [
+  "identify: unsupported write shape"
+ ],
+ "WS-K08E": [
+  "identify: unsupported write shape"
+ ],
+ "TH-S04D": [
+  "thermostat_mode: device-specific payload",
+  "sensor: device-specific payload",
+  "external_temperature: unsupported write shape",
+  "external_humidity: unsupported write shape",
+  "identify: unsupported write shape"
+ ],
+ "WT-A03E": [
+  "preset: unsupported write shape",
+  "sensor: device-specific payload",
+  "external_temperature_input: converter error: external_temperature_input can only be used when sensor is external",
+  "preset_home_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
+  "preset_away_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
+  "preset_sleep_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
+  "preset_vacation_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
+  "preset_wind_down_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
+  "weekly_schedule_sunday: type text",
+  "weekly_schedule_monday: type text",
+  "weekly_schedule_tuesday: type text",
+  "weekly_schedule_wednesday: type text",
+  "weekly_schedule_thursday: type text",
+  "weekly_schedule_friday: type text",
+  "weekly_schedule_saturday: type text",
+  "save_schedule: converter error: entity.commandResponse is not a function",
+  "clear_schedule: converter error: entity.commandResponse is not a function",
+  "identify: unsupported write shape"
+ ],
+ "UT-A01E": [
+  "ntc_sensor_type: converter error: Set 'ntc_r25' and 'ntc_beta' to use a custom NTC sensor",
+  "ntc_beta: non-linear numeric",
+  "identify: unsupported write shape"
+ ],
+ "PS-S04D": [
+  "identify: unsupported write shape",
+  "detection_range: numeric without a single attribute",
+  "schedule_start_time: type text",
+  "schedule_end_time: type text"
+ ],
+ "FP310": [
+  "detection_range: numeric without a single attribute",
+  "schedule_start_time: type text",
+  "schedule_end_time: type text",
+  "identify: unsupported write shape"
+ ]
+}

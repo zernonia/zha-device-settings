@@ -99,7 +99,10 @@ class ZhaDeviceSettingsPanel extends HTMLElement {
     try {
       const res = await this._ws("write_setting", { ieee: this._selected, setting_id: settingId, value });
       const s = this._detail.settings.find((x) => x.id === settingId);
-      if (s) Object.assign(s, { value: res.value, status: res.status === "SUCCESS" ? "SUCCESS" : res.status });
+      if (s && res.status === "SUCCESS") {
+        s.value = res.value;
+        if (s.status !== "WRITE_ONLY") s.status = "SUCCESS";
+      }
       if (res.status === "SUCCESS") this._showToast("Saved");
       else this._showToast(`Device replied: ${res.status}`, true);
     } catch (e) {
@@ -243,29 +246,37 @@ class ZhaDeviceSettingsPanel extends HTMLElement {
 
   _renderSetting(s) {
     const busy = this._busy.has(s.id);
-    const unread = s.status !== "SUCCESS";
+    const writeOnly = s.status === "WRITE_ONLY";
+    const unread = !writeOnly && s.status !== "SUCCESS";
+    const dis = busy ? "disabled" : "";
     let control;
-    if (s.control === "toggle") {
+    if (s.control === "toggle" && !writeOnly && !unread) {
       control = `<label class="switch"><input type="checkbox" data-setting="${esc(s.id)}" data-kind="toggle"
-        ${s.value ? "checked" : ""} ${busy ? "disabled" : ""}><span class="slider"></span></label>`;
-    } else if (s.control === "select") {
-      control = `<select data-setting="${esc(s.id)}" data-kind="select" ${busy ? "disabled" : ""}>
-        ${unread || s.value === null ? `<option value="" selected disabled>Unknown</option>` : ""}
-        ${(s.options || [])
-          .map((o) => `<option value="${o.value}" ${o.value === s.value ? "selected" : ""}>${esc(o.label)}</option>`)
-          .join("")}
-      </select>`;
+        ${s.value === 1 ? "checked" : ""} ${dis}><span class="slider"></span></label>`;
+    } else if (s.control === "number") {
+      control = `<span class="num"><input type="number" data-setting="${esc(s.id)}" data-kind="number" value="${s.value ?? ""}"
+        ${s.min != null ? `min="${s.min}"` : ""} ${s.max != null ? `max="${s.max}"` : ""} step="${s.step ?? 1}" ${dis}>
+        ${s.unit ? `<span class="unit">${esc(s.unit)}</span>` : ""}</span>`;
     } else {
-      control = `<input type="number" data-setting="${esc(s.id)}" data-kind="number" value="${s.value ?? ""}"
-        ${s.min != null ? `min="${s.min}"` : ""} ${s.max != null ? `max="${s.max}"` : ""} ${busy ? "disabled" : ""}>`;
+      // select, or a toggle whose current state is unknown
+      control = `<select data-setting="${esc(s.id)}" data-kind="select" ${dis}>
+        ${s.value == null ? `<option value="" selected disabled>${writeOnly ? "Choose…" : "Unknown"}</option>` : ""}
+        ${(s.options || []).map((o, i) => `<option value="${i}" ${i === s.value ? "selected" : ""}>${esc(o.label)}</option>`).join("")}
+      </select>`;
     }
+    const t = s.target;
+    const addr = t
+      ? `ep ${t.endpoint} · ${hex(t.cluster)} / ${hex(t.attribute)}${t.manufacturer != null ? ` · mfr ${hex(t.manufacturer)}` : ""}`
+      : "write-only";
+    const range = s.control === "number" && (s.min != null || s.max != null) ? ` · range ${s.min ?? "…"}–${s.max ?? "…"}` : "";
     return `
       <div class="setting">
         <div class="setting-text">
           <div class="setting-label">${esc(s.label)} ${busy ? `<span class="muted">saving…</span>` : ""}</div>
-          <div class="setting-desc">${esc(s.description)}</div>
+          ${s.description ? `<div class="setting-desc">${esc(s.description)}</div>` : ""}
           ${unread ? `<div class="warn">Couldn't read current value (${esc(s.status || "no response")}). You can still set it.</div>` : ""}
-          <div class="setting-addr">ep ${s.endpoint} · ${hex(s.cluster)} / ${hex(s.attribute)}${s.manufacturer != null ? ` · mfr ${hex(s.manufacturer)}` : ""}</div>
+          ${writeOnly ? `<div class="setting-desc">The device can't report this one, so the value shown is the last one set from here.</div>` : ""}
+          <div class="setting-addr">${addr}${range}</div>
         </div>
         <div class="setting-control">${control}</div>
       </div>`;
@@ -328,7 +339,8 @@ class ZhaDeviceSettingsPanel extends HTMLElement {
       el.addEventListener("change", () => {
         const id = el.dataset.setting;
         const kind = el.dataset.kind;
-        const value = kind === "toggle" ? (el.checked ? 1 : 0) : parseInt(el.value, 10);
+        const value =
+          kind === "toggle" ? (el.checked ? 1 : 0) : kind === "number" ? parseFloat(el.value) : parseInt(el.value, 10);
         if (Number.isNaN(value)) return;
         this._write(id, value);
       })
@@ -402,6 +414,9 @@ const STYLES = `
   .warn { color:var(--warning-color, #ff9800); font-size:12px; margin-top:4px; }
   select, input[type=number], .grid input { padding:8px 10px; border-radius:8px; border:1px solid var(--divider-color);
     background:var(--primary-background-color); color:inherit; font:inherit; min-width:160px; }
+  .num { display:inline-flex; align-items:center; gap:6px; }
+  .num input { min-width:110px; width:120px; }
+  .unit { color:var(--secondary-text-color); font-size:13px; }
   .switch { position:relative; width:40px; height:22px; display:inline-block; }
   .switch input { opacity:0; width:0; height:0; }
   .slider { position:absolute; inset:0; background:var(--switch-unchecked-track-color, #9e9e9e); border-radius:22px; transition:.2s; cursor:pointer; }

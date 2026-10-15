@@ -1,0 +1,11 @@
+{
+  "name": "zha-device-settings-tools",
+  "private": true,
+  "description": "Generates ZHA Device Settings definitions from zigbee-herdsman-converters",
+  "scripts": {
+    "generate": "node generate.js"
+  },
+  "dependencies": {
+    "zigbee-herdsman-converters": "26.119.0"
+  }
+}

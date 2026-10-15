@@ -29,12 +29,36 @@ DATA_TYPES: dict[int, type] = {
     0x21: t.uint16_t,
     0x22: t.uint24_t,
     0x23: t.uint32_t,
+    0x24: t.uint40_t,
+    0x25: t.uint48_t,
     0x28: t.int8s,
     0x29: t.int16s,
+    0x2A: t.int24s,
     0x2B: t.int32s,
     0x30: t.enum8,
     0x31: t.enum16,
+    0x38: t.Half,
+    0x39: t.Single,
+    0x3A: t.Double,
+    0x41: t.LVBytes,
 }
+
+FLOAT_TYPES = {0x38, 0x39, 0x3A}
+BYTES_TYPES = {0x41}
+
+
+def _coerce(type_id: int, value: Any):
+    """Build the zigpy value for a ZCL type from a JSON value."""
+    py_type = DATA_TYPES.get(type_id)
+    if py_type is None:
+        raise HomeAssistantError(f"Unsupported ZCL data type 0x{type_id:02x}")
+    if type_id in BYTES_TYPES:
+        return py_type(bytes(value))
+    if type_id in FLOAT_TYPES:
+        return py_type(float(value))
+    if type_id == 0x10:
+        return t.Bool(bool(value))
+    return py_type(int(value))
 
 
 def get_app_controller(hass: HomeAssistant):
@@ -95,11 +119,13 @@ def _status_records(rsp: Any) -> list:
 def _plain(value: Any) -> Any:
     """Convert zigpy values to JSON-friendly python values."""
     if isinstance(value, bool):
-        return value
+        return int(value)
     if isinstance(value, int):
         return int(value)
+    if isinstance(value, float):
+        return float(value)
     if isinstance(value, (bytes, bytearray)):
-        return value.hex()
+        return list(value)
     if isinstance(value, (list, tuple)):
         return [_plain(v) for v in value]
     return str(value)
@@ -154,16 +180,13 @@ async def write_attribute(
     manufacturer: int | None,
 ) -> str:
     """Write one explicitly-typed attribute. Returns the ZCL status name."""
-    py_type = DATA_TYPES.get(type_id)
-    if py_type is None:
-        raise HomeAssistantError(f"Unsupported ZCL data type 0x{type_id:02x}")
-
+    zvalue = _coerce(type_id, value)
     device = get_zigpy_device(hass, ieee)
     cluster = _get_cluster(device, endpoint_id, cluster_id)
 
     record = foundation.Attribute(
         attrid=t.uint16_t(attribute_id),
-        value=foundation.TypeValue(type=type_id, value=py_type(value)),
+        value=foundation.TypeValue(type=type_id, value=zvalue),
     )
 
     # zigpy renamed the kwarg at some point; support both spellings.

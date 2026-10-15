@@ -1,0 +1,48 @@
+name: Regenerate definitions
+
+# Re-runs tools/generate.js against the latest zigbee-herdsman-converters and
+# opens a PR when the generated definitions change.
+
+on:
+  schedule:
+    - cron: "0 3 1 * *" # monthly
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generate from latest converters
+        working-directory: tools
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-audit --no-fund --save-exact zigbee-herdsman-converters@latest
+          node generate.js lumi
+          echo "ZHC_VERSION=$(node -p "require('zigbee-herdsman-converters/package.json').version")" >> "$GITHUB_ENV"
+
+      - name: Open PR if changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- custom_components tools/package.json; then
+            echo "No changes"; exit 0
+          fi
+          branch="regenerate/zhc-$ZHC_VERSION"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add custom_components tools/package.json tools/package-lock.json tools/*.skipped.json
+          git commit -m "Regenerate definitions from zigbee-herdsman-converters $ZHC_VERSION"
+          git push -f origin "$branch"
+          gh pr create --title "Regenerate definitions (zigbee-herdsman-converters $ZHC_VERSION)" \
+            --body "Automated regeneration. Review the definitions diff, then merge and bump the manifest version to release." \
+            --head "$branch" --base main || echo "PR already exists"
