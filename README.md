@@ -118,7 +118,9 @@ After editing, restart HA or call the `zha_device_settings/reload_definitions` w
 
 ## Releasing an update
 
-Bump `version` in `custom_components/zha_device_settings/manifest.json` and push to `main`. The *Release* workflow creates a `vX.Y.Z` tag and GitHub release, and HACS offers it as an update. Pushes that don't change the version stay unreleased.
+1. Write what changed under **Unreleased** in [`CHANGELOG.md`](CHANGELOG.md) as you go, in words a user would understand.
+2. When releasing, rename that heading to `## [x.y.z] - YYYY-MM-DD` (leaving a fresh empty `## [Unreleased]` above it) and set the same `version` in `custom_components/zha_device_settings/manifest.json`.
+3. Push to `main`. The *Release* workflow creates the `vX.Y.Z` tag and GitHub release with that section as its notes, which is what Home Assistant shows in the update dialog. It refuses to release a version with no notes, and *Validate* flags the missing section on the push itself.
 
 ## Development
 

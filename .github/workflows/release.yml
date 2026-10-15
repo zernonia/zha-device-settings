@@ -1,14 +1,16 @@
 name: Release
 
-# Bump "version" in custom_components/zha_device_settings/manifest.json and push to main.
-# If no tag exists for that version yet, this creates tag vX.Y.Z and a GitHub release,
-# which HACS shows as an available update in Home Assistant.
+# Bump "version" in custom_components/zha_device_settings/manifest.json, add a matching
+# "## [x.y.z]" section to CHANGELOG.md, and push to main. If no tag exists for that version
+# yet, this creates tag vX.Y.Z and a GitHub release whose notes are that CHANGELOG section.
+# Home Assistant shows those notes in the update dialog. Releasing without notes fails.
 
 on:
   push:
     branches: [main]
     paths:
       - "custom_components/zha_device_settings/manifest.json"
+      - "CHANGELOG.md"
   workflow_dispatch:
 
 permissions:
@@ -26,15 +28,18 @@ jobs:
         id: version
         run: |
           v=$(jq -r .version custom_components/zha_device_settings/manifest.json)
+          echo "version=$v" >> "$GITHUB_OUTPUT"
           echo "tag=v$v" >> "$GITHUB_OUTPUT"
 
       - name: Create release if tag is new
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
         run: |
           if git rev-parse "$TAG" >/dev/null 2>&1; then
             echo "$TAG already exists, nothing to do"
             exit 0
           fi
-          gh release create "$TAG" --title "$TAG" --generate-notes --target "$GITHUB_SHA"
+          python3 tools/changelog_section.py "$VERSION" > notes.md
+          gh release create "$TAG" --title "$TAG" --notes-file notes.md --target "$GITHUB_SHA"

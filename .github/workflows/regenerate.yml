@@ -50,9 +50,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
-          git add custom_components tools/package.json tools/package-lock.json tools/*.skipped.json tools/zha_builtin_attributes.json
+          python3 - <<PY
+          import pathlib, re
+          p = pathlib.Path("CHANGELOG.md"); s = p.read_text()
+          line = "- Device definitions updated from Zigbee2MQTT's device library ($ZHC_VERSION). Review the diff for new devices and settings worth naming here."
+          s = re.sub(r"(## \\[Unreleased\\]\n)", lambda m: m.group(1) + "\n### Changed\n" + line + "\n", s, count=1)
+          p.write_text(s)
+          PY
+          git add CHANGELOG.md custom_components tools/package.json tools/package-lock.json tools/*.skipped.json tools/zha_builtin_attributes.json
           git commit -m "Regenerate definitions from zigbee-herdsman-converters $ZHC_VERSION"
           git push -f origin "$branch"
           gh pr create --title "Regenerate definitions (zigbee-herdsman-converters $ZHC_VERSION)" \
-            --body "Automated regeneration. Review the definitions diff, then merge and bump the manifest version to release." \
+            --body "Automated regeneration. Review the definitions diff and reword the CHANGELOG entry under Unreleased (name notable new devices/settings). To release: move Unreleased into a versioned section and bump the manifest version." \
             --head "$branch" --base main || echo "PR already exists"
