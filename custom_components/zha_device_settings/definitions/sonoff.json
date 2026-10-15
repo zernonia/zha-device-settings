@@ -1,0 +1,5872 @@
+{
+ "id": "sonoff",
+ "name": "sonoff (generated from zigbee-herdsman-converters 26.119.0)",
+ "generated": true,
+ "devices": [
+  {
+   "models": [
+    "SNZB-02UL"
+   ],
+   "model": "SNZB-02UL",
+   "name": "SONOFF E-ink screen temperature and humidity sensor",
+   "settings": [
+    {
+     "key": "remote_temperature",
+     "label": "Remote temperature",
+     "description": "Remote temperature value displayed on the E-ink screen. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": -20,
+     "max": 60,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 24606,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         1,
+         1,
+         0,
+         3,
+         7,
+         1,
+         0,
+         0,
+         1,
+         2,
+         48,
+         248
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 13,
+       "width": 2,
+       "endian": "le",
+       "signed": true
+      }
+     }
+    },
+    {
+     "key": "remote_humidity",
+     "label": "Remote humidity",
+     "description": "Remote humidity value displayed on the E-ink screen. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 5,
+     "max": 95,
+     "step": 1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 24606,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         1,
+         1,
+         0,
+         3,
+         7,
+         1,
+         1,
+         0,
+         1,
+         2,
+         244,
+         1
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 13,
+       "width": 2,
+       "endian": "le",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "remote_pressure",
+     "label": "Remote pressure",
+     "description": "Remote atmospheric pressure value displayed on the E-ink screen. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 700,
+     "max": 1100,
+     "step": 0.1,
+     "unit": "hPa",
+     "scale": 100,
+     "offset": -65536,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 24606,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         14,
+         0,
+         1,
+         1,
+         0,
+         3,
+         9,
+         1,
+         2,
+         0,
+         1,
+         4,
+         112,
+         17,
+         1,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 13,
+       "width": 2,
+       "endian": "le",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "weather",
+     "label": "Weather",
+     "description": "Weather shown on the E-ink screen. Selecting a value sends the default coordinates to the device and is applied on its next weather request. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Sunny",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20502,
+         "type": 43,
+         "manufacturer": null,
+         "value": 114057900
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20503,
+         "type": 43,
+         "manufacturer": null,
+         "value": 22543100
+        }
+       ]
+      },
+      {
+       "label": "Partly cloudy",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20502,
+         "type": 43,
+         "manufacturer": null,
+         "value": 114057900
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20503,
+         "type": 43,
+         "manufacturer": null,
+         "value": 22543100
+        }
+       ]
+      },
+      {
+       "label": "Overcast",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20502,
+         "type": 43,
+         "manufacturer": null,
+         "value": 114057900
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20503,
+         "type": 43,
+         "manufacturer": null,
+         "value": 22543100
+        }
+       ]
+      },
+      {
+       "label": "Rain",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20502,
+         "type": 43,
+         "manufacturer": null,
+         "value": 114057900
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20503,
+         "type": 43,
+         "manufacturer": null,
+         "value": 22543100
+        }
+       ]
+      },
+      {
+       "label": "Snow",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20502,
+         "type": 43,
+         "manufacturer": null,
+         "value": 114057900
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20503,
+         "type": 43,
+         "manufacturer": null,
+         "value": 22543100
+        }
+       ]
+      },
+      {
+       "label": "Windy",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20502,
+         "type": 43,
+         "manufacturer": null,
+         "value": 114057900
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20503,
+         "type": 43,
+         "manufacturer": null,
+         "value": 22543100
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "key": "comfort_temperature_min",
+     "label": "Comfort temperature min",
+     "description": "Minimum temperature that is considered comfortable. The device will display a snowflake icon❄ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 4,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_temperature_max",
+     "label": "Comfort temperature max",
+     "description": "Maximum temperature that is considered comfortable. The device will display a flame icon🔥 when the temperature is higher than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 3,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "temperature_units",
+     "label": "Temperature units",
+     "description": "The unit of the temperature displayed on the device screen. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 7,
+      "type": 33,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Celsius",
+       "raw": 0
+      },
+      {
+       "label": "Fahrenheit",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "comfort_humidity_min",
+     "label": "Comfort humidity min",
+     "description": "Minimum humidity that is considered comfortable. The device will display an empty droplet icon💧 when the humidity is lower than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 5,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 95,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_humidity_max",
+     "label": "Comfort humidity max",
+     "description": "Maximum humidity that is considered comfortable. The device will display a half‑filled droplet icon💧 when the humidity is higher than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 6,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 95,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "temperature_calibration",
+     "label": "Temperature calibration",
+     "description": "Calibrated temperature target value (supports 0.1°C step). Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8195,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "humidity_calibration",
+     "label": "Humidity calibration",
+     "description": "Calibrated relative humidity target value (supports 0.1% step). Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8196,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-09P"
+   ],
+   "model": "SNZB-09P",
+   "name": "SONOFF Siren",
+   "settings": [
+    {
+     "key": "alarm_sound_enable",
+     "label": "Alarm sound enable",
+     "description": "Enable or disable the alarm sound.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8230,
+      "type": 16,
+      "manufacturer": 4742
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "alarm_light_enable",
+     "label": "Alarm light enable",
+     "description": "Enable or disable the alarm light.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8226,
+      "type": 16,
+      "manufacturer": 4742
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "alarm_sound_type",
+     "label": "Alarm sound type",
+     "description": "Select the alarm sound preset.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8227,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Siren classic",
+       "raw": 0
+      },
+      {
+       "label": "Siren steady",
+       "raw": 1
+      },
+      {
+       "label": "Siren rising",
+       "raw": 3
+      },
+      {
+       "label": "Siren warning",
+       "raw": 5
+      },
+      {
+       "label": "Siren rapid",
+       "raw": 6
+      },
+      {
+       "label": "Siren emergency",
+       "raw": 8
+      },
+      {
+       "label": "Tone chirp",
+       "raw": 2
+      },
+      {
+       "label": "Tone hi lo",
+       "raw": 4
+      },
+      {
+       "label": "Tone intermittent",
+       "raw": 7
+      },
+      {
+       "label": "Tone pulse",
+       "raw": 9
+      }
+     ]
+    },
+    {
+     "key": "alarm_volume_level",
+     "label": "Alarm volume level",
+     "description": "Set the alarm sound volume level.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8228,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Low",
+       "raw": 0
+      },
+      {
+       "label": "Medium",
+       "raw": 1
+      },
+      {
+       "label": "High",
+       "raw": 2
+      },
+      {
+       "label": "Max",
+       "raw": 3
+      }
+     ]
+    },
+    {
+     "key": "alarm_duration",
+     "label": "Alarm duration",
+     "description": "Alarm duration in seconds.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8229,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 1,
+     "max": 900,
+     "step": 1,
+     "unit": "s",
+     "scale": 1,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZT-03P"
+   ],
+   "model": "SNZT-03P",
+   "name": "SONOFF Smart Motion Sensor",
+   "settings": [
+    {
+     "key": "illumination_compensation_offset",
+     "label": "Illumination calibration",
+     "description": "Light intensity calibration offset",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8216,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -1000,
+     "max": 1000,
+     "step": 1,
+     "unit": "lx",
+     "scale": 1,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-02P"
+   ],
+   "model": "SNZB-02P",
+   "name": "SONOFF Temperature and humidity sensor",
+   "settings": [
+    {
+     "key": "temperature_calibration",
+     "label": "Temperature calibration",
+     "description": "Offset to add/subtract to the reported temperature",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8195,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "humidity_calibration",
+     "label": "Humidity calibration",
+     "description": "Offset to add/subtract to the reported relative humidity",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8196,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-02B"
+   ],
+   "model": "SNZB-02B",
+   "name": "SONOFF Temperature and humidity sensor",
+   "settings": [
+    {
+     "key": "temperature_calibration",
+     "label": "Temperature calibration",
+     "description": "Offset to add/subtract to the reported temperature. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8195,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "humidity_calibration",
+     "label": "Humidity calibration",
+     "description": "Offset to add/subtract to the reported relative humidity. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8196,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-02M"
+   ],
+   "model": "SNZB-02M",
+   "name": "SONOFF Temperature and humidity sensor",
+   "settings": [
+    {
+     "key": "temperature_calibration",
+     "label": "Temperature calibration",
+     "description": "Calibrated temperature target value (supports 0.1°C step). Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8195,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "humidity_calibration",
+     "label": "Humidity calibration",
+     "description": "Calibrated relative humidity target value (supports 0.1% step). Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8196,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "pressure_calibration",
+     "label": "Pressure calibration",
+     "description": "Pressure compensation offset applied directly to pressure reading in hPa (positive adds, negative subtracts). Range: -400 to 400 hPa. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8199,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -200,
+     "max": 200,
+     "step": 0.1,
+     "unit": "hPa",
+     "scale": 100,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-02DR2"
+   ],
+   "model": "SNZB-02DR2",
+   "name": "SONOFF Temperature and humidity sensor with display and relay control",
+   "settings": [
+    {
+     "key": "temperature_sensor_select",
+     "label": "Temperature sensor select",
+     "description": "Data source shown on the display. Set to 'external' to enable the external display and show the values written to external_temperature and external_humidity; set to 'internal' to show the built-in sensor again.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24590,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Internal",
+       "raw": 0
+      },
+      {
+       "label": "External",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "external_temperature",
+     "label": "External temperature",
+     "description": "Temperature value to display when temperature_sensor_select is set to 'external'. Push readings here from another sensor (e.g. via an automation).",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24589,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 125,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "external_humidity",
+     "label": "External humidity",
+     "description": "Relative humidity value to display when temperature_sensor_select is set to 'external'. Push readings here from another sensor. Requires device firmware 1.0.4 or later.",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24600,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 100,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_temperature_min",
+     "label": "Comfort temperature min",
+     "description": "Minimum temperature that is considered comfortable. The device will display ❄️ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 4,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -10,
+     "max": 60,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_temperature_max",
+     "label": "Comfort temperature max",
+     "description": "Maximum temperature that is considered comfortable. The device will display 🔥 when the temperature is higher than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 3,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -10,
+     "max": 60,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_humidity_min",
+     "label": "Comfort humidity min",
+     "description": "Minimum relative humidity that is considered comfortable. The device will display ☀️ when the humidity is lower than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 5,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 95,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_humidity_max",
+     "label": "Comfort humidity max",
+     "description": "Maximum relative humidity that is considered comfortable. The device will display 💧 when the humidity is higher than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 6,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 95,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "temperature_units",
+     "label": "Temperature units",
+     "description": "The unit of the temperature displayed on the device screen. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 7,
+      "type": 33,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Celsius",
+       "raw": 0
+      },
+      {
+       "label": "Fahrenheit",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "temperature_calibration",
+     "label": "Temperature calibration",
+     "description": "Offset to add/subtract to the reported temperature",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8195,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "humidity_calibration",
+     "label": "Humidity calibration",
+     "description": "Offset to add/subtract to the reported relative humidity",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8196,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-02D"
+   ],
+   "model": "SNZB-02D",
+   "name": "SONOFF Temperature and humidity sensor with screen",
+   "settings": [
+    {
+     "key": "comfort_temperature_min",
+     "label": "Comfort temperature min",
+     "description": "Minimum temperature that is considered comfortable. The device will display ❄️ when the temperature is lower than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 4,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -10,
+     "max": 60,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_temperature_max",
+     "label": "Comfort temperature max",
+     "description": "Maximum temperature that is considered comfortable. The device will display 🔥 when the temperature is higher than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 3,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -10,
+     "max": 60,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_humidity_min",
+     "label": "Comfort humidity min",
+     "description": "Minimum relative humidity that is considered comfortable. The device will display ☀️ when the humidity is lower than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 5,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 95,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "comfort_humidity_max",
+     "label": "Comfort humidity max",
+     "description": "Maximum relative humidity that is considered comfortable. The device will display 💧 when the humidity is higher than this value. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 6,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 95,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "temperature_units",
+     "label": "Temperature units",
+     "description": "The unit of the temperature displayed on the device screen. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 7,
+      "type": 33,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Celsius",
+       "raw": 0
+      },
+      {
+       "label": "Fahrenheit",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "temperature_calibration",
+     "label": "Temperature calibration",
+     "description": "Offset to add/subtract to the reported temperature",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8195,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "humidity_calibration",
+     "label": "Humidity calibration",
+     "description": "Offset to add/subtract to the reported relative humidity",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8196,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-02LD"
+   ],
+   "model": "SNZB-02LD",
+   "name": "SONOFF Waterproof (IP65) sensor with screen and probe temperature detection",
+   "settings": [
+    {
+     "key": "temperature_units",
+     "label": "Temperature units",
+     "description": "The unit of the temperature displayed on the device screen. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 7,
+      "type": 33,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Celsius",
+       "raw": 0
+      },
+      {
+       "label": "Fahrenheit",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "temperature_calibration",
+     "label": "Temperature calibration",
+     "description": "Offset to add/subtract to the reported temperature",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8195,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-02WD"
+   ],
+   "model": "SNZB-02WD",
+   "name": "SONOFF Waterproof (IP65) temperature and humidity sensor with screen",
+   "settings": [
+    {
+     "key": "temperature_units",
+     "label": "Temperature units",
+     "description": "The unit of the temperature displayed on the device screen. Note: wake up the device by pressing the button on the back before changing this value.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 7,
+      "type": 33,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Celsius",
+       "raw": 0
+      },
+      {
+       "label": "Fahrenheit",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "temperature_calibration",
+     "label": "Temperature calibration",
+     "description": "Offset to add/subtract to the reported temperature",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8195,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "humidity_calibration",
+     "label": "Humidity calibration",
+     "description": "Offset to add/subtract to the reported relative humidity",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8196,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -50,
+     "max": 50,
+     "step": 0.1,
+     "unit": "%",
+     "scale": 100,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "MINI-ZB2GS"
+   ],
+   "model": "MINI-ZB2GS",
+   "name": "SONOFF Zigbee dual-channel smart switch",
+   "settings": [
+    {
+     "key": "external_trigger_mode_l1",
+     "label": "External trigger mode (L1)",
+     "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Following(off)",
+       "raw": 2
+      },
+      {
+       "label": "Following(on)",
+       "raw": 130
+      }
+     ]
+    },
+    {
+     "key": "external_trigger_mode_l2",
+     "label": "External trigger mode (L2)",
+     "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 2,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Following(off)",
+       "raw": 2
+      },
+      {
+       "label": "Following(on)",
+       "raw": 130
+      }
+     ]
+    },
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator settings, turn off/on the blue online status network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "turbo_mode",
+     "label": "Turbo mode",
+     "description": "Enable/disable Radio power turbo mode",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 18,
+      "type": 41,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 9
+      },
+      {
+       "label": "On",
+       "raw": 20
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_state_channel_1_l1",
+     "label": "Delayed power on state channel 1 (L1)",
+     "description": "Delayed Power-on State(Channel 1)",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 20,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_state_channel_2_l2",
+     "label": "Delayed power on state channel 2 (L2)",
+     "description": "Delayed Power-on State(Channel 2)",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 2,
+      "cluster": 64529,
+      "attribute": 20,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_time_l1",
+     "label": "Delayed power on time (L1)",
+     "description": "Delayed Power-on time",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 21,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0.5,
+     "max": 3599.5,
+     "step": 0.5,
+     "unit": "seconds",
+     "scale": 2,
+     "offset": 0
+    },
+    {
+     "key": "delayed_power_on_time_l2",
+     "label": "Delayed power on time (L2)",
+     "description": "Delayed Power-on time",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 2,
+      "cluster": 64529,
+      "attribute": 21,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0.5,
+     "max": 3599.5,
+     "step": 0.5,
+     "unit": "seconds",
+     "scale": 2,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "MINI-ZB2GS-L"
+   ],
+   "model": "MINI-ZB2GS-L",
+   "name": "SONOFF Zigbee dual-channel smart switch",
+   "settings": [
+    {
+     "key": "external_trigger_mode_l1",
+     "label": "External trigger mode (L1)",
+     "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Following(off)",
+       "raw": 2
+      },
+      {
+       "label": "Following(on)",
+       "raw": 130
+      }
+     ]
+    },
+    {
+     "key": "external_trigger_mode_l2",
+     "label": "External trigger mode (L2)",
+     "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 2,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Following(off)",
+       "raw": 2
+      },
+      {
+       "label": "Following(on)",
+       "raw": 130
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_state_channel_1_l1",
+     "label": "Delayed power on state channel 1 (L1)",
+     "description": "Delayed Power-on State(Channel 1)",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 20,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_state_channel_2_l2",
+     "label": "Delayed power on state channel 2 (L2)",
+     "description": "Delayed Power-on State(Channel 2)",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 2,
+      "cluster": 64529,
+      "attribute": 20,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_time_l1",
+     "label": "Delayed power on time (L1)",
+     "description": "Delayed Power-on time",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 21,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0.5,
+     "max": 3599.5,
+     "step": 0.5,
+     "unit": "seconds",
+     "scale": 2,
+     "offset": 0
+    },
+    {
+     "key": "delayed_power_on_time_l2",
+     "label": "Delayed power on time (L2)",
+     "description": "Delayed Power-on time",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 2,
+      "cluster": 64529,
+      "attribute": 21,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0.5,
+     "max": 3599.5,
+     "step": 0.5,
+     "unit": "seconds",
+     "scale": 2,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SWV-ZF2"
+   ],
+   "model": "SWV-ZF2",
+   "name": "SONOFF Zigbee dual-channel smart water valve",
+   "settings": [
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "irrigation_duration",
+     "label": "Irrigation duration",
+     "description": "Default duration for manual irrigation",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 1,
+     "max": 719,
+     "step": 1,
+     "unit": "min",
+     "scale": 65537,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 20509,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         0,
+         0,
+         1,
+         0,
+         1,
+         0,
+         10,
+         1,
+         0,
+         0,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 4,
+       "width": 4,
+       "endian": "be",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "irrigation_mode",
+     "label": "Irrigation mode",
+     "description": "Default mode for manual irrigation",
+     "group": "Configuration",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Duration",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20509,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          12,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          1,
+          0,
+          0,
+          0,
+          0
+         ],
+         "raw": true
+        }
+       ]
+      },
+      {
+       "label": "Capacity",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20509,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          12,
+          0,
+          1,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          1,
+          0,
+          0,
+          0,
+          0
+         ],
+         "raw": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "key": "irrigation_amount",
+     "label": "Irrigation amount",
+     "description": "Default manual irrigation amount",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 0,
+     "max": 10000,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 20509,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         0,
+         0,
+         10,
+         0,
+         10,
+         0,
+         10,
+         1,
+         0,
+         0,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 11,
+       "width": 2,
+       "endian": "be",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "fail_safe",
+     "label": "Fail safe",
+     "description": "Manual irrigation safety timeout",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 0,
+     "max": 719,
+     "step": 1,
+     "unit": "min",
+     "scale": 1,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 20509,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         0,
+         0,
+         10,
+         0,
+         10,
+         0,
+         10,
+         1,
+         0,
+         0,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 13,
+       "width": 2,
+       "endian": "be",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "irrigation_amount_unit",
+     "label": "Irrigation amount unit",
+     "description": "Default manual irrigation unit",
+     "group": "Configuration",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Us gallon",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20509,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          12,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0
+         ],
+         "raw": true
+        }
+       ]
+      },
+      {
+       "label": "Liter",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20509,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          12,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          1,
+          0,
+          0,
+          0,
+          0
+         ],
+         "raw": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "MG1_5RZ"
+   ],
+   "model": "MG1_5RZ",
+   "name": "SONOFF Zigbee human presence radar (5.8 GHz)",
+   "settings": [
+    {
+     "key": "occupied_to_unoccupied_delay",
+     "label": "Occupied to unoccupied delay",
+     "description": "Ultrasonic occupied → unoccupied delay (seconds)",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 32,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 60,
+     "max": 65535,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "unoccupied_to_occupied_delay",
+     "label": "Unoccupied to occupied delay",
+     "description": "Ultrasonic unoccupied → occupied delay (seconds)",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 33,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 65535,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "occupancy_sensitivity",
+     "label": "Occupancy sensitivity",
+     "description": "Sensitivity of human presence detection",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 34,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Low",
+       "raw": 1
+      },
+      {
+       "label": "Medium",
+       "raw": 2
+      },
+      {
+       "label": "High",
+       "raw": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-06P24"
+   ],
+   "model": "SNZB-06P24",
+   "name": "SONOFF Zigbee occupancy sensor with illuminance",
+   "settings": [
+    {
+     "key": "enable_occupancy_zone_1",
+     "label": "Zone 1 (0m-1m)",
+     "description": "",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8214,
+      "type": 25,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 3
+      }
+     ]
+    },
+    {
+     "key": "enable_occupancy_zone_2",
+     "label": "Zone 2 (1m-1.5m)",
+     "description": "",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8214,
+      "type": 25,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 4
+      }
+     ]
+    },
+    {
+     "key": "enable_occupancy_zone_3",
+     "label": "Zone 3 (1.5m-2m)",
+     "description": "",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8214,
+      "type": 25,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 8
+      }
+     ]
+    },
+    {
+     "key": "enable_occupancy_zone_4",
+     "label": "Zone 4 (2m-2.5m)",
+     "description": "",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8214,
+      "type": 25,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 16
+      }
+     ]
+    },
+    {
+     "key": "enable_occupancy_zone_5",
+     "label": "Zone 5 (2.5m-3m)",
+     "description": "",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8214,
+      "type": 25,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 32
+      }
+     ]
+    },
+    {
+     "key": "enable_occupancy_zone_6",
+     "label": "Zone 6 (3m-3.5m)",
+     "description": "",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8214,
+      "type": 25,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 64
+      }
+     ]
+    },
+    {
+     "key": "enable_occupancy_zone_7",
+     "label": "Zone 7 (3.5m-4m)",
+     "description": "",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8214,
+      "type": 25,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 128
+      }
+     ]
+    },
+    {
+     "key": "illuminance_calibration",
+     "label": "Illuminance calibration",
+     "description": "Illuminance compensation offset",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8216,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -1000,
+     "max": 1000,
+     "step": 1,
+     "unit": "lx",
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "radar_sensitivity",
+     "label": "Fine-tune Sensitivity",
+     "description": "Radar sensitivity level",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8225,
+      "type": 40,
+      "manufacturer": null
+     },
+     "min": -6,
+     "max": 6,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "SNZB-03PR2"
+   ],
+   "model": "SNZB-03PR2",
+   "name": "SONOFF Zigbee PIR sensor",
+   "settings": [
+    {
+     "key": "illumination_compensation_offset",
+     "label": "Illumination calibration",
+     "description": "Light intensity calibration offset",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 8216,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -1000,
+     "max": 1000,
+     "step": 1,
+     "unit": "lx",
+     "scale": 1,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "MINI-ZBDIM"
+   ],
+   "model": "MINI-ZBDIM",
+   "name": "SONOFF Zigbee smart mini dimmer switch",
+   "settings": [
+    {
+     "key": "delayed_power_on_state",
+     "label": "Delayed power on state",
+     "description": "Delayed Power-on State",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 20,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_time",
+     "label": "Delayed power on time",
+     "description": "Delayed Power-on time",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 21,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0.5,
+     "max": 3599.5,
+     "step": 0.5,
+     "unit": "seconds",
+     "scale": 2,
+     "offset": 0
+    },
+    {
+     "key": "external_trigger_mode",
+     "label": "External trigger mode",
+     "description": "External trigger mode, which can be one of edge, pulse,double pulse,triple pulse. The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Double pulse",
+       "raw": 3
+      },
+      {
+       "label": "Triple pulse",
+       "raw": 4
+      }
+     ]
+    },
+    {
+     "key": "min_brightness_threshold",
+     "label": "Min brightness threshold",
+     "description": "Lowest brightness level mapped to 1 % on the dimmer slider.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 16385,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 1,
+     "max": 99,
+     "step": 1,
+     "unit": "%",
+     "scale": 2.540816,
+     "offset": 0.459184
+    },
+    {
+     "key": "max_brightness_threshold",
+     "label": "Max brightness threshold",
+     "description": "highest brightness level mapped to 100 % on the dimmer slider.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 16386,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 2,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "scale": 2.55102,
+     "offset": -0.102041
+    },
+    {
+     "key": "dimmer_transition_time",
+     "label": "Dimmer transition time",
+     "description": "Transition time",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 31,
+      "type": 35,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 5,
+     "step": 0.1,
+     "unit": "s",
+     "scale": 10,
+     "offset": 0
+    },
+    {
+     "key": "dimming_light_rate",
+     "label": "Dimming light rate",
+     "description": "Speed of brightness change via external switch.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 16387,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "1x",
+       "raw": 1
+      },
+      {
+       "label": "2x",
+       "raw": 2
+      },
+      {
+       "label": "3x",
+       "raw": 3
+      },
+      {
+       "label": "4x",
+       "raw": 4
+      },
+      {
+       "label": "5x",
+       "raw": 5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "ZBM5-1C-120",
+    "ZBM5-1C-80/86"
+   ],
+   "model": "ZBM5-1C-120",
+   "name": "SONOFF Zigbee Smart one-channel wall switch (type 120)",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator settings, turn off/on the blue online status network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "S60ZBTPF"
+   ],
+   "model": "S60ZBTPF",
+   "name": "SONOFF Zigbee smart plug",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator settings, turn off/on the blue online status network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "outlet_control_protect",
+     "label": "Outlet control protect",
+     "description": "Outlet overload protection Settings",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28679,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "S60ZBTPG"
+   ],
+   "model": "S60ZBTPG",
+   "name": "SONOFF Zigbee smart plug",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator settings, turn off/on the blue online status network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "outlet_control_protect",
+     "label": "Outlet control protect",
+     "description": "Outlet overload protection Settings",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28679,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "BASIC-ZB1GSP"
+   ],
+   "model": "BASIC-ZB1GSP",
+   "name": "SONOFF Zigbee smart plug with power monitoring",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator settings, turn off/on the blue online status network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "outlet_control_protect",
+     "label": "Outlet control protect",
+     "description": "Outlet overload protection Settings",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28679,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ac_current_max_overload_enable",
+     "label": "Ac current max overload enable",
+     "description": "AC current overload protection enable",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28684,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ac_current_max_overload",
+     "label": "Ac current max overload",
+     "description": "AC current overload threshold",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28685,
+      "type": 35,
+      "manufacturer": null
+     },
+     "min": 0.1,
+     "max": 32,
+     "step": 0.1,
+     "unit": "A",
+     "scale": 1000,
+     "offset": 0
+    },
+    {
+     "key": "ac_voltage_max_overload_enable",
+     "label": "Ac voltage max overload enable",
+     "description": "AC voltage overload protection enable",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28686,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ac_voltage_max_overload",
+     "label": "Ac voltage max overload",
+     "description": "AC voltage overload threshold (runtime validated by detected supply band)",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28687,
+      "type": 35,
+      "manufacturer": null
+     },
+     "min": 85,
+     "max": 277,
+     "step": 1,
+     "unit": "V",
+     "scale": 1000,
+     "offset": 0
+    },
+    {
+     "key": "ac_power_max_overload_enable",
+     "label": "Ac power max overload enable",
+     "description": "AC power overload protection enable",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28688,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ac_power_max_overload",
+     "label": "Ac power max overload",
+     "description": "AC power overload threshold (runtime validated by detected supply band)",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28689,
+      "type": 35,
+      "manufacturer": null
+     },
+     "min": 10,
+     "max": 7680,
+     "step": 1,
+     "unit": "W",
+     "scale": 1000,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "S61SZBTPB"
+   ],
+   "model": "S61SZBTPB",
+   "name": "SONOFF Zigbee smart plug with power monitoring",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator settings, turn off/on the blue online status network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "outlet_control_protect",
+     "label": "Outlet control protect",
+     "description": "When enabled, the device turns off immediately when the configured threshold is reached. After protection is triggered, it can only be restored manually and cannot be turned on via Home Assistant.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28679,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ac_current_max_overload_enable",
+     "label": "Ac current max overload enable",
+     "description": "AC current overload protection enable",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28684,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ac_current_max_overload",
+     "label": "Ac current max overload",
+     "description": "AC current overload threshold",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28685,
+      "type": 35,
+      "manufacturer": null
+     },
+     "min": 0.1,
+     "max": 15,
+     "step": 0.1,
+     "unit": "A",
+     "scale": 1000,
+     "offset": 0
+    },
+    {
+     "key": "ac_voltage_max_overload_enable",
+     "label": "Ac voltage max overload enable",
+     "description": "AC voltage overload protection enable",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28686,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ac_voltage_max_overload",
+     "label": "Ac voltage max overload",
+     "description": "AC voltage overload threshold (runtime validated by detected supply band)",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28687,
+      "type": 35,
+      "manufacturer": null
+     },
+     "min": 85,
+     "max": 277,
+     "step": 1,
+     "unit": "V",
+     "scale": 1000,
+     "offset": 0
+    },
+    {
+     "key": "ac_power_max_overload_enable",
+     "label": "Ac power max overload enable",
+     "description": "AC power overload protection enable",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28688,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ac_power_max_overload",
+     "label": "Ac power max overload",
+     "description": "AC power overload threshold (runtime validated by detected supply band)",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 28689,
+      "type": 35,
+      "manufacturer": null
+     },
+     "min": 10,
+     "max": 3600,
+     "step": 1,
+     "unit": "W",
+     "scale": 1000,
+     "offset": 0
+    }
+   ]
+  },
+  {
+   "models": [
+    "MINI-ZB1GP"
+   ],
+   "model": "MINI-ZB1GP",
+   "name": "SONOFF Zigbee smart power monitoring sensor",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Turn the blue network status indicator on or off.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "turbo_mode",
+     "label": "Turbo mode",
+     "description": "Boost Zigbee radio transmit power to improve range.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 18,
+      "type": 41,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 9
+      },
+      {
+       "label": "On",
+       "raw": 20
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "MINI-ZBRBS"
+   ],
+   "model": "MINI-ZBRBS",
+   "name": "SONOFF Zigbee smart roller shutter switch",
+   "settings": [
+    {
+     "key": "motor_travel_calibration_action",
+     "label": "Motor travel calibration action",
+     "description": "Calibrates the motor stroke, or clears the current one.",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 20481,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "None",
+       "raw": 0
+      },
+      {
+       "label": "Start automatic",
+       "raw": 2
+      },
+      {
+       "label": "Start manual",
+       "raw": 3
+      },
+      {
+       "label": "Clear",
+       "raw": 4
+      },
+      {
+       "label": "Manual 2 fully opened",
+       "raw": 7
+      },
+      {
+       "label": "Manual 3 fully closed",
+       "raw": 8
+      }
+     ]
+    },
+    {
+     "key": "external_trigger_mode",
+     "label": "External trigger mode",
+     "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Following(off)",
+       "raw": 2
+      },
+      {
+       "label": "Following(on)",
+       "raw": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "ZBMINIR2",
+    "MINI-ZBD"
+   ],
+   "model": "ZBMINIR2",
+   "name": "SONOFF Zigbee smart switch",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator Settings, turn off/turn on the online network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "turbo_mode",
+     "label": "Turbo mode",
+     "description": "Enable/disable Radio power turbo mode",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 18,
+      "type": 41,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 9
+      },
+      {
+       "label": "On",
+       "raw": 20
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_state",
+     "label": "Delayed power on state",
+     "description": "Delayed Power-on State",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 20,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_time",
+     "label": "Delayed power on time",
+     "description": "Delayed Power-on time",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 21,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0.5,
+     "max": 3599.5,
+     "step": 0.5,
+     "unit": "seconds",
+     "scale": 2,
+     "offset": 0
+    },
+    {
+     "key": "detach_relay_mode",
+     "label": "Detach relay mode",
+     "description": "Enable/Disable detach relay mode",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 23,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "external_trigger_mode",
+     "label": "External trigger mode",
+     "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Following(off)",
+       "raw": 2
+      },
+      {
+       "label": "Following(on)",
+       "raw": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "MINI-ZB1GS"
+   ],
+   "model": "MINI-ZB1GS",
+   "name": "SONOFF Zigbee smart switch",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Turn the blue network status indicator on or off.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "turbo_mode",
+     "label": "Turbo mode",
+     "description": "Boost Zigbee radio transmit power to improve range.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 18,
+      "type": 41,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 9
+      },
+      {
+       "label": "On",
+       "raw": 20
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_state",
+     "label": "Delayed power on state",
+     "description": "Restore the plug output after the configured power-on delay.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 20,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_time",
+     "label": "Delayed power on time",
+     "description": "Delay before the plug output is restored after power returns.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 21,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0.5,
+     "max": 3599.5,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 2,
+     "offset": 0
+    },
+    {
+     "key": "external_trigger_mode",
+     "label": "External trigger mode",
+     "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Following(off)",
+       "raw": 2
+      },
+      {
+       "label": "Following(on)",
+       "raw": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "MINI-ZB1GSP"
+   ],
+   "model": "MINI-ZB1GSP",
+   "name": "SONOFF Zigbee smart switch with power monitoring",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Turn the blue network status indicator on or off.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "turbo_mode",
+     "label": "Turbo mode",
+     "description": "Boost Zigbee radio transmit power to improve range.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 18,
+      "type": 41,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 9
+      },
+      {
+       "label": "On",
+       "raw": 20
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_state",
+     "label": "Delayed power on state",
+     "description": "Restore the plug output after the configured power-on delay.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 20,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "delayed_power_on_time",
+     "label": "Delayed power on time",
+     "description": "Delay before the plug output is restored after power returns.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 21,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 0.5,
+     "max": 3599.5,
+     "step": 0.5,
+     "unit": "s",
+     "scale": 2,
+     "offset": 0
+    },
+    {
+     "key": "external_trigger_mode",
+     "label": "External trigger mode",
+     "description": "External trigger mode, which can be one of edge, pulse, following(off), following(on). The appropriate triggering mode can be selected according to the type of external switch to achieve a better use experience.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 22,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Edge",
+       "raw": 0
+      },
+      {
+       "label": "Pulse",
+       "raw": 1
+      },
+      {
+       "label": "Following(off)",
+       "raw": 2
+      },
+      {
+       "label": "Following(on)",
+       "raw": 130
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "ZBM5-3C-120",
+    "ZBM5-3C-80/86"
+   ],
+   "model": "ZBM5-3C-120",
+   "name": "SONOFF Zigbee Smart three-channel wall switch (type 120)",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator settings, turn off/on the blue online status network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "ZBM5-2C-120",
+    "ZBM5-2C-80/86"
+   ],
+   "model": "ZBM5-2C-120",
+   "name": "SONOFF Zigbee Smart two-channel wall switch (type 120)",
+   "settings": [
+    {
+     "key": "network_indicator",
+     "label": "Network indicator",
+     "description": "Network indicator settings, turn off/on the blue online status network indicator.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "SWV"
+   ],
+   "model": "SWV",
+   "name": "SONOFF Zigbee smart water valve",
+   "settings": [
+    {
+     "key": "auto_close_when_water_shortage",
+     "label": "Auto close when water shortage",
+     "description": "Automatically shut down the water valve after the water shortage exceeds 30 minutes. Requires firmware version 1.0.4 or later!",
+     "group": "Controls",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 20497,
+      "type": 33,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 30
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "SWV-ZFE",
+    "SWV-ZFU"
+   ],
+   "model": "SWV-ZFE",
+   "name": "SONOFF Zigbee smart water valve",
+   "settings": [
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "irrigation_duration",
+     "label": "Irrigation duration",
+     "description": "Default duration for manual irrigation",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 1,
+     "max": 719,
+     "step": 1,
+     "unit": "min",
+     "scale": 65537,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 20509,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         0,
+         0,
+         1,
+         0,
+         1,
+         0,
+         10,
+         1,
+         0,
+         0,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 4,
+       "width": 4,
+       "endian": "be",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "irrigation_mode",
+     "label": "Irrigation mode",
+     "description": "Default mode for manual irrigation",
+     "group": "Configuration",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Duration",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20509,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          12,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          1,
+          0,
+          0,
+          0,
+          0
+         ],
+         "raw": true
+        }
+       ]
+      },
+      {
+       "label": "Capacity",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20509,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          12,
+          0,
+          1,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          1,
+          0,
+          0,
+          0,
+          0
+         ],
+         "raw": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "key": "irrigation_amount",
+     "label": "Irrigation amount",
+     "description": "Default manual irrigation amount",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 0,
+     "max": 10000,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 20509,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         0,
+         0,
+         10,
+         0,
+         10,
+         0,
+         10,
+         1,
+         0,
+         0,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 11,
+       "width": 2,
+       "endian": "be",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "fail_safe",
+     "label": "Fail safe",
+     "description": "Manual irrigation safety timeout",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 0,
+     "max": 719,
+     "step": 1,
+     "unit": "min",
+     "scale": 1,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 20509,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         0,
+         0,
+         10,
+         0,
+         10,
+         0,
+         10,
+         1,
+         0,
+         0,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 13,
+       "width": 2,
+       "endian": "be",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "irrigation_amount_unit",
+     "label": "Irrigation amount unit",
+     "description": "Default manual irrigation unit",
+     "group": "Configuration",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Us gallon",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20509,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          12,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          0,
+          0,
+          0,
+          0,
+          0
+         ],
+         "raw": true
+        }
+       ]
+      },
+      {
+       "label": "Liter",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 20509,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          12,
+          0,
+          0,
+          0,
+          10,
+          0,
+          10,
+          0,
+          10,
+          1,
+          0,
+          0,
+          0,
+          0
+         ],
+         "raw": true
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "SWV-ZNE",
+    "SWV-ZNU"
+   ],
+   "model": "SWV-ZNE",
+   "name": "SONOFF Zigbee smart water valve",
+   "settings": [
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "irrigation_duration",
+     "label": "Irrigation duration",
+     "description": "Default duration for manual irrigation",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 1,
+     "max": 719,
+     "step": 1,
+     "unit": "min",
+     "scale": 65537,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 20509,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         12,
+         0,
+         0,
+         0,
+         1,
+         0,
+         1,
+         0,
+         10,
+         1,
+         0,
+         10,
+         0,
+         10
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 4,
+       "width": 4,
+       "endian": "be",
+       "signed": false
+      }
+     }
+    }
+   ]
+  },
+  {
+   "models": [
+    "TP-WGZBA"
+   ],
+   "model": "TP-WGZBA",
+   "name": "SONOFF Zigbee thermostat panel",
+   "settings": [
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "open_window",
+     "label": "Open window",
+     "description": "Automatically stops heating when the room temperature drops by more than 1.5°C within 5 minutes.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24576,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "frost_protection_temperature",
+     "label": "Frost protection temperature",
+     "description": "The minimum room temperature at which heating automatically turns on in Off mode to prevent pipes from freezing.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24578,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 15,
+     "step": 0.5,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "schedule_active_group",
+     "label": "Schedule active group",
+     "description": "The schedule group currently used in Auto mode.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24605,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "1",
+       "raw": 0
+      },
+      {
+       "label": "2",
+       "raw": 1
+      },
+      {
+       "label": "3",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "temperature_sensor_select",
+     "label": "Temperature sensor",
+     "description": "Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor. When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor.",
+     "group": "Controls",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Local temperature",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24606,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          8,
+          0,
+          1,
+          1,
+          0,
+          1,
+          3,
+          0,
+          208,
+          7
+         ],
+         "raw": true
+        }
+       ]
+      },
+      {
+       "label": "Remote temperature",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24606,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          8,
+          0,
+          1,
+          1,
+          0,
+          1,
+          3,
+          1,
+          208,
+          7
+         ],
+         "raw": true
+        }
+       ]
+      },
+      {
+       "label": "Remote source offline",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24606,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          8,
+          0,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          208,
+          7
+         ],
+         "raw": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "key": "external_temperature_input",
+     "label": "External temperature",
+     "description": "The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Home Assistant.",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 0,
+     "max": 99.9,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 24606,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         8,
+         0,
+         1,
+         1,
+         0,
+         1,
+         3,
+         1,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 9,
+       "width": 2,
+       "endian": "le",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "hysteresis_low",
+     "label": "Minimum heating start threshold",
+     "description": "Heating starts when the room temperature falls below the target temperature plus this offset.",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": -2.6,
+     "max": -0.2,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 65536,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 24607,
+        "type": 76,
+        "manufacturer": null,
+        "value": [
+         2,
+         0,
+         41,
+         252,
+         254,
+         41,
+         200,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 3,
+       "width": 2,
+       "endian": "le",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "hysteresis_high",
+     "label": "Maximum heating stop threshold",
+     "description": "Heating stops when the room temperature rises above the target temperature plus this offset.",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 0,
+     "max": 2.6,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 24607,
+        "type": 76,
+        "manufacturer": null,
+        "value": [
+         2,
+         0,
+         41,
+         56,
+         255,
+         41,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 6,
+       "width": 2,
+       "endian": "le",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "hydronic_underfloor_heating_relay_output",
+     "label": "Hydronic underfloor heating relay output",
+     "description": "Select how the 3 A relay operates. Normally open (NO): The output is powered during heating and unpowered when heating stops. Normally closed (NC): The output is unpowered during heating and powered when heating stops.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24616,
+      "type": 24,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Normally open no",
+       "raw": 0
+      },
+      {
+       "label": "Normally closed nc",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "boiler_dry_contact_output",
+     "label": "Boiler dry contact output",
+     "description": "Select how the boiler dry-contact relay operates. Normally open (NO): The contact closes during heating and opens when heating stops. Normally closed (NC): The contact opens during heating and closes when heating stops.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24616,
+      "type": 24,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Normally open no",
+       "raw": 0
+      },
+      {
+       "label": "Normally closed nc",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "ntc_overheat_protection",
+     "label": "NTC overheat protection",
+     "description": "Enable or disable NTC overheat protection.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24628,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "ntc_overheat_protection_temperature",
+     "label": "NTC overheat protection temperature",
+     "description": "Temperature threshold at which NTC overheat protection is triggered.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24626,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 20,
+     "max": 50,
+     "step": 0.5,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "radar_detection",
+     "label": "Radar detection",
+     "description": "Enable or disable radar presence detection.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24629,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "radar_sensitivity",
+     "label": "Radar sensitivity",
+     "description": "Radar detection sensitivity.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24608,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Low",
+       "raw": 0
+      },
+      {
+       "label": "Medium",
+       "raw": 1
+      },
+      {
+       "label": "High",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "radar_do_not_disturb",
+     "label": "Radar do not disturb",
+     "description": "Do not wake the screen automatically when presence is detected during the configured period.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24609,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "standby_brightness",
+     "label": "Standby brightness",
+     "description": "Screen brightness when the device is idle.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24612,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "active_brightness",
+     "label": "Active brightness",
+     "description": "Screen brightness when the device is active.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24611,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "night_mode",
+     "label": "Night mode",
+     "description": "Reduce screen brightness during the scheduled period.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24614,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "night_brightness",
+     "label": "Night brightness",
+     "description": "Adjusts the screen brightness when the device is in standby during the scheduled period.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24613,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 8,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "bluetooth_pairing",
+     "label": "Bluetooth pairing",
+     "description": "Start or stop Bluetooth pairing broadcast.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 41,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "TRVZB"
+   ],
+   "model": "TRVZB",
+   "name": "SONOFF Zigbee thermostatic radiator valve",
+   "settings": [
+    {
+     "key": "timer_mode_target_temp",
+     "label": "Timer mode target temp",
+     "description": "In timer mode, the temperature can be set to 4-35 ℃.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24598,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 4,
+     "max": 35,
+     "step": 0.5,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "temporary_mode_duration",
+     "label": "Temporary mode duration",
+     "description": "Boost Mode: Sets maximum TRV temperature for up to 180 minutes. Timer Mode: Customizes temperature and duration, up to 24 hours.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24597,
+      "type": 35,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 1440,
+     "step": 1,
+     "unit": "minutes",
+     "scale": 60,
+     "offset": 0
+    },
+    {
+     "key": "temporary_mode_select",
+     "label": "Temporary mode ",
+     "description": "Boost mode: Activates maximum TRV temperature for a user-defined duration, enabling rapid heating. Timer Mode: Allows customization of temperature and duration for precise heating control. After the set duration, the system will return to its previous normal mode and temperature.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24596,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Boost",
+       "raw": 0
+      },
+      {
+       "label": "Timer",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "open_window",
+     "label": "Open window",
+     "description": "Automatically turns off the radiator when local temperature drops by more than 1.5°C in 4.5 minutes.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24576,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "frost_protection_temperature",
+     "label": "Frost protection temperature",
+     "description": "Minimum temperature at which to automatically turn on the radiator, if system mode is off, to prevent pipes freezing.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24578,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 4,
+     "max": 35,
+     "step": 0.5,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "temperature_sensor_select",
+     "label": "Temperature sensor",
+     "description": "Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor. When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor.",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24590,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Local temperature",
+       "raw": 0
+      },
+      {
+       "label": "Remote temperature",
+       "raw": 1
+      },
+      {
+       "label": "Remote source offline",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "external_temperature_input",
+     "label": "External temperature",
+     "description": "The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Home Assistant.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24589,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 99.9,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "valve_opening_degree",
+     "label": "Valve opening degree",
+     "description": "Valve open position (percentage) control. If the opening degree is set to 100%, the valve is fully open when it is opened. If the opening degree is set to 0%, the valve is fully closed when it is opened, and the default value is 100%. Note: only version v1.1.4 or higher is supported.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24587,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "valve_closing_degree",
+     "label": "Valve closing degree",
+     "description": "Valve closed position (percentage) control. If the closing degree is set to 100%, the valve is fully closed when it is closed. If the closing degree is set to 0%, the valve is fully opened when it is closed, and the default value is 100%. Note: Only version v1.1.4 or higher is supported.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24588,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "temperature_accuracy",
+     "label": "Temperature accuracy",
+     "description": "Temperature control accuracy. The range is -0.2 ~ -1°C, with an interval of 0.2, and the default is -1. If the temperature control accuracy is selected as -1°C (default value) and the target temperature is 26 degrees, then TRVZB will close the valve when the room temperature reaches 26 degrees and open the valve at 25 degrees. If -0.4°C is chosen as the temperature control accuracy, then the valve will close when the room temperature reaches 26 degrees and open at 25.6 degrees. Note: Only version v1.3.0 or higher is supported.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24593,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -1,
+     "max": -0.2,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "smart_temperature_control",
+     "label": "Smart temperature control",
+     "description": "Enable adaptive valve control using a PID algorithm. When enabled, \"Valve Opening Percentage\" and \"Temperature Accuracy\" are unavailable.",
+     "group": "Controls",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24599,
+      "type": 24,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "TRV-ZBT"
+   ],
+   "model": "TRV-ZBT",
+   "name": "SONOFF Zigbee thermostatic radiator valve",
+   "settings": [
+    {
+     "key": "screen_direction",
+     "label": "Screen direction",
+     "description": "Screen direction in degrees",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 33,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "0",
+       "raw": 0
+      },
+      {
+       "label": "90",
+       "raw": 1
+      },
+      {
+       "label": "180",
+       "raw": 2
+      },
+      {
+       "label": "270",
+       "raw": 3
+      }
+     ]
+    },
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "open_window",
+     "label": "Open window",
+     "description": "Automatically turns off the radiator when local temperature drops by more than 1.5°C in 5 minutes.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24576,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "frost_protection_temperature",
+     "label": "Frost protection temperature",
+     "description": "Minimum temperature at which to automatically turn on the radiator to prevent freezing.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24578,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 15,
+     "step": 0.5,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "temperature_sensor_select",
+     "label": "Temperature sensor",
+     "description": "Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor. When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor.",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24590,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Local temperature",
+       "raw": 0
+      },
+      {
+       "label": "Remote temperature",
+       "raw": 1
+      },
+      {
+       "label": "Remote source offline",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "external_temperature_input",
+     "label": "External temperature",
+     "description": "The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Home Assistant.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24589,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 99.9,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "heating_valve_position",
+     "label": "Heating valve position",
+     "description": "Valve opening percentage during heating.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24587,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "idle_valve_position",
+     "label": "Idle valve position",
+     "description": "Valve opening percentage when not heating. Recommended: set the heating valve position higher than the idle valve position.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24588,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "temperature_accuracy",
+     "label": "Temperature accuracy",
+     "description": "Temperature control accuracy. The range is -0.2 ~ -1°C, with an interval of 0.2, and the default is -1. If the temperature control accuracy is selected as -1°C (default value) and the target temperature is 26 degrees, then TRV-ZBT will close the valve when the room temperature reaches 26 degrees and open the valve at 25 degrees. If -0.4°C is chosen as the temperature control accuracy, then the valve will close when the room temperature reaches 26 degrees and open at 25.6 degrees. ",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24593,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -1,
+     "max": -0.2,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "smart_temperature_control",
+     "label": "Smart temperature control",
+     "description": "Enable adaptive valve control using a PID algorithm. When enabled, \"Valve Opening Percentage\" and \"Temperature Accuracy\" are unavailable.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24595,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 1
+      },
+      {
+       "label": "On",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "temporary_mode_mode",
+     "label": "Temporary mode mode",
+     "description": "Temporary mode: Boost heats at 30°C; Timer uses a custom temperature and duration.",
+     "group": "Controls",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Disabled",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24596,
+         "type": 32,
+         "manufacturer": null,
+         "value": 255
+        }
+       ]
+      },
+      {
+       "label": "Timer",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24597,
+         "type": 35,
+         "manufacturer": null,
+         "value": 300
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24598,
+         "type": 41,
+         "manufacturer": null,
+         "value": 3000
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24596,
+         "type": 32,
+         "manufacturer": null,
+         "value": 1
+        }
+       ]
+      },
+      {
+       "label": "Boost",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24597,
+         "type": 35,
+         "manufacturer": null,
+         "value": 300
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24598,
+         "type": 41,
+         "manufacturer": null,
+         "value": 3000
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24596,
+         "type": 32,
+         "manufacturer": null,
+         "value": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "key": "low_battery_valve_state",
+     "label": "Low battery valve state",
+     "description": "Fixed valve opening percentage used when the battery is too low to operate.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24604,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Close",
+       "raw": 0
+      },
+      {
+       "label": "Open 30",
+       "raw": 30
+      }
+     ]
+    },
+    {
+     "key": "schedule_active_group",
+     "label": "Schedule active group",
+     "description": "The schedule group currently used in Auto mode.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24605,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "1",
+       "raw": 0
+      },
+      {
+       "label": "2",
+       "raw": 1
+      },
+      {
+       "label": "3",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "valve_travel_calibration",
+     "label": "Valve travel calibration",
+     "description": "Calibrates the valve travel range to ensure accurate opening and closing control.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24630,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Calibrate",
+       "raw": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "TRV-ZBL"
+   ],
+   "model": "TRV-ZBL",
+   "name": "SONOFF Zigbee thermostatic radiator valve",
+   "settings": [
+    {
+     "key": "screen_orientation",
+     "label": "Screen orientation",
+     "description": "Select the display orientation.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 33,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Standard",
+       "raw": 0
+      },
+      {
+       "label": "Flipped",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "open_window",
+     "label": "Open window",
+     "description": "Automatically turns off the radiator when local temperature drops by more than 1.5°C in 5 minutes.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24576,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "frost_protection_temperature",
+     "label": "Frost protection temperature",
+     "description": "Minimum temperature at which to automatically turn on the radiator to prevent freezing.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24578,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": 5,
+     "max": 15,
+     "step": 0.5,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "temperature_sensor_select",
+     "label": "Temperature sensor",
+     "description": "Select the temperature source used for control.local_temperature: Uses the built-in sensor.remote_temperature: Uses the external temperature sensor.remote_source_offline: The external sensor is offline, so the device automatically uses the built-in sensor. When the external sensor reconnects, the device reports 0x03 and switches back to the external temperature sensor.",
+     "group": "Controls",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Local temperature",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24606,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          8,
+          0,
+          1,
+          1,
+          0,
+          1,
+          3,
+          0,
+          208,
+          7
+         ],
+         "raw": true
+        }
+       ]
+      },
+      {
+       "label": "Remote temperature",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24606,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          8,
+          0,
+          1,
+          1,
+          0,
+          1,
+          3,
+          1,
+          208,
+          7
+         ],
+         "raw": true
+        }
+       ]
+      },
+      {
+       "label": "Remote source offline",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24606,
+         "type": 72,
+         "manufacturer": null,
+         "value": [
+          32,
+          8,
+          0,
+          1,
+          1,
+          0,
+          1,
+          3,
+          2,
+          208,
+          7
+         ],
+         "raw": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "key": "external_temperature_input",
+     "label": "External temperature",
+     "description": "The value of an external temperature sensor. Note: synchronisation of this value with the external temperature sensor needs to happen outside of Home Assistant.",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 0,
+     "max": 99.9,
+     "step": 0.1,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64529,
+        "attribute": 24606,
+        "type": 72,
+        "manufacturer": null,
+        "value": [
+         32,
+         8,
+         0,
+         1,
+         1,
+         0,
+         1,
+         3,
+         1,
+         0,
+         0
+        ],
+        "raw": true
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 9,
+       "width": 2,
+       "endian": "le",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "heating_valve_position",
+     "label": "Heating valve position",
+     "description": "Valve opening percentage during heating.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24587,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "idle_valve_position",
+     "label": "Idle valve position",
+     "description": "Valve opening percentage when not heating. Recommended: set the heating valve position higher than the idle valve position.",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24588,
+      "type": 32,
+      "manufacturer": null
+     },
+     "min": 0,
+     "max": 100,
+     "step": 1,
+     "unit": "%",
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "temperature_accuracy",
+     "label": "Temperature accuracy",
+     "description": "Temperature control accuracy. The range is -0.2 ~ -1°C, with an interval of 0.2, and the default is -1. If the temperature control accuracy is selected as -1°C (default value) and the target temperature is 26 degrees, then TRV-ZBL will close the valve when the room temperature reaches 26 degrees and open the valve at 25 degrees. If -0.4°C is chosen as the temperature control accuracy, then the valve will close when the room temperature reaches 26 degrees and open at 25.6 degrees. ",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24593,
+      "type": 41,
+      "manufacturer": null
+     },
+     "min": -1,
+     "max": -0.2,
+     "step": 0.2,
+     "unit": "°C",
+     "scale": 100,
+     "offset": 0
+    },
+    {
+     "key": "smart_temperature_control",
+     "label": "Smart temperature control",
+     "description": "Enable adaptive valve control using a PID algorithm. When enabled, \"Valve Opening Percentage\" and \"Temperature Accuracy\" are unavailable.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24595,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 1
+      },
+      {
+       "label": "On",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "temporary_mode_mode",
+     "label": "Temporary mode mode",
+     "description": "Temporary mode: Boost heats at 30°C; Timer uses a custom temperature and duration.",
+     "group": "Controls",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Disabled",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24596,
+         "type": 32,
+         "manufacturer": null,
+         "value": 255
+        }
+       ]
+      },
+      {
+       "label": "Timer",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24597,
+         "type": 35,
+         "manufacturer": null,
+         "value": 300
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24598,
+         "type": 41,
+         "manufacturer": null,
+         "value": 3000
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24596,
+         "type": 32,
+         "manufacturer": null,
+         "value": 1
+        }
+       ]
+      },
+      {
+       "label": "Boost",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24597,
+         "type": 35,
+         "manufacturer": null,
+         "value": 300
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24598,
+         "type": 41,
+         "manufacturer": null,
+         "value": 3000
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64529,
+         "attribute": 24596,
+         "type": 32,
+         "manufacturer": null,
+         "value": 0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "key": "low_battery_valve_state",
+     "label": "Low battery valve state",
+     "description": "Fixed valve opening percentage used when the battery is too low to operate.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24604,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Close",
+       "raw": 0
+      },
+      {
+       "label": "Open 30",
+       "raw": 30
+      }
+     ]
+    },
+    {
+     "key": "schedule_active_group",
+     "label": "Schedule active group",
+     "description": "The schedule group currently used in Auto mode.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24605,
+      "type": 32,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "1",
+       "raw": 0
+      },
+      {
+       "label": "2",
+       "raw": 1
+      },
+      {
+       "label": "3",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "valve_travel_calibration",
+     "label": "Valve travel calibration",
+     "description": "Calibrates the valve travel range to ensure accurate opening and closing control.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 24630,
+      "type": 16,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Calibrate",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "ZBMicro"
+   ],
+   "model": "ZBMicro",
+   "name": "SONOFF Zigbee USB repeater plug",
+   "settings": [
+    {
+     "key": "rf_turbo_mode",
+     "label": "Rf turbo mode",
+     "description": "Enable/disable Radio power turbo mode",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64529,
+      "attribute": 18,
+      "type": 41,
+      "manufacturer": 4742
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 9
+      },
+      {
+       "label": "On",
+       "raw": 20
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

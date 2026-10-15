@@ -170,46 +170,6 @@
      "offset": 0
     },
     {
-     "key": "on_off_duration",
-     "label": "On off duration",
-     "description": "Duration for light to gradually dim when turning off",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 19,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
-     "key": "off_on_duration",
-     "label": "Off on duration",
-     "description": "Duration for light to gradually brighten when turning on",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 18,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
      "key": "effect",
      "label": "Effect",
      "description": "RGB dynamic effect type",
@@ -278,6 +238,290 @@
    "model": "TH-S04D",
    "name": "Aqara Climate Sensor W100",
    "settings": [
+    {
+     "key": "sensor",
+     "label": "Sensor",
+     "description": "Select mode to display sensor: internal or both with external",
+     "group": "Configuration",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Internal",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          28,
+          68,
+          18,
+          115,
+          4,
+          65,
+          25,
+          101,
+          83,
+          241,
+          0,
+          21,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 14,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          28,
+          68,
+          19,
+          114,
+          4,
+          65,
+          25,
+          101,
+          83,
+          241,
+          0,
+          20,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 14,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "External",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          50,
+          68,
+          18,
+          93,
+          2,
+          65,
+          47,
+          101,
+          83,
+          241,
+          0,
+          21,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          21,
+          141,
+          0,
+          1,
+          157,
+          27,
+          152,
+          0,
+          2,
+          0,
+          85,
+          21,
+          10,
+          1,
+          0,
+          0,
+          1,
+          6,
+          230,
+          185,
+          191,
+          229,
+          186,
+          166,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          8,
+          101
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 14,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          50,
+          68,
+          19,
+          92,
+          2,
+          65,
+          47,
+          101,
+          83,
+          241,
+          0,
+          20,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          21,
+          141,
+          0,
+          1,
+          157,
+          27,
+          152,
+          0,
+          1,
+          0,
+          85,
+          21,
+          10,
+          1,
+          0,
+          0,
+          1,
+          6,
+          230,
+          184,
+          169,
+          229,
+          186,
+          166,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          7,
+          99
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 14,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
     {
      "key": "auto_hide_middle_line",
      "label": "Auto hide middle line",
@@ -2153,46 +2397,6 @@
      "offset": 0
     },
     {
-     "key": "off_on_duration",
-     "label": "Off on duration",
-     "description": "Duration for light to gradually brighten when turning on",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 18,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
-     "key": "on_off_duration",
-     "label": "On off duration",
-     "description": "Duration for light to gradually dim when turning off",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 19,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
      "key": "transition_curve_curvature",
      "label": "Transition curve curvature",
      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast)",
@@ -2317,46 +2521,6 @@
      "offset": 0
     },
     {
-     "key": "off_on_duration",
-     "label": "Off on duration",
-     "description": "Duration for light to gradually brighten when turning on",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 18,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
-     "key": "on_off_duration",
-     "label": "On off duration",
-     "description": "Duration for light to gradually dim when turning off",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 19,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
      "key": "transition_curve_curvature",
      "label": "Transition curve curvature",
      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast)",
@@ -2459,26 +2623,6 @@
    "name": "Aqara Floor heating thermostat W500",
    "settings": [
     {
-     "key": "local_temperature_calibration",
-     "label": "Local temperature calibration",
-     "description": "Offset to add/subtract to the local temperature",
-     "group": "Controls",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 513,
-      "attribute": 16,
-      "type": 40,
-      "manufacturer": null
-     },
-     "min": -2.5,
-     "max": 2.5,
-     "step": 0.1,
-     "unit": "°C",
-     "scale": 10,
-     "offset": 0
-    },
-    {
      "key": "temperature_setpoint_hold",
      "label": "Temperature setpoint hold",
      "description": "Prevent changes. `false` = run normally. `true` = prevent from making changes.",
@@ -2520,46 +2664,6 @@
      "step": 1,
      "unit": null,
      "scale": 1,
-     "offset": 0
-    },
-    {
-     "key": "max_heat_setpoint_limit",
-     "label": "Max heat setpoint limit",
-     "description": "Maximum Heating set point limit",
-     "group": "Controls",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 513,
-      "attribute": 22,
-      "type": 41,
-      "manufacturer": null
-     },
-     "min": 5,
-     "max": 30,
-     "step": 0.5,
-     "unit": "°C",
-     "scale": 100,
-     "offset": 0
-    },
-    {
-     "key": "min_heat_setpoint_limit",
-     "label": "Min heat setpoint limit",
-     "description": "Minimum Heating set point limit",
-     "group": "Controls",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 513,
-      "attribute": 21,
-      "type": 41,
-      "manufacturer": null
-     },
-     "min": 5,
-     "max": 30,
-     "step": 0.5,
-     "unit": "°C",
-     "scale": 100,
      "offset": 0
     },
     {
@@ -2793,7 +2897,7 @@
       "manufacturer": 4447
      },
      "min": 2,
-     "max": 65535,
+     "max": 255,
      "step": 1,
      "unit": "s",
      "scale": 1,
@@ -2874,46 +2978,6 @@
      "step": 1,
      "unit": "%",
      "scale": 1,
-     "offset": 0
-    },
-    {
-     "key": "on_off_duration",
-     "label": "On off duration",
-     "description": "Duration for light to gradually dim when turning off",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 19,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
-     "key": "off_on_duration",
-     "label": "Off on duration",
-     "description": "Duration for light to gradually brighten when turning on",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 18,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
      "offset": 0
     },
     {
@@ -4224,7 +4288,7 @@
       "manufacturer": 4447
      },
      "min": 2,
-     "max": 65535,
+     "max": 255,
      "step": 1,
      "unit": "s",
      "scale": 1,
@@ -4281,7 +4345,7 @@
       "manufacturer": 4447
      },
      "min": 2,
-     "max": 65535,
+     "max": 255,
      "step": 1,
      "unit": "s",
      "scale": 1,
@@ -4334,7 +4398,7 @@
       "manufacturer": 4447
      },
      "min": 2,
-     "max": 65535,
+     "max": 255,
      "step": 1,
      "unit": "s",
      "scale": 1,
@@ -5588,6 +5652,45 @@
      ]
     },
     {
+     "key": "detection_range",
+     "label": "Detection range",
+     "description": "Specifies the range that is being detected. Requires mmWave radar mode. Press the on-device button to wake the device up and refresh its' settings.",
+     "group": "Controls",
+     "control": "number",
+     "target": null,
+     "min": 0,
+     "max": 16777215,
+     "step": 1,
+     "unit": null,
+     "scale": 1,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64704,
+        "attribute": 410,
+        "type": 65,
+        "manufacturer": 4447,
+        "value": [
+         0,
+         3,
+         0,
+         0,
+         0
+        ]
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 2,
+       "width": 3,
+       "endian": "le",
+       "signed": false
+      }
+     }
+    },
+    {
      "key": "led_disabled_night",
      "label": "LED indicator at night",
      "description": "Turn off to keep the indicator LED dark during night hours.",
@@ -6120,92 +6223,11 @@
   },
   {
    "models": [
-    "lumi.light.acn006"
-   ],
-   "model": "H1-EU",
-   "name": "Aqara Pro track light",
-   "settings": [
-    {
-     "key": "color_temp_startup",
-     "label": "Color temp startup",
-     "description": "Color temperature after cold power on of this light",
-     "group": "Controls",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 768,
-      "attribute": 16400,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 166,
-     "max": 370,
-     "step": 1,
-     "unit": "mired",
-     "scale": 1,
-     "offset": 0
-    },
-    {
-     "key": "power_on_behavior",
-     "label": "Power-on behaviour",
-     "description": "What the relay does when power returns after an outage.",
-     "group": "Configuration",
-     "control": "select",
-     "target": {
-      "endpoint": 1,
-      "cluster": 6,
-      "attribute": 16387,
-      "type": 48,
-      "manufacturer": null
-     },
-     "options": [
-      {
-       "label": "Off",
-       "raw": 0
-      },
-      {
-       "label": "On",
-       "raw": 1
-      },
-      {
-       "label": "Toggle",
-       "raw": 2
-      },
-      {
-       "label": "Previous",
-       "raw": 255
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "models": [
     "lumi.airrtc.aeu005"
    ],
    "model": "WT-A03E",
    "name": "Aqara Radiator thermostat W600",
    "settings": [
-    {
-     "key": "local_temperature_calibration",
-     "label": "Local temperature calibration",
-     "description": "Offset to add/subtract to the local temperature",
-     "group": "Controls",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 513,
-      "attribute": 16,
-      "type": 40,
-      "manufacturer": null
-     },
-     "min": -5,
-     "max": 5,
-     "step": 0.1,
-     "unit": "°C",
-     "scale": 10,
-     "offset": 0
-    },
     {
      "key": "temperature_setpoint_hold_duration",
      "label": "Manual Override Duration",
@@ -6225,6 +6247,306 @@
      "unit": "min",
      "scale": 1,
      "offset": 0
+    },
+    {
+     "key": "sensor",
+     "label": "Temperature source",
+     "description": "Choose whether the thermostat uses its internal sensor or data provided via 'External Sensor Temperature'",
+     "group": "Configuration",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Internal",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 640,
+         "type": 32,
+         "manufacturer": 4447,
+         "value": 0
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          28,
+          68,
+          18,
+          115,
+          4,
+          65,
+          25,
+          101,
+          83,
+          241,
+          0,
+          20,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 14,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          28,
+          68,
+          19,
+          114,
+          4,
+          65,
+          25,
+          101,
+          83,
+          241,
+          0,
+          23,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 14,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "External",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          50,
+          68,
+          18,
+          93,
+          2,
+          65,
+          47,
+          101,
+          83,
+          241,
+          0,
+          20,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          21,
+          141,
+          0,
+          1,
+          157,
+          27,
+          152,
+          0,
+          1,
+          0,
+          85,
+          21,
+          10,
+          1,
+          0,
+          0,
+          1,
+          6,
+          230,
+          184,
+          169,
+          229,
+          186,
+          166,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          7,
+          101
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 14,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          50,
+          68,
+          19,
+          92,
+          2,
+          65,
+          47,
+          101,
+          83,
+          241,
+          0,
+          23,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          21,
+          141,
+          0,
+          1,
+          157,
+          27,
+          152,
+          8,
+          0,
+          7,
+          253,
+          21,
+          10,
+          1,
+          9,
+          232,
+          174,
+          190,
+          229,
+          164,
+          135,
+          229,
+          156,
+          168,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          3,
+          101
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 14,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 640,
+         "type": 32,
+         "manufacturer": 4447,
+         "value": 1
+        }
+       ]
+      }
+     ]
     },
     {
      "key": "calibrate",
@@ -6685,26 +7007,6 @@
    "name": "Aqara Smart bathroom heater T1",
    "settings": [
     {
-     "key": "color_temp_startup",
-     "label": "Color temp startup",
-     "description": "Color temperature after cold power on of this light",
-     "group": "Controls",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 768,
-      "attribute": 16400,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 153,
-     "max": 370,
-     "step": 1,
-     "unit": "mired",
-     "scale": 1,
-     "offset": 0
-    },
-    {
      "key": "mute_prompt_tone",
      "label": "Mute prompt tone",
      "description": "Mute device operation prompt tones",
@@ -6782,47 +7084,6 @@
       {
        "label": "On",
        "raw": 1
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "models": [
-    "lumi.light.cbacn1"
-   ],
-   "model": "HLQDQ01LM",
-   "name": "Aqara Smart LED controller",
-   "settings": [
-    {
-     "key": "power_on_behavior",
-     "label": "Power-on behaviour",
-     "description": "What the relay does when power returns after an outage.",
-     "group": "Configuration",
-     "control": "select",
-     "target": {
-      "endpoint": 1,
-      "cluster": 6,
-      "attribute": 16387,
-      "type": 48,
-      "manufacturer": null
-     },
-     "options": [
-      {
-       "label": "Off",
-       "raw": 0
-      },
-      {
-       "label": "On",
-       "raw": 1
-      },
-      {
-       "label": "Toggle",
-       "raw": 2
-      },
-      {
-       "label": "Previous",
-       "raw": 255
       }
      ]
     }
@@ -7220,6 +7481,98 @@
        ]
       }
      ]
+    },
+    {
+     "key": "serving_size",
+     "label": "Serving size",
+     "description": "One serving size",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 1,
+     "max": 10,
+     "step": 1,
+     "unit": "portion",
+     "scale": 1,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64704,
+        "attribute": 65521,
+        "type": 65,
+        "manufacturer": 4447,
+        "value": [
+         0,
+         2,
+         1,
+         14,
+         92,
+         0,
+         85,
+         4,
+         0,
+         0,
+         0,
+         1
+        ]
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 11,
+       "width": 1,
+       "endian": "le",
+       "signed": false
+      }
+     }
+    },
+    {
+     "key": "portion_weight",
+     "label": "Portion weight",
+     "description": "Portion weight",
+     "group": "Configuration",
+     "control": "number",
+     "target": null,
+     "min": 1,
+     "max": 20,
+     "step": 1,
+     "unit": "g",
+     "scale": 1,
+     "offset": 0,
+     "template": {
+      "writes": [
+       {
+        "endpoint": 1,
+        "cluster": 64704,
+        "attribute": 65521,
+        "type": 65,
+        "manufacturer": 4447,
+        "value": [
+         0,
+         2,
+         1,
+         14,
+         95,
+         0,
+         85,
+         4,
+         0,
+         0,
+         0,
+         1
+        ]
+       }
+      ],
+      "patch": {
+       "write": 0,
+       "byte": 11,
+       "width": 1,
+       "endian": "le",
+       "signed": false
+      }
+     }
     }
    ]
   },
@@ -7795,6 +8148,293 @@
      ]
     },
     {
+     "key": "sensor",
+     "label": "Sensor",
+     "description": "Select temperature sensor to use",
+     "group": "Configuration",
+     "control": "select",
+     "target": null,
+     "options": [
+      {
+       "label": "Internal",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          29,
+          68,
+          18,
+          114,
+          4,
+          65,
+          26,
+          101,
+          83,
+          241,
+          0,
+          61,
+          5,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 15,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          29,
+          68,
+          19,
+          113,
+          4,
+          65,
+          26,
+          101,
+          83,
+          241,
+          0,
+          61,
+          4,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 15,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "label": "External",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          49,
+          68,
+          18,
+          94,
+          2,
+          65,
+          46,
+          101,
+          83,
+          241,
+          0,
+          61,
+          4,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          21,
+          141,
+          0,
+          1,
+          157,
+          27,
+          152,
+          0,
+          1,
+          0,
+          85,
+          19,
+          10,
+          2,
+          0,
+          0,
+          100,
+          4,
+          206,
+          194,
+          182,
+          200,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          61,
+          100,
+          101
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 15,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        },
+        {
+         "endpoint": 1,
+         "cluster": 64704,
+         "attribute": 65522,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          113,
+          52,
+          68,
+          19,
+          90,
+          2,
+          65,
+          49,
+          101,
+          83,
+          241,
+          0,
+          61,
+          5,
+          0,
+          21,
+          141,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          21,
+          141,
+          0,
+          1,
+          157,
+          27,
+          152,
+          8,
+          0,
+          7,
+          253,
+          22,
+          10,
+          2,
+          10,
+          201,
+          232,
+          177,
+          184,
+          212,
+          218,
+          207,
+          223,
+          192,
+          235,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          61,
+          4,
+          101
+         ],
+         "dynamic": [
+          {
+           "kind": "ieee",
+           "byte": 15,
+           "endian": "be"
+          },
+          {
+           "kind": "timestamp",
+           "byte": 9,
+           "endian": "be"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
      "key": "calibrate",
      "label": "Calibrate",
      "description": "Calibrates the valve",
@@ -7899,7 +8539,7 @@
       "type": 35,
       "manufacturer": 4447
      },
-     "min": -10,
+     "min": 0,
      "max": 35,
      "step": 1,
      "unit": "°C",
@@ -7927,67 +8567,6 @@
       {
        "label": "On",
        "raw": 1
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "models": [
-    "lumi.light.rgbac1"
-   ],
-   "model": "ZNTGMK11LM",
-   "name": "Aqara Smart RGBW light controller",
-   "settings": [
-    {
-     "key": "color_temp_startup",
-     "label": "Color temp startup",
-     "description": "Color temperature after cold power on of this light",
-     "group": "Controls",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 768,
-      "attribute": 16400,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 150,
-     "max": 500,
-     "step": 1,
-     "unit": "mired",
-     "scale": 1,
-     "offset": 0
-    },
-    {
-     "key": "power_on_behavior",
-     "label": "Power-on behaviour",
-     "description": "What the relay does when power returns after an outage.",
-     "group": "Configuration",
-     "control": "select",
-     "target": {
-      "endpoint": 1,
-      "cluster": 6,
-      "attribute": 16387,
-      "type": 48,
-      "manufacturer": null
-     },
-     "options": [
-      {
-       "label": "Off",
-       "raw": 0
-      },
-      {
-       "label": "On",
-       "raw": 1
-      },
-      {
-       "label": "Toggle",
-       "raw": 2
-      },
-      {
-       "label": "Previous",
-       "raw": 255
       }
      ]
     }
@@ -17360,46 +17939,6 @@
      "offset": 0
     },
     {
-     "key": "off_on_duration",
-     "label": "Off on duration",
-     "description": "Duration for light to gradually brighten when turning on",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 18,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
-     "key": "on_off_duration",
-     "label": "On off duration",
-     "description": "Duration for light to gradually dim when turning off",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 19,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
      "key": "transition_curve_curvature",
      "label": "Transition curve curvature",
      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast)",
@@ -17494,46 +18033,6 @@
      "step": 1,
      "unit": "%",
      "scale": 1,
-     "offset": 0
-    },
-    {
-     "key": "off_on_duration",
-     "label": "Off on duration",
-     "description": "Duration for light to gradually brighten when turning on",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 18,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
-     "key": "on_off_duration",
-     "label": "On off duration",
-     "description": "Duration for light to gradually dim when turning off",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 19,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
      "offset": 0
     },
     {
@@ -17634,46 +18133,6 @@
      "offset": 0
     },
     {
-     "key": "off_on_duration",
-     "label": "Off on duration",
-     "description": "Duration for light to gradually brighten when turning on",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 18,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
-     "key": "on_off_duration",
-     "label": "On off duration",
-     "description": "Duration for light to gradually dim when turning off",
-     "group": "Configuration",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 8,
-      "attribute": 19,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 0,
-     "max": 10,
-     "step": 0.5,
-     "unit": "s",
-     "scale": 10,
-     "offset": 0
-    },
-    {
      "key": "transition_curve_curvature",
      "label": "Transition curve curvature",
      "description": "Transition curve shape: 0.2-1 (fast to slow), 1 (uniform), 1-6 (slow to fast)",
@@ -17692,67 +18151,6 @@
      "unit": null,
      "scale": 1,
      "offset": 0
-    }
-   ]
-  },
-  {
-   "models": [
-    "lumi.light.acn037"
-   ],
-   "model": "GDSD12LM",
-   "name": "Aqara Track light V1",
-   "settings": [
-    {
-     "key": "color_temp_startup",
-     "label": "Color temp startup",
-     "description": "Color temperature after cold power on of this light",
-     "group": "Controls",
-     "control": "number",
-     "target": {
-      "endpoint": 1,
-      "cluster": 768,
-      "attribute": 16400,
-      "type": 33,
-      "manufacturer": null
-     },
-     "min": 166,
-     "max": 370,
-     "step": 1,
-     "unit": "mired",
-     "scale": 1,
-     "offset": 0
-    },
-    {
-     "key": "power_on_behavior",
-     "label": "Power-on behaviour",
-     "description": "What the relay does when power returns after an outage.",
-     "group": "Configuration",
-     "control": "select",
-     "target": {
-      "endpoint": 1,
-      "cluster": 6,
-      "attribute": 16387,
-      "type": 48,
-      "manufacturer": null
-     },
-     "options": [
-      {
-       "label": "Off",
-       "raw": 0
-      },
-      {
-       "label": "On",
-       "raw": 1
-      },
-      {
-       "label": "Toggle",
-       "raw": 2
-      },
-      {
-       "label": "Previous",
-       "raw": 255
-      }
-     ]
     }
    ]
   },

@@ -53,22 +53,36 @@ def test_z1_pro_has_anti_flicker():
     assert [o["raw"] for o in s["options"]] == [1, 4]
 
 
-def test_all_definitions_well_formed():
-    assert len(INDEX) > 100
+def _check_write(w, where):
+    assert {"endpoint", "cluster", "attribute", "type", "value"} <= w.keys(), where
+    if w.get("raw"):
+        assert isinstance(w["value"], list) and all(0 <= b <= 255 for b in w["value"]), where
+    else:
+        assert w["type"] in zigbee.DATA_TYPES, where
+        zigbee._coerce(w["type"], w["value"])  # must be encodable
+
+
+def test_all_definitions_well_formed_and_encodable():
+    """Every option and both ends of every number range must produce encodable writes."""
+    assert len(INDEX) > 200
     for model, dev in INDEX.items():
         keys = [s["key"] for s in dev["settings"]]
         assert len(keys) == len(set(keys)), model
         for s in dev["settings"]:
-            assert s["control"] in ("select", "toggle", "number"), (model, s["key"])
+            where = (model, s["key"])
+            assert s["control"] in ("select", "toggle", "number"), where
             if s["control"] == "number":
-                assert s["target"], (model, s["key"])
+                assert s["target"] or s.get("template"), where
+                ends = [v for v in (s.get("min"), s.get("max")) if v is not None] or [0]
+                for v in ends:
+                    for w in defs_mod.apply_dynamic(defs_mod.writes_for(s, v), IEEE, 1_760_000_000):
+                        _check_write(w, where)
             else:
-                for o in s["options"]:
-                    assert ("raw" in o) == bool(s["target"]), (model, s["key"])
-                    for w in o.get("writes", []):
-                        assert w["type"] in zigbee.DATA_TYPES, (model, s["key"], w["type"])
-            if s["target"]:
-                assert s["target"]["type"] in zigbee.DATA_TYPES, (model, s["key"])
+                for i, o in enumerate(s["options"]):
+                    assert ("raw" in o) == bool(s["target"]), where
+                    for w in defs_mod.apply_dynamic(defs_mod.writes_for(s, i), IEEE, 1_760_000_000):
+                        _check_write(w, where)
+                        assert "dynamic" not in w, where
 
 
 def test_raw_ui_roundtrip_select():
@@ -216,3 +230,47 @@ def test_led_at_night_is_positive_toggle():
     assert [o["label"] for o in s["options"]] == ["Off", "On"]
     assert defs_mod.writes_for(s, 1)[0]["value"] == 0
     assert defs_mod.raw_to_ui(s, 1)["value"] == 0  # device says disabled -> toggle shows Off
+
+
+def test_number_patched_into_payload_matches_z2m_encoding():
+    # SWV water valve: duration is stored twice as uint16 BE at bytes 4..7.
+    s = _setting("SWV" and next(m for m, d in INDEX.items() if d["model"] == "SWV-ZF2"), "irrigation_duration")
+    w = defs_mod.writes_for(s, 10)[0]
+    assert w["value"][4:8] == [0, 10, 0, 10]
+    with __import__("pytest").raises(ValueError):
+        defs_mod.writes_for(s, 10_000)  # above max
+
+
+def test_dynamic_ieee_and_timestamp_filled():
+    model = next(m for m, d in INDEX.items() if d["model"] == "TH-S04D")
+    s = _setting(model, "sensor")
+    ext = next(i for i, o in enumerate(s["options"]) if o["label"] == "External")
+    writes = defs_mod.apply_dynamic(defs_mod.writes_for(s, ext), "54:ef:44:10:00:aa:bb:01", 0x01020304)
+    w = writes[0]
+    assert w["value"][9:13] == [1, 2, 3, 4]  # timestamp, big endian
+    assert w["value"][14:22] == [0x54, 0xEF, 0x44, 0x10, 0x00, 0xAA, 0xBB, 0x01]
+    # the stored definition is not mutated
+    assert defs_mod.writes_for(s, ext)[0]["value"][9:13] != [1, 2, 3, 4]
+
+
+def test_raw_composite_write_serializes_verbatim():
+    device = make_device()
+    captured = []
+
+    async def fake_write(self, attrs, manufacturer=None, **kw):
+        captured.append(attrs[0])
+        return foundation.WriteAttributesResponse.deserialize(b"\x00")[0]
+
+    from zigpy.zcl import Cluster
+
+    with patch.object(zigbee, "get_zigpy_device", return_value=device), patch.object(Cluster, "_write_attributes", fake_write):
+        run(zigbee.write_attribute(None, IEEE, 1, 0xFC11, 0x501D, 0x48, [0x20, 2, 0, 7, 9], None, raw=True))
+    assert captured[0].serialize().hex() == "1d50" + "48" + "2002000709"
+
+
+def test_philips_and_ikea_only_keep_settings_zha_lacks():
+    hue_motion = next(d for d in INDEX.values() if d["model"] == "9290012607")
+    keys = {s["key"] for s in hue_motion["settings"]}
+    assert "led_indication" in keys
+    assert not any(s["target"] and (s["target"]["cluster"], s["target"]["attribute"]) == (6, 0x4003)
+                   for d in INDEX.values() for s in d["settings"])  # start-up on/off is a ZHA entity

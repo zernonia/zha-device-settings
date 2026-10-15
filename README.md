@@ -4,23 +4,26 @@ A Zigbee2MQTT-style settings page for **ZHA** in Home Assistant.
 
 ZHA can already talk to almost any Zigbee setting, but only through raw cluster IDs in *Manage Zigbee device*, and its write service silently drops attributes that the cluster class doesn't know about (common with manufacturer clusters). This integration adds a **Zigbee Settings** sidebar page with:
 
-- **Friendly settings for every Aqara / Xiaomi (Lumi) device Zigbee2MQTT supports**: dropdowns, toggles and number fields, with live values read from the device.
+- **Friendly settings ZHA doesn't offer** for Aqara/Xiaomi, Sonoff, Philips Hue and IKEA devices: dropdowns, toggles and number fields, with live values read from the device.
 - **Raw attributes tab** for any device: read/write any attribute with an explicit data type and manufacturer code.
 - Writes go straight through zigpy as typed ZCL frames, then read back so the UI shows what the device actually holds.
 
 ## Supported devices
 
-**141 Aqara / Xiaomi device types, 649 settings**, generated from [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) (Zigbee2MQTT's device library). That includes wall switches (H1, Z1, Z1 Pro, D1, E1, T1 …), relays, plugs, sensors (motion, presence FP1/FP1E, vibration, smoke, gas), curtain motors, dimmers, thermostats and more. Examples:
+**184 device types, 847 settings**, generated from [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) (Zigbee2MQTT's device library). Settings ZHA already exposes as entities (start-up behaviour, transition times, thermostat calibration and limits, occupancy delays …) are left out, so everything here is something ZHA is missing.
 
-| Device | zigpy model | Settings |
-|---|---|---|
-| Smart wall switch Z1 (1–4 rocker) | `lumi.switch.acn048`, `acn049`, `acn054`, `acn055` | Decoupled mode per rocker, lock relay, click mode, power-on behaviour, LED off at night |
-| Smart wall switch Z1 Pro (1–4 rocker) | `lumi.switch.acn056`–`acn059` | Same as Z1 plus anti-flicker / quick mode |
-| Smart plug EU | `lumi.plug.maeu01` | Power outage memory, LED off at night, overload protection (W), auto-off, button lock |
+| Brand | Device types | Settings | Highlights |
+|---|---|---|---|
+| Aqara / Xiaomi | 137 | 629 | Wall switches (H1, Z1, Z1 Pro, D1, E1, T1 …) decoupled mode, click mode, LED at night; plugs; FP1/FP1E presence; curtain motors; thermostats incl. external sensor switching |
+| Sonoff | 37 | 199 | TRVZB/TRV-ZBT valve opening, frost protection, external temperature; SWV water valve duration, amount, fail-safe; SNZB presence and sensors |
+| Philips Hue | 6 | 10 | Motion sensor LED and sensitivity, wall switch module device mode |
+| IKEA | 4 | 9 | INSPELNING / TRETAKT plug child lock and LED, STARKVIND purifier, VALLHORN motion timer |
 
-The device list in the panel shows which of your devices are covered. Settings Zigbee2MQTT can't express as plain attribute writes (schedules, text fields, external-sensor linking, values that need prior device state) aren't included; `tools/lumi.skipped.json` lists them with the reason.
+**Innr** is covered too, in the sense that every setting Zigbee2MQTT offers for it is already a ZHA entity. Philips and IKEA lights likewise have nothing extra; their remaining Zigbee2MQTT options are light *controls* (Hue effects and gradients, identify), not settings.
 
-A few settings are **write-only** — Aqara expects them as fixed proprietary frames and doesn't report them back. The panel marks these and remembers the last value set from it.
+Not included: schedules and other text/list values, actions (factory reset, clear history, pairing), and settings whose converter needs a read-modify-write of current device state. `tools/<vendor>.skipped.json` lists every skipped option with the reason.
+
+Some settings are **write-only**: the device expects a proprietary frame and doesn't report the value back. The panel marks these and shows the last value set from it.
 
 ## Install
 
@@ -37,13 +40,18 @@ Then **Settings → Devices & services → Add integration → ZHA Device Settin
 
 ## How definitions are generated
 
-`tools/generate.js` doesn't re-implement Zigbee2MQTT's converters, it **runs** them: every settable option is fed each possible value through its converter against a mock device that records the resulting ZCL writes (endpoint, cluster, attribute, data type, manufacturer code, value). Each value is captured twice with different device addresses, and anything whose payload changes between runs (embedded addresses, sequence counters) is dropped, since it couldn't be safely replayed.
+`tools/generate.js` doesn't re-implement Zigbee2MQTT's converters, it **runs** them: every settable option is fed each possible value through its converter against a mock device that records the resulting ZCL writes (endpoint, cluster, attribute, data type, manufacturer code, value). On top of plain attribute writes it handles:
+
+- **Composite types**: ZCL arrays and structs are pre-serialized and sent verbatim.
+- **Numbers inside payloads**: captures at several values locate the changing bytes and fit a linear encoding, so the integration can patch any value into the frame.
+- **Device-specific bytes**: each capture runs with a different device address *and* a different frozen clock and random source. Payloads that differ only by the device's IEEE address or the current Unix time get those slots filled at write time; anything else that varies (counters, randomness) is dropped as unsafe to replay.
+- **ZHA overlap**: `tools/zha_builtin_attributes.json` (from `export_zha_builtins.py`, which introspects ZHA's entity classes) lists attributes ZHA already exposes; matching settings are skipped.
 
 ```sh
-cd tools && npm install && node generate.js lumi   # writes custom_components/.../definitions/lumi.json
+cd tools && npm install && node generate.js   # writes custom_components/.../definitions/<vendor>.json
 ```
 
-The *Regenerate definitions* workflow does this monthly against the latest converter release and opens a PR when anything changes. Other vendors can be generated the same way (`node generate.js ikea tuya …`, file names from `zigbee-herdsman-converters/dist/devices/`), though Tuya devices mostly use command-based data points, which aren't supported yet.
+The *Regenerate definitions* workflow does this monthly against the latest converter and ZHA releases and opens a PR when anything changes. To add a vendor, append its file name (from `zigbee-herdsman-converters/dist/devices/`) to `VENDORS` in `generate.js`. Tuya isn't supported yet: its devices are matched by manufacturer fingerprint and configured through data-point commands rather than attributes.
 
 ## Adding your own definitions
 

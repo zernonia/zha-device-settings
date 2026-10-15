@@ -1,0 +1,401 @@
+{
+ "AE 262": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "AE 282 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RCL 231 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RCL 232 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RCL 240 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RCL 241 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RCL 242 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "FL 140 C": [
+  "color_temp_startup: already a ZHA entity"
+ ],
+ "FL 130 C": [
+  "color_temp_startup: already a ZHA entity"
+ ],
+ "FL 120 C": [
+  "color_temp_startup: already a ZHA entity"
+ ],
+ "RB 282 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BF 263": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OLS 210": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OGL 130 C": [
+  "color_temp_startup: already a ZHA entity"
+ ],
+ "OPL 130 C": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 185 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BY 185 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 250 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 251 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 252 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 256 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 262": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BB 262": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 265": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BY 266": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 266": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 267": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RF 262": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RF 265": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BF 265": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 272 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 278 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 279 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 285 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 286 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 287 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BB 287 C-2": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BB 287 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BY 285 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BB 282 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BY 286 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 165": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 162": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 172 W": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 175 W": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 178 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BY 178 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 122": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 125": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 225": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 226": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 227 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 128 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 228 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 229 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 230 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 232 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 240": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 241 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RS 242 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 145": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 245": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 243": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 246 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 247 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 248 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 249 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RB 148 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RF 261": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RF 263": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RF 264": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BY 165": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RCL 110": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RSL 110": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RSL 115": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "PL 110": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "PL 115": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "ST 110": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "UC 110": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "DL 110 N": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "DL 110 W": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SL 110 N": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SL 110 M": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SL 110 W": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "AE 260": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "AE 270 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "AE 270 T-2": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "AE 280 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "AE 287 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SP 110": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SP 220": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SP 222": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SP 224": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SP 234": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OSP 210": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OSP 240": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "FL 230 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "FL 250 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OFL 120 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OFL 140 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OFL 142 C": [
+  "color_temp_startup: already a ZHA entity"
+ ],
+ "RB 255 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OFL 122 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "FL 122 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OSL 130 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OSL 132 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OSL 140 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "OSL 232 C": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "BE 220": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "SP 240": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "AE 264": [
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RF 271 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RF 273 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "RF 274 T": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ]
+}

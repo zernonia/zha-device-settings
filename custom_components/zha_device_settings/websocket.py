@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import time
 from collections import defaultdict
 from typing import Any
 
@@ -15,6 +16,7 @@ from homeassistant.helpers import area_registry as ar, device_registry as dr
 from . import zigbee
 from .const import DOMAIN
 from .definitions import (
+    apply_dynamic,
     find_setting,
     load_definitions,
     match_definition,
@@ -159,14 +161,22 @@ async def ws_write_setting(hass: HomeAssistant, connection, msg: dict[str, Any])
         if setting is None:
             raise HomeAssistantError(f"Unknown setting {msg['setting_id']}")
         try:
-            writes = writes_for(setting, msg["value"])
-        except (ValueError, TypeError) as err:
+            writes = apply_dynamic(writes_for(setting, msg["value"]), ieee, time.time())
+        except (ValueError, TypeError, OverflowError) as err:
             raise HomeAssistantError(str(err)) from err
 
         status = "SUCCESS"
         for w in writes:
             status = await zigbee.write_attribute(
-                hass, ieee, w["endpoint"], w["cluster"], w["attribute"], w["type"], w["value"], w.get("manufacturer")
+                hass,
+                ieee,
+                w["endpoint"],
+                w["cluster"],
+                w["attribute"],
+                w["type"],
+                w["value"],
+                w.get("manufacturer"),
+                raw=bool(w.get("raw")),
             )
             if status != "SUCCESS":
                 break

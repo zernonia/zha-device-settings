@@ -1,0 +1,351 @@
+{
+ "id": "philips",
+ "name": "philips (generated from zigbee-herdsman-converters 26.119.0)",
+ "generated": true,
+ "devices": [
+  {
+   "models": [
+    "SML002"
+   ],
+   "model": "9290019758",
+   "name": "Philips Hue motion outdoor sensor",
+   "settings": [
+    {
+     "key": "motion_sensitivity",
+     "label": "Motion sensitivity",
+     "description": "",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 48,
+      "type": 32,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Low",
+       "raw": 0
+      },
+      {
+       "label": "Medium",
+       "raw": 1
+      },
+      {
+       "label": "High",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "led_indication",
+     "label": "LED indication",
+     "description": "Blink green LED on motion detection",
+     "group": "Controls",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 0,
+      "attribute": 51,
+      "type": 16,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "SML004"
+   ],
+   "model": "9290030674",
+   "name": "Philips Hue motion outdoor sensor",
+   "settings": [
+    {
+     "key": "motion_sensitivity",
+     "label": "Motion sensitivity",
+     "description": "",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 48,
+      "type": 32,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Low",
+       "raw": 0
+      },
+      {
+       "label": "Medium",
+       "raw": 1
+      },
+      {
+       "label": "High",
+       "raw": 2
+      },
+      {
+       "label": "Very high",
+       "raw": 3
+      },
+      {
+       "label": "Max",
+       "raw": 4
+      }
+     ]
+    },
+    {
+     "key": "led_indication",
+     "label": "LED indication",
+     "description": "Blink green LED on motion detection",
+     "group": "Controls",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 0,
+      "attribute": 51,
+      "type": 16,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "SML001"
+   ],
+   "model": "9290012607",
+   "name": "Philips Hue motion sensor",
+   "settings": [
+    {
+     "key": "motion_sensitivity",
+     "label": "Motion sensitivity",
+     "description": "Select motion sensitivity to use",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 48,
+      "type": 32,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Low",
+       "raw": 0
+      },
+      {
+       "label": "Medium",
+       "raw": 1
+      },
+      {
+       "label": "High",
+       "raw": 2
+      }
+     ]
+    },
+    {
+     "key": "led_indication",
+     "label": "LED indication",
+     "description": "Blink green LED on motion detection",
+     "group": "Controls",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 0,
+      "attribute": 51,
+      "type": 16,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "SML003"
+   ],
+   "model": "9290030675",
+   "name": "Philips Hue motion sensor",
+   "settings": [
+    {
+     "key": "motion_sensitivity",
+     "label": "Motion sensitivity",
+     "description": "",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 1030,
+      "attribute": 48,
+      "type": 32,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Low",
+       "raw": 0
+      },
+      {
+       "label": "Medium",
+       "raw": 1
+      },
+      {
+       "label": "High",
+       "raw": 2
+      },
+      {
+       "label": "Very high",
+       "raw": 3
+      },
+      {
+       "label": "Max",
+       "raw": 4
+      }
+     ]
+    },
+    {
+     "key": "led_indication",
+     "label": "LED indication",
+     "description": "Blink green LED on motion detection",
+     "group": "Controls",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 0,
+      "attribute": 51,
+      "type": 16,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "RDM001",
+    "9290030171",
+    "RDM004"
+   ],
+   "model": "929003017102",
+   "name": "Philips Hue wall switch module",
+   "settings": [
+    {
+     "key": "device_mode",
+     "label": "Device mode",
+     "description": "",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 0,
+      "attribute": 52,
+      "type": 48,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Single rocker",
+       "raw": 0
+      },
+      {
+       "label": "Single push button",
+       "raw": 1
+      },
+      {
+       "label": "Dual rocker",
+       "raw": 2
+      },
+      {
+       "label": "Dual push button",
+       "raw": 3
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "ROM002"
+   ],
+   "model": "9290042970A",
+   "name": "Philips Hue wired wall switch module",
+   "settings": [
+    {
+     "key": "device_mode",
+     "label": "Device mode",
+     "description": "",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 0,
+      "attribute": 52,
+      "type": 48,
+      "manufacturer": 4107
+     },
+     "options": [
+      {
+       "label": "Single rocker",
+       "raw": 0
+      },
+      {
+       "label": "Single push button",
+       "raw": 1
+      },
+      {
+       "label": "Dual rocker",
+       "raw": 2
+      },
+      {
+       "label": "Dual push button",
+       "raw": 3
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,292 @@
+{
+ "id": "ikea",
+ "name": "ikea (generated from zigbee-herdsman-converters 26.119.0)",
+ "generated": true,
+ "devices": [
+  {
+   "models": [
+    "INSPELNING Smart plug"
+   ],
+   "model": "E22xx",
+   "name": "IKEA INSPELNING smart plug",
+   "settings": [
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64645,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": 4476
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "led_enable",
+     "label": "LED disable",
+     "description": "Enables/disables the led on the device.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64645,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": 4476
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "STARKVIND Air purifier",
+    "STARKVIND Air purifier table"
+   ],
+   "model": "E2007",
+   "name": "IKEA STARKVIND air purifier",
+   "settings": [
+    {
+     "key": "fan_mode",
+     "label": "Mode",
+     "description": "Mode of this fan",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64637,
+      "attribute": 6,
+      "type": 32,
+      "manufacturer": 4476
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "Auto",
+       "raw": 1
+      },
+      {
+       "label": "1",
+       "raw": 10
+      },
+      {
+       "label": "2",
+       "raw": 15
+      },
+      {
+       "label": "3",
+       "raw": 20
+      },
+      {
+       "label": "4",
+       "raw": 25
+      },
+      {
+       "label": "5",
+       "raw": 30
+      },
+      {
+       "label": "6",
+       "raw": 35
+      },
+      {
+       "label": "7",
+       "raw": 40
+      },
+      {
+       "label": "8",
+       "raw": 45
+      },
+      {
+       "label": "9",
+       "raw": 50
+      }
+     ]
+    },
+    {
+     "key": "led_enable",
+     "label": "LED enable",
+     "description": "Controls the LED",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64637,
+      "attribute": 3,
+      "type": 16,
+      "manufacturer": 4476
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 1
+      },
+      {
+       "label": "On",
+       "raw": 0
+      }
+     ]
+    },
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Controls physical input on the device",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64637,
+      "attribute": 5,
+      "type": 16,
+      "manufacturer": 4476
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "TRETAKT Smart plug"
+   ],
+   "model": "E22x4",
+   "name": "IKEA TRETAKT smart plug",
+   "settings": [
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Enables/disables physical input on the device.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64645,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": 4476
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "led_enable",
+     "label": "LED disable",
+     "description": "Enables/disables the led on the device.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64645,
+      "attribute": 1,
+      "type": 16,
+      "manufacturer": 4476
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "VALLHORN Wireless Motion Sensor"
+   ],
+   "model": "E2134",
+   "name": "IKEA VALLHORN wireless motion sensor",
+   "settings": [
+    {
+     "key": "lux_value",
+     "label": "Illuminance sensor threshold",
+     "description": "Controls whether the motion sensor triggers at all times or only when illuminance is low.",
+     "group": "Controls",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64641,
+      "attribute": 0,
+      "type": 16,
+      "manufacturer": 4476
+     },
+     "options": [
+      {
+       "label": "Always",
+       "raw": 0
+      },
+      {
+       "label": "Only when dark",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "timer",
+     "label": "On duration",
+     "description": "How long bound devices remain on after motion is detected.",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64641,
+      "attribute": 2,
+      "type": 33,
+      "manufacturer": 4476
+     },
+     "min": 10,
+     "max": 65534,
+     "step": 10,
+     "unit": "s",
+     "scale": 1,
+     "offset": 0
+    }
+   ]
+  }
+ ]
+}

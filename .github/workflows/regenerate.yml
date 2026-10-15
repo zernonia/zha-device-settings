@@ -21,26 +21,36 @@ jobs:
         with:
           node-version: 22
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Refresh list of settings ZHA already exposes
+        working-directory: tools
+        run: |
+          pip install zha
+          python export_zha_builtins.py > zha_builtin_attributes.json
+
       - name: Generate from latest converters
         working-directory: tools
         run: |
           npm install --no-audit --no-fund
           npm install --no-audit --no-fund --save-exact zigbee-herdsman-converters@latest
-          node generate.js lumi
+          node generate.js
           echo "ZHC_VERSION=$(node -p "require('zigbee-herdsman-converters/package.json').version")" >> "$GITHUB_ENV"
 
       - name: Open PR if changed
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- custom_components tools/package.json; then
+          if git diff --quiet -- custom_components tools/package.json tools/zha_builtin_attributes.json; then
             echo "No changes"; exit 0
           fi
           branch="regenerate/zhc-$ZHC_VERSION"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
-          git add custom_components tools/package.json tools/package-lock.json tools/*.skipped.json
+          git add custom_components tools/package.json tools/package-lock.json tools/*.skipped.json tools/zha_builtin_attributes.json
           git commit -m "Regenerate definitions from zigbee-herdsman-converters $ZHC_VERSION"
           git push -f origin "$branch"
           gh pr create --title "Regenerate definitions (zigbee-herdsman-converters $ZHC_VERSION)" \

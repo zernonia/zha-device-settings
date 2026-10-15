@@ -1,6 +1,7 @@
 {
  "ZNYB01LM": [
   "identify: unsupported write shape",
+  "color_temp_startup: already a ZHA entity",
   "swing_mode: converter error: Aqara Bathroom Heater T1 did not return attribute 0x24f",
   "operating_mode: unsupported write shape",
   "night_light_mode: converter error: Aqara Bathroom Heater T1 did not return attribute 0x518",
@@ -18,6 +19,8 @@
  ],
  "LGYCDD01LM": [
   "identify: unsupported write shape",
+  "on_off_duration: already a ZHA entity",
+  "off_on_duration: already a ZHA entity",
   "effect_segments: type text",
   "effect_colors: type list",
   "segment_colors: type list"
@@ -46,16 +49,31 @@
  "ZNCLBL01LM": [
   "identify: unsupported write shape"
  ],
+ "ZNTGMK11LM": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
+ "HLQDQ01LM": [
+  "power_on_behavior: already a ZHA entity"
+ ],
  "ZNDDQDQ11LM": [
-  "identify: unsupported write shape"
+  "identify: unsupported write shape",
+  "off_on_duration: already a ZHA entity",
+  "on_off_duration: already a ZHA entity"
  ],
  "ZNDDQDQ12LM": [
-  "identify: unsupported write shape"
+  "identify: unsupported write shape",
+  "off_on_duration: already a ZHA entity",
+  "on_off_duration: already a ZHA entity"
  ],
  "ZNDDQDQ13LM": [
-  "identify: unsupported write shape"
+  "identify: unsupported write shape",
+  "off_on_duration: already a ZHA entity",
+  "on_off_duration: already a ZHA entity"
  ],
  "GDSD12LM": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity",
   "identify: unsupported write shape"
  ],
  "WXKG15LM": [
@@ -65,15 +83,12 @@
   "identify: unsupported write shape"
  ],
  "SRTS-A01": [
-  "sensor: device-specific payload",
-  "external_temperature_input: unsupported write shape",
+  "external_temperature_input: numeric without a single attribute",
   "schedule_settings: type text",
   "identify: unsupported write shape"
  ],
  "ZNCWWSQ01LM": [
-  "schedule: type list",
-  "serving_size: numeric without a single attribute",
-  "portion_weight: numeric without a single attribute"
+  "schedule: type list"
  ],
  "CTP-R01": [
   "operation_mode: converter error: Invalid entity type"
@@ -83,30 +98,39 @@
  ],
  "CL-L02D": [
   "identify: unsupported write shape",
+  "on_off_duration: already a ZHA entity",
+  "off_on_duration: already a ZHA entity",
   "effect_colors: type list",
   "segment_colors: type list"
  ],
  "T2_E27": [
   "identify: unsupported write shape",
+  "off_on_duration: already a ZHA entity",
+  "on_off_duration: already a ZHA entity",
   "effect_colors: type list"
  ],
  "T2_E27_CCT": [
-  "identify: unsupported write shape"
+  "identify: unsupported write shape",
+  "off_on_duration: already a ZHA entity",
+  "on_off_duration: already a ZHA entity"
  ],
  "WS-K08E": [
   "identify: unsupported write shape"
  ],
  "TH-S04D": [
   "thermostat_mode: device-specific payload",
-  "sensor: device-specific payload",
   "external_temperature: unsupported write shape",
   "external_humidity: unsupported write shape",
   "identify: unsupported write shape"
  ],
+ "H1-EU": [
+  "color_temp_startup: already a ZHA entity",
+  "power_on_behavior: already a ZHA entity"
+ ],
  "WT-A03E": [
+  "local_temperature_calibration: already a ZHA entity",
   "preset: unsupported write shape",
-  "sensor: device-specific payload",
-  "external_temperature_input: converter error: external_temperature_input can only be used when sensor is external",
+  "external_temperature_input: numeric without a single attribute",
   "preset_home_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
   "preset_away_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
   "preset_sleep_temperature: converter error: Preset temperature table is unknown. Read the preset temperature properties first.",
@@ -124,13 +148,15 @@
   "identify: unsupported write shape"
  ],
  "UT-A01E": [
-  "ntc_sensor_type: converter error: Set 'ntc_r25' and 'ntc_beta' to use a custom NTC sensor",
+  "local_temperature_calibration: already a ZHA entity",
+  "max_heat_setpoint_limit: already a ZHA entity",
+  "min_heat_setpoint_limit: already a ZHA entity",
+  "ntc_sensor_type: converter error: ntc_r25 must be a whole number between 1 and 999, got '10000'",
   "ntc_beta: non-linear numeric",
   "identify: unsupported write shape"
  ],
  "PS-S04D": [
   "identify: unsupported write shape",
-  "detection_range: numeric without a single attribute",
   "schedule_start_time: type text",
   "schedule_end_time: type text"
  ],

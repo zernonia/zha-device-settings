@@ -30,6 +30,7 @@ zigbee-herdsman-converters; hand-written files use the same shape):
 
 from __future__ import annotations
 
+import copy
 import json
 import logging
 from pathlib import Path
@@ -97,11 +98,35 @@ def raw_to_ui(setting: dict[str, Any], raw: Any) -> dict[str, Any]:
     return {"value": None, "raw": raw}
 
 
+def _patch_number(writes: list[dict[str, Any]], patch: dict[str, Any], raw: int) -> list[dict[str, Any]]:
+    """Put a raw number into a template write, either as its value or as bytes in its payload."""
+    out = copy.deepcopy(writes)
+    w = out[patch["write"]]
+    if patch.get("scalar"):
+        w["value"] = raw
+        return out
+    width = patch["width"]
+    if patch.get("signed") and raw < 0:
+        raw += 1 << (8 * width)
+    if not 0 <= raw < (1 << (8 * width)):
+        raise ValueError(f"Value out of range for a {width}-byte field")
+    data = raw.to_bytes(width, "big" if patch["endian"] == "be" else "little")
+    start = patch["byte"]
+    w["value"] = list(w["value"][:start]) + list(data) + list(w["value"][start + width :])
+    return out
+
+
 def writes_for(setting: dict[str, Any], value: Any) -> list[dict[str, Any]]:
     """Compute the attribute writes for a UI value (option index, or a number)."""
     if setting["control"] == "number":
-        target = setting["target"]
+        lo, hi = setting.get("min"), setting.get("max")
+        if (lo is not None and float(value) < lo) or (hi is not None and float(value) > hi):
+            raise ValueError(f"Value must be between {lo} and {hi}")
         raw = float(value) * (setting.get("scale") or 1) + (setting.get("offset") or 0)
+        template = setting.get("template")
+        if template:
+            return _patch_number(template["writes"], template["patch"], int(round(raw)))
+        target = setting["target"]
         if target["type"] not in (0x38, 0x39, 0x3A):
             raw = int(round(raw))
         return [{**target, "value": raw}]
@@ -112,5 +137,29 @@ def writes_for(setting: dict[str, Any], value: Any) -> list[dict[str, Any]]:
         raise ValueError(f"Option {index} out of range")
     opt = options[index]
     if "writes" in opt:
-        return opt["writes"]
+        return copy.deepcopy(opt["writes"])
     return [{**setting["target"], "value": opt["raw"]}]
+
+
+def apply_dynamic(writes: list[dict[str, Any]], ieee: str, now: float) -> list[dict[str, Any]]:
+    """Fill device IEEE address / current Unix time slots in payload bytes."""
+    ieee_be = bytes.fromhex(ieee.replace(":", ""))
+    out = []
+    for w in writes:
+        slots = w.get("dynamic")
+        if not slots:
+            out.append(w)
+            continue
+        data = list(w["value"])
+        for slot in slots:
+            if slot["kind"] == "ieee":
+                chunk = ieee_be
+            elif slot["kind"] == "timestamp":
+                chunk = int(now).to_bytes(4, "big")
+            else:
+                raise ValueError(f"Unknown dynamic slot {slot['kind']}")
+            if slot["endian"] == "le":
+                chunk = chunk[::-1]
+            data[slot["byte"] : slot["byte"] + len(chunk)] = list(chunk)
+        out.append({**{k: v for k, v in w.items() if k != "dynamic"}, "value": data})
+    return out

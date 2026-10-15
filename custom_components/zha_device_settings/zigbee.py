@@ -178,9 +178,14 @@ async def write_attribute(
     type_id: int,
     value: Any,
     manufacturer: int | None,
+    raw: bool = False,
 ) -> str:
-    """Write one explicitly-typed attribute. Returns the ZCL status name."""
-    zvalue = _coerce(type_id, value)
+    """Write one explicitly-typed attribute. Returns the ZCL status name.
+
+    With raw=True, `value` is the already-serialized bytes that follow the type id
+    (used for arrays and structs, which the definitions pre-encode).
+    """
+    zvalue = t.SerializableBytes(bytes(value)) if raw else _coerce(type_id, value)
     device = get_zigpy_device(hass, ieee)
     cluster = _get_cluster(device, endpoint_id, cluster_id)
 
