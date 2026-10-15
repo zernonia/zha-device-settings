@@ -4,6 +4,7 @@ name: Release
 # "## [x.y.z]" section to CHANGELOG.md, and push to main. If no tag exists for that version
 # yet, this creates tag vX.Y.Z and a GitHub release whose notes are that CHANGELOG section.
 # Home Assistant shows those notes in the update dialog. Releasing without notes fails.
+# Editing an existing section in CHANGELOG.md also updates that release's notes.
 
 on:
   push:
@@ -43,3 +44,17 @@ jobs:
           fi
           python3 tools/changelog_section.py "$VERSION" > notes.md
           gh release create "$TAG" --title "$TAG" --notes-file notes.md --target "$GITHUB_SHA"
+
+      - name: Sync notes of existing releases from CHANGELOG.md
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for tag in $(gh release list --limit 200 --json tagName --jq '.[].tagName'); do
+            if python3 tools/changelog_section.py "$tag" > notes.md 2>/dev/null; then
+              current=$(gh release view "$tag" --json body --jq .body)
+              if [ "$current" != "$(cat notes.md)" ]; then
+                gh release edit "$tag" --notes-file notes.md
+                echo "Updated notes for $tag"
+              fi
+            fi
+          done
