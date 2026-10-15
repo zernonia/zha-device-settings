@@ -206,3 +206,13 @@ def test_write_float_and_bytes_serialize():
         run(zigbee.write_attribute(None, IEEE, 1, 0x0000, 0xFFF0, 0x41, [0xAA, 0x10], 0x115F))
     assert captured[0].serialize().hex() == "0b0239" + "00c00f45"  # 2300.0 as float32 LE
     assert captured[1].serialize().hex() == "f0ff4102aa10"
+
+
+def test_led_at_night_is_positive_toggle():
+    # Z2M's "led_disabled_night" is a double negative; we expose it as "LED indicator at night"
+    # where On (option index 1) must write 0 = "not disabled".
+    s = _setting("lumi.switch.acn049", "led_disabled_night")
+    assert s["label"] == "LED indicator at night"
+    assert [o["label"] for o in s["options"]] == ["Off", "On"]
+    assert defs_mod.writes_for(s, 1)[0]["value"] == 0
+    assert defs_mod.raw_to_ui(s, 1)["value"] == 0  # device says disabled -> toggle shows Off

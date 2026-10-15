@@ -174,7 +174,63 @@ function findConverter(def, feature) {
     return null;
 }
 
-const humanize = (s) => String(s).replace(/_/g, " ").replace(/^\w/, (c) => c.toUpperCase());
+const humanize = (s) => fixCase(String(s).replace(/_/g, " ").replace(/^\w/, (c) => c.toUpperCase()));
+
+// ---------- label polish ----------
+
+const ACRONYMS = {led: "LED", lcd: "LCD", pir: "PIR", ai: "AI", ntc: "NTC", off: "off", on: "on"};
+function fixCase(label) {
+    return label.replace(/\b([A-Za-z]+)\b/g, (w, _, i) => {
+        const a = ACRONYMS[w.toLowerCase()];
+        if (!a) return w;
+        if (a === "off" || a === "on") return i === 0 ? w : a; // "Auto OFF" -> "Auto off", but keep "On" option labels
+        return a;
+    });
+}
+
+// Clearer names for common Z2M properties. `invert` flips a negative toggle
+// ("LED disabled at night" ON = dark) into a positive one ("LED at night" ON = lit).
+const OVERRIDES = {
+    led_disabled_night: {label: "LED indicator at night", invert: true,
+        description: "Turn off to keep the indicator LED dark during night hours."},
+    disable_led_at_night: {label: "LED indicator at night", invert: true,
+        description: "Turn off to keep the indicator LED dark during night hours."},
+    operation_mode: {label: "Button mode",
+        description: "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered."},
+    power_outage_memory: {label: "Restore state after power loss",
+        description: "When power returns, switch back to the state before the outage."},
+    flip_indicator_light: {label: "Invert indicator LED",
+        description: "Light the LED while the switch is off instead of on, so it's easy to find in the dark."},
+    power_on_behavior: {label: "Power-on behaviour",
+        description: "What the relay does when power returns after an outage."},
+    mode_switch: {label: "Switch mode",
+        description: "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster."},
+    lock_relay: {label: "Lock relay",
+        description: "Keep the relay in its current state. Neither the button nor Zigbee commands can change it."},
+    click_mode: {label: "Click mode",
+        description: "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold."},
+    multi_click: {label: "Multi-click", description: "Allow double press and hold events, at the cost of a slightly slower response."},
+    auto_off: {label: "Auto off"},
+    led_indicator: {label: "LED indicator"},
+    button_lock: {label: "Button lock", description: "Disable the physical button."},
+    child_lock: {label: "Child lock"},
+};
+
+function polish(feature, setting) {
+    const o = OVERRIDES[feature.name];
+    if (!o) {
+        setting.label = fixCase(setting.label);
+        return setting;
+    }
+    const suffix = feature.endpoint ? ` (${humanize(feature.endpoint)})` : "";
+    setting.label = o.label + suffix;
+    if (o.description) setting.description = o.description;
+    if (o.invert && setting.control === "toggle" && setting.options.length === 2) {
+        const [off, on] = setting.options;
+        setting.options = [{...on, label: "Off"}, {...off, label: "On"}];
+    }
+    return setting;
+}
 
 async function capture(def, zigbeeModel, feature, conv, value, ieee) {
     const {device, writes} = makeDevice(zigbeeModel, ieee);
@@ -286,7 +342,7 @@ async function processVendor(file) {
             if (!f.property || !(f.access & SET)) continue;
             if (RUNTIME_PROPS.has(f.name) && f.category !== "config") continue;
             const r = await buildSetting(def, zigbeeModel, f);
-            if (r.setting) settings.push(r.setting);
+            if (r.setting) settings.push(polish(f, r.setting));
             else (skipped[raw.model] ||= []).push(`${f.property}: ${r.skip}`);
         }
         if (!settings.length) continue;

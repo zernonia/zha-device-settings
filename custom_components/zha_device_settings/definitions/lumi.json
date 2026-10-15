@@ -12,8 +12,8 @@
    "settings": [
     {
      "key": "multi_click_top_wireless_button",
-     "label": "Multi click (Top wireless button)",
-     "description": "Multi-click mode for top wireless button",
+     "label": "Multi-click (Top wireless button)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -36,8 +36,8 @@
     },
     {
      "key": "multi_click_bottom_wireless_button",
-     "label": "Multi click (Bottom wireless button)",
-     "description": "Multi-click mode for bottom wireless button",
+     "label": "Multi-click (Bottom wireless button)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -69,8 +69,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -103,8 +103,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1134,7 +1134,7 @@
    "settings": [
     {
      "key": "led_indicator",
-     "label": "Led indicator",
+     "label": "LED indicator",
      "description": "LED indicator",
      "group": "Configuration",
      "control": "toggle",
@@ -1158,8 +1158,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -1182,8 +1182,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1214,8 +1214,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode for knob",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1238,8 +1238,8 @@
     },
     {
      "key": "multi_click",
-     "label": "Multi click",
-     "description": "Enable multi-click mode for the switch, otherwise single click",
+     "label": "Multi-click",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -1262,8 +1262,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1411,7 +1411,7 @@
    "settings": [
     {
      "key": "led_indicator",
-     "label": "Led indicator",
+     "label": "LED indicator",
      "description": "LED indicator",
      "group": "Configuration",
      "control": "toggle",
@@ -1435,8 +1435,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -1459,8 +1459,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1483,8 +1483,8 @@
     },
     {
      "key": "operation_mode_power",
-     "label": "Operation mode (Power)",
-     "description": "Decoupled mode for the load relay (decoupling power disables bright/dim buttons)",
+     "label": "Button mode (Power)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1507,8 +1507,8 @@
     },
     {
      "key": "operation_mode_bright",
-     "label": "Operation mode (Bright)",
-     "description": "Decoupled mode for the brightness up button (disabled when power is decoupled)",
+     "label": "Button mode (Bright)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1531,8 +1531,8 @@
     },
     {
      "key": "operation_mode_dim",
-     "label": "Operation mode (Dim)",
-     "description": "Decoupled mode for the brightness down button (disabled when power is decoupled)",
+     "label": "Button mode (Dim)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1555,8 +1555,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1587,8 +1587,8 @@
     },
     {
      "key": "multi_click_power",
-     "label": "Multi click (Power)",
-     "description": "Multi-click mode for power button",
+     "label": "Multi-click (Power)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -1611,8 +1611,8 @@
     },
     {
      "key": "multi_click_bright",
-     "label": "Multi click (Bright)",
-     "description": "Multi-click mode for brightness up button",
+     "label": "Multi-click (Bright)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -1635,8 +1635,8 @@
     },
     {
      "key": "multi_click_dim",
-     "label": "Multi click (Dim)",
-     "description": "Multi-click mode for brightness down button",
+     "label": "Multi-click (Dim)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -1769,8 +1769,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": null,
@@ -1918,8 +1918,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1950,8 +1950,8 @@
     },
     {
      "key": "operation_mode_l1",
-     "label": "Operation mode (L1)",
-     "description": "Decoupled mode for 1st relay",
+     "label": "Button mode (L1)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -1974,8 +1974,8 @@
     },
     {
      "key": "operation_mode_l2",
-     "label": "Operation mode (L2)",
-     "description": "Decoupled mode for 2nd relay",
+     "label": "Button mode (L2)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -2082,8 +2082,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -2246,8 +2246,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -2427,8 +2427,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -2625,14 +2625,14 @@
        "raw": 1
       },
       {
-       "label": "Ntc",
+       "label": "NTC",
        "raw": 2
       }
      ]
     },
     {
      "key": "ntc_r25",
-     "label": "Ntc r25",
+     "label": "NTC r25",
      "description": "Resistance of the NTC sensor at 25 °C (R25) as a whole number of kOhm, e.g. 2 for a 2 kOhm sensor",
      "group": "Configuration",
      "control": "number",
@@ -2676,8 +2676,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -2810,8 +2810,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3047,8 +3047,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3081,8 +3081,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3143,7 +3143,7 @@
    "settings": [
     {
      "key": "led_indicator",
-     "label": "Led indicator",
+     "label": "LED indicator",
      "description": "LED indicator",
      "group": "Configuration",
      "control": "toggle",
@@ -3167,8 +3167,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3191,8 +3191,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3223,8 +3223,8 @@
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left switch",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3247,8 +3247,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right switch",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3272,7 +3272,7 @@
     {
      "key": "lock_relay_left",
      "label": "Lock relay (Left)",
-     "description": "Lock left switch",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3296,7 +3296,7 @@
     {
      "key": "lock_relay_right",
      "label": "Lock relay (Right)",
-     "description": "Lock right switch",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3319,8 +3319,8 @@
     },
     {
      "key": "multi_click_left_down",
-     "label": "Multi click (Left down)",
-     "description": "Multi-click mode for left down button",
+     "label": "Multi-click (Left down)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3343,8 +3343,8 @@
     },
     {
      "key": "multi_click_right_down",
-     "label": "Multi click (Right down)",
-     "description": "Multi-click mode for right down button",
+     "label": "Multi-click (Right down)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3376,7 +3376,7 @@
    "settings": [
     {
      "key": "led_indicator",
-     "label": "Led indicator",
+     "label": "LED indicator",
      "description": "LED indicator",
      "group": "Configuration",
      "control": "toggle",
@@ -3400,8 +3400,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3424,8 +3424,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3456,8 +3456,8 @@
     },
     {
      "key": "operation_mode_up",
-     "label": "Operation mode (Up)",
-     "description": "Decoupled mode for switch",
+     "label": "Button mode (Up)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3481,7 +3481,7 @@
     {
      "key": "lock_relay_up",
      "label": "Lock relay (Up)",
-     "description": "Lock switch",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3504,8 +3504,8 @@
     },
     {
      "key": "multi_click_down",
-     "label": "Multi click (Down)",
-     "description": "Multi-click mode for down button",
+     "label": "Multi-click (Down)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3537,8 +3537,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3569,8 +3569,8 @@
     },
     {
      "key": "operation_mode_up",
-     "label": "Operation mode (Up)",
-     "description": "Decoupled mode for up button",
+     "label": "Button mode (Up)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3593,8 +3593,8 @@
     },
     {
      "key": "operation_mode_down",
-     "label": "Operation mode (Down)",
-     "description": "Decoupled mode for down button",
+     "label": "Button mode (Down)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3618,7 +3618,7 @@
     {
      "key": "lock_relay_up",
      "label": "Lock relay (Up)",
-     "description": "Locks up relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3642,7 +3642,7 @@
     {
      "key": "lock_relay_down",
      "label": "Lock relay (Down)",
-     "description": "Locks down relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3665,8 +3665,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3679,18 +3679,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3713,8 +3713,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3746,8 +3746,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3778,8 +3778,8 @@
     },
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3803,7 +3803,7 @@
     {
      "key": "lock_relay_top",
      "label": "Lock relay (Top)",
-     "description": "Locks top relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3826,8 +3826,8 @@
     },
     {
      "key": "multi_click_wireless",
-     "label": "Multi click (Wireless)",
-     "description": "Multi-click mode for wireless button",
+     "label": "Multi-click (Wireless)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3850,8 +3850,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3864,18 +3864,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -3898,8 +3898,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3931,8 +3931,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3963,8 +3963,8 @@
     },
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -3987,8 +3987,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -4011,8 +4011,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -4036,7 +4036,7 @@
     {
      "key": "lock_relay_top",
      "label": "Lock relay (Top)",
-     "description": "Locks top relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4060,7 +4060,7 @@
     {
      "key": "lock_relay_center",
      "label": "Lock relay (Center)",
-     "description": "Locks center relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4084,7 +4084,7 @@
     {
      "key": "lock_relay_bottom",
      "label": "Lock relay (Bottom)",
-     "description": "Locks bottom relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4107,8 +4107,8 @@
     },
     {
      "key": "multi_click_wireless",
-     "label": "Multi click (Wireless)",
-     "description": "Multi-click mode for wireless button",
+     "label": "Multi-click (Wireless)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4131,8 +4131,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4145,18 +4145,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4179,8 +4179,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -4576,8 +4576,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -4617,8 +4617,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4650,8 +4650,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4683,8 +4683,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -4716,8 +4716,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Operation mode, select \"command\" to enable bindings (wake up the device before changing modes!)",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -4749,8 +4749,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Operation mode, select \"command\" to enable bindings (wake up the device before changing modes!)",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -4782,8 +4782,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Operation mode, select \"command\" to enable bindings (wake up the device before changing modes!)",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -4903,7 +4903,7 @@
     },
     {
      "key": "ai_interference_source_selfidentification",
-     "label": "Ai interference source selfidentification",
+     "label": "AI interference source selfidentification",
      "description": "AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources",
      "group": "Controls",
      "control": "toggle",
@@ -4927,7 +4927,7 @@
     },
     {
      "key": "ai_sensitivity_adaptive",
-     "label": "Ai sensitivity adaptive",
+     "label": "AI sensitivity adaptive",
      "description": "Adaptive sensitivity switch function.",
      "group": "Controls",
      "control": "toggle",
@@ -5118,14 +5118,14 @@
        "raw": 1
       },
       {
-       "label": "Pir",
+       "label": "PIR",
        "raw": 2
       }
      ]
     },
     {
      "key": "ai_interference_source_selfidentification",
-     "label": "Ai interference source selfidentification",
+     "label": "AI interference source selfidentification",
      "description": "AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources",
      "group": "Controls",
      "control": "toggle",
@@ -5149,7 +5149,7 @@
     },
     {
      "key": "ai_sensitivity_adaptive",
-     "label": "Ai sensitivity adaptive",
+     "label": "AI sensitivity adaptive",
      "description": "Adaptive sensitivity switch function.",
      "group": "Controls",
      "control": "toggle",
@@ -5193,7 +5193,7 @@
     },
     {
      "key": "pir_detection_interval",
-     "label": "Pir detection interval",
+     "label": "PIR detection interval",
      "description": "Higher detection frequency results in higher accuracy but lower battery life.",
      "group": "Controls",
      "control": "number",
@@ -5589,8 +5589,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -5603,11 +5603,11 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     }
@@ -5710,7 +5710,7 @@
     },
     {
      "key": "ai_interference_source_selfidentification",
-     "label": "Ai interference source selfidentification",
+     "label": "AI interference source selfidentification",
      "description": "AI interference source self-identification switch, when enabled can identify fans, air conditioners and other interference sources",
      "group": "Controls",
      "control": "toggle",
@@ -5734,7 +5734,7 @@
     },
     {
      "key": "ai_sensitivity_adaptive",
-     "label": "Ai sensitivity adaptive",
+     "label": "AI sensitivity adaptive",
      "description": "Adaptive sensitivity switch function.",
      "group": "Controls",
      "control": "toggle",
@@ -6094,8 +6094,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -6108,11 +6108,11 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     }
@@ -6147,8 +6147,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power-on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -6434,8 +6434,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -6491,8 +6491,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -6548,8 +6548,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -6605,8 +6605,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -6629,8 +6629,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -6643,11 +6643,11 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
@@ -6763,8 +6763,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -6796,8 +6796,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power-on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -6837,8 +6837,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -7055,7 +7055,7 @@
     },
     {
      "key": "led_indicator",
-     "label": "Disable LED at night",
+     "label": "LED indicator",
      "description": "LED indicator will be disabled every day from 21:00 to 09:00",
      "group": "Configuration",
      "control": "toggle",
@@ -7232,8 +7232,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": null,
@@ -7288,37 +7288,14 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": null,
      "options": [
       {
        "label": "Off",
-       "writes": [
-        {
-         "endpoint": 1,
-         "cluster": 0,
-         "attribute": 65520,
-         "type": 65,
-         "manufacturer": 4447,
-         "value": [
-          170,
-          128,
-          5,
-          209,
-          71,
-          1,
-          3,
-          16,
-          1
-         ]
-        }
-       ]
-      },
-      {
-       "label": "On",
        "writes": [
         {
          "endpoint": 1,
@@ -7339,12 +7316,35 @@
          ]
         }
        ]
+      },
+      {
+       "label": "On",
+       "writes": [
+        {
+         "endpoint": 1,
+         "cluster": 0,
+         "attribute": 65520,
+         "type": 65,
+         "manufacturer": 4447,
+         "value": [
+          170,
+          128,
+          5,
+          209,
+          71,
+          1,
+          3,
+          16,
+          1
+         ]
+        }
+       ]
       }
      ]
     },
     {
      "key": "auto_off",
-     "label": "Auto OFF",
+     "label": "Auto off",
      "description": "Turn the device automatically off when attached device consumes less than 2W for 30 minutes",
      "group": "Configuration",
      "control": "toggle",
@@ -7409,8 +7409,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -7433,8 +7433,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -7447,11 +7447,11 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
@@ -7477,7 +7477,7 @@
     },
     {
      "key": "auto_off",
-     "label": "Auto OFF",
+     "label": "Auto off",
      "description": "Turn the device automatically off when attached device consumes less than 2W for 20 minutes",
      "group": "Configuration",
      "control": "toggle",
@@ -7502,7 +7502,7 @@
     {
      "key": "button_lock",
      "label": "Button lock",
-     "description": "Disables the physical switch button",
+     "description": "Disable the physical button.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -7534,8 +7534,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -7558,8 +7558,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -7572,18 +7572,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "button_lock",
      "label": "Button lock",
-     "description": "Disables the physical switch button",
+     "description": "Disable the physical button.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -7635,8 +7635,8 @@
    "settings": [
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -7649,18 +7649,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": null,
@@ -7715,7 +7715,7 @@
     },
     {
      "key": "auto_off",
-     "label": "Auto OFF",
+     "label": "Auto off",
      "description": "Turn the device automatically off when attached device consumes less than 2W for 20 minutes",
      "group": "Configuration",
      "control": "toggle",
@@ -7961,8 +7961,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power-on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -8002,8 +8002,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Command mode is useful for binding. Event mode is useful for processing.",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -8063,8 +8063,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -8087,8 +8087,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Command mode is useful for binding. Event mode is useful for processing.",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -10037,7 +10037,7 @@
     },
     {
      "key": "lcd_brightness",
-     "label": "Lcd brightness",
+     "label": "LCD brightness",
      "description": "LCD brightness (will not persist if auto-brightness is enabled)",
      "group": "Controls",
      "control": "number",
@@ -10153,7 +10153,7 @@
     },
     {
      "key": "lcd_auto_brightness_enabled",
-     "label": "Lcd auto brightness enabled",
+     "label": "LCD auto brightness enabled",
      "description": "Enable LCD auto brightness",
      "group": "Controls",
      "control": "toggle",
@@ -10233,7 +10233,7 @@
     },
     {
      "key": "standby_lcd_brightness",
-     "label": "Standby lcd brightness",
+     "label": "Standby LCD brightness",
      "description": "Standby LCD brightness",
      "group": "Controls",
      "control": "number",
@@ -10372,8 +10372,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": null,
@@ -10469,8 +10469,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10493,8 +10493,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10507,18 +10507,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "button_lock",
      "label": "Button lock",
-     "description": "Disables the physical switch button",
+     "description": "Disable the physical button.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10618,8 +10618,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -10650,8 +10650,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10664,11 +10664,11 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
@@ -10695,7 +10695,7 @@
     {
      "key": "button_lock",
      "label": "Button lock",
-     "description": "Disables the physical switch button",
+     "description": "Disable the physical button.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10727,8 +10727,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -10779,7 +10779,7 @@
     },
     {
      "key": "led_indicator",
-     "label": "Led indicator",
+     "label": "LED indicator",
      "description": "LED indicator",
      "group": "Configuration",
      "control": "toggle",
@@ -10804,7 +10804,7 @@
     {
      "key": "button_lock",
      "label": "Button lock",
-     "description": "Disables the physical switch button",
+     "description": "Disable the physical button.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10880,8 +10880,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10904,8 +10904,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10918,18 +10918,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "button_lock",
      "label": "Button lock",
-     "description": "Disables the physical switch button",
+     "description": "Disable the physical button.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -10981,8 +10981,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Operation mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -11009,8 +11009,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Operation mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -11046,8 +11046,8 @@
    "settings": [
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11070,8 +11070,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11094,8 +11094,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11118,8 +11118,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11142,8 +11142,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11175,8 +11175,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11208,8 +11208,8 @@
    "settings": [
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11232,8 +11232,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11256,8 +11256,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11280,8 +11280,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11314,8 +11314,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Operation mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11342,8 +11342,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Operation mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11379,8 +11379,8 @@
    "settings": [
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11403,8 +11403,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11427,8 +11427,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11451,8 +11451,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11485,8 +11485,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11509,8 +11509,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": null,
@@ -11606,8 +11606,8 @@
    "settings": [
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11630,8 +11630,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11654,8 +11654,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11687,8 +11687,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Operation mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11715,8 +11715,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Operation mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11752,8 +11752,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11785,8 +11785,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11809,8 +11809,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11833,8 +11833,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11857,8 +11857,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11881,8 +11881,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11905,8 +11905,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11919,18 +11919,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -11962,8 +11962,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -11986,8 +11986,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12019,8 +12019,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12052,8 +12052,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12076,8 +12076,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12100,8 +12100,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12124,8 +12124,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12148,8 +12148,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12162,18 +12162,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12205,8 +12205,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12229,8 +12229,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12253,8 +12253,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12277,8 +12277,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12301,8 +12301,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12334,8 +12334,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12358,8 +12358,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12382,8 +12382,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode for button",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12406,8 +12406,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12439,8 +12439,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12463,8 +12463,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12487,8 +12487,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12511,8 +12511,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12544,8 +12544,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12568,8 +12568,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12592,8 +12592,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12625,8 +12625,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12649,8 +12649,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12673,8 +12673,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12697,8 +12697,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12721,8 +12721,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12754,8 +12754,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12778,8 +12778,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12802,8 +12802,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12826,8 +12826,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12850,8 +12850,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12864,18 +12864,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -12907,8 +12907,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12931,8 +12931,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12945,18 +12945,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -12979,8 +12979,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13003,8 +13003,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13036,8 +13036,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13060,8 +13060,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13084,8 +13084,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13098,18 +13098,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13132,8 +13132,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13156,8 +13156,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13180,8 +13180,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13213,8 +13213,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13237,8 +13237,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode for a button",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -13261,8 +13261,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13275,18 +13275,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13318,8 +13318,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13342,8 +13342,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13366,8 +13366,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13380,18 +13380,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13414,8 +13414,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13438,8 +13438,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13471,8 +13471,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13495,8 +13495,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13519,8 +13519,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13533,18 +13533,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Switches between direct relay control and action sending only",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -13567,8 +13567,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Features. Anti flicker mode can be used to solve blinking issues of some lights.Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -13600,8 +13600,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13624,8 +13624,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13648,8 +13648,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13672,8 +13672,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13696,8 +13696,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13710,11 +13710,11 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     }
@@ -13729,8 +13729,8 @@
    "settings": [
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13753,8 +13753,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13777,8 +13777,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13791,18 +13791,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13834,8 +13834,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13858,8 +13858,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13872,18 +13872,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13906,8 +13906,8 @@
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13930,8 +13930,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -13963,8 +13963,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -13987,8 +13987,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14001,18 +14001,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14035,8 +14035,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14068,8 +14068,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14092,8 +14092,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14106,18 +14106,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14140,8 +14140,8 @@
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14164,8 +14164,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14188,8 +14188,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14221,8 +14221,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14245,8 +14245,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14269,8 +14269,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14293,8 +14293,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14307,18 +14307,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14350,8 +14350,8 @@
    "settings": [
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14374,8 +14374,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14398,8 +14398,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14412,18 +14412,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14455,8 +14455,8 @@
    "settings": [
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14479,8 +14479,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14503,8 +14503,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -14527,8 +14527,8 @@
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14551,8 +14551,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14565,18 +14565,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14608,8 +14608,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14632,8 +14632,8 @@
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -14656,8 +14656,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -14680,8 +14680,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14694,18 +14694,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14737,8 +14737,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14761,8 +14761,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode for a button",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -14785,8 +14785,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14799,18 +14799,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14842,8 +14842,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14866,8 +14866,8 @@
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -14890,8 +14890,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -14914,8 +14914,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -14938,8 +14938,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14952,18 +14952,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -14995,8 +14995,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15019,8 +15019,8 @@
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15043,8 +15043,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15067,8 +15067,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15081,18 +15081,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15124,8 +15124,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15148,8 +15148,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode for a button",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15172,8 +15172,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15186,18 +15186,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15229,8 +15229,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15253,8 +15253,8 @@
     },
     {
      "key": "operation_mode_left",
-     "label": "Operation mode (Left)",
-     "description": "Decoupled mode for left button",
+     "label": "Button mode (Left)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15277,8 +15277,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15301,8 +15301,8 @@
     },
     {
      "key": "operation_mode_right",
-     "label": "Operation mode (Right)",
-     "description": "Decoupled mode for right button",
+     "label": "Button mode (Right)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15325,8 +15325,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15339,18 +15339,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15382,8 +15382,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15414,8 +15414,8 @@
     },
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15438,8 +15438,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15463,7 +15463,7 @@
     {
      "key": "lock_relay_top",
      "label": "Lock relay (Top)",
-     "description": "Locks top relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15487,7 +15487,7 @@
     {
      "key": "lock_relay_bottom",
      "label": "Lock relay (Bottom)",
-     "description": "Locks bottom relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15510,8 +15510,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15524,18 +15524,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks.",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15567,8 +15567,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15599,8 +15599,8 @@
     },
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15623,8 +15623,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15647,8 +15647,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15672,7 +15672,7 @@
     {
      "key": "lock_relay_top",
      "label": "Lock relay (Top)",
-     "description": "Locks top relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15696,7 +15696,7 @@
     {
      "key": "lock_relay_center",
      "label": "Lock relay (Center)",
-     "description": "Locks center relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15720,7 +15720,7 @@
     {
      "key": "lock_relay_bottom",
      "label": "Lock relay (Bottom)",
-     "description": "Locks bottom relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15743,8 +15743,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15757,18 +15757,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks.",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15800,8 +15800,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15832,8 +15832,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode for a button",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15857,7 +15857,7 @@
     {
      "key": "lock_relay",
      "label": "Lock relay",
-     "description": "Locks relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15880,8 +15880,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -15894,18 +15894,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks.",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15937,8 +15937,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15969,8 +15969,8 @@
     },
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -15993,8 +15993,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16017,8 +16017,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16042,7 +16042,7 @@
     {
      "key": "lock_relay_top",
      "label": "Lock relay (Top)",
-     "description": "Locks top relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16066,7 +16066,7 @@
     {
      "key": "lock_relay_center",
      "label": "Lock relay (Center)",
-     "description": "Locks center relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16090,7 +16090,7 @@
     {
      "key": "lock_relay_bottom",
      "label": "Lock relay (Bottom)",
-     "description": "Locks bottom relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16113,8 +16113,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16127,18 +16127,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks.",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16170,8 +16170,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16202,8 +16202,8 @@
     },
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16226,8 +16226,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16251,7 +16251,7 @@
     {
      "key": "lock_relay_top",
      "label": "Lock relay (Top)",
-     "description": "Locks top relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16275,7 +16275,7 @@
     {
      "key": "lock_relay_bottom",
      "label": "Lock relay (Bottom)",
-     "description": "Locks bottom relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16298,8 +16298,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16312,18 +16312,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks.",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16346,8 +16346,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16379,8 +16379,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16411,8 +16411,8 @@
     },
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16435,8 +16435,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16459,8 +16459,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16484,7 +16484,7 @@
     {
      "key": "lock_relay_top",
      "label": "Lock relay (Top)",
-     "description": "Locks top relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16508,7 +16508,7 @@
     {
      "key": "lock_relay_center",
      "label": "Lock relay (Center)",
-     "description": "Locks center relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16532,7 +16532,7 @@
     {
      "key": "lock_relay_bottom",
      "label": "Lock relay (Bottom)",
-     "description": "Locks bottom relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16555,8 +16555,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16569,18 +16569,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks.",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16603,8 +16603,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16636,8 +16636,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16668,8 +16668,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Decoupled mode for a button",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16693,7 +16693,7 @@
     {
      "key": "lock_relay",
      "label": "Lock relay",
-     "description": "Locks relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16716,8 +16716,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16730,18 +16730,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks.",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16764,8 +16764,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16797,8 +16797,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16829,8 +16829,8 @@
     },
     {
      "key": "operation_mode_top",
-     "label": "Operation mode (Top)",
-     "description": "Decoupled mode for top button",
+     "label": "Button mode (Top)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16853,8 +16853,8 @@
     },
     {
      "key": "operation_mode_center",
-     "label": "Operation mode (Center)",
-     "description": "Decoupled mode for center button",
+     "label": "Button mode (Center)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16877,8 +16877,8 @@
     },
     {
      "key": "operation_mode_bottom",
-     "label": "Operation mode (Bottom)",
-     "description": "Decoupled mode for bottom button",
+     "label": "Button mode (Bottom)",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -16902,7 +16902,7 @@
     {
      "key": "lock_relay_top",
      "label": "Lock relay (Top)",
-     "description": "Locks top relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16926,7 +16926,7 @@
     {
      "key": "lock_relay_center",
      "label": "Lock relay (Center)",
-     "description": "Locks center relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16950,7 +16950,7 @@
     {
      "key": "lock_relay_bottom",
      "label": "Lock relay (Bottom)",
-     "description": "Locks bottom relay and prevents it from operating",
+     "description": "Keep the relay in its current state. Neither the button nor Zigbee commands can change it.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16973,8 +16973,8 @@
     },
     {
      "key": "led_disabled_night",
-     "label": "Led disabled night",
-     "description": "Enables/disables LED indicator at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -16987,18 +16987,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode for wireless button. fast: only supports single click but allows faster response time.multi: supports multiple types of clicks but is slower, because it awaits multiple clicks.",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17021,8 +17021,8 @@
     },
     {
      "key": "mode_switch",
-     "label": "Mode switch",
-     "description": "Anti flicker mode can be used to solve blinking issues of some lights. Quick mode makes the device respond faster.",
+     "label": "Switch mode",
+     "description": "Anti-flicker fixes blinking on some low-wattage LED bulbs. Quick mode responds faster.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17057,8 +17057,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -17139,8 +17139,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17216,8 +17216,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17293,8 +17293,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17430,8 +17430,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17567,8 +17567,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17724,8 +17724,8 @@
     },
     {
      "key": "power_on_behavior",
-     "label": "Power-on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17900,8 +17900,8 @@
    "settings": [
     {
      "key": "power_on_behavior",
-     "label": "Power on behavior",
-     "description": "Controls the behavior when the device is powered on after power loss",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
      "group": "Configuration",
      "control": "select",
      "target": {
@@ -17932,8 +17932,8 @@
     },
     {
      "key": "multi_click_1",
-     "label": "Multi click (1)",
-     "description": "Multi-click mode for the socket 1 button",
+     "label": "Multi-click (1)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -17956,8 +17956,8 @@
     },
     {
      "key": "multi_click_2",
-     "label": "Multi click (2)",
-     "description": "Multi-click mode for the socket 2 button",
+     "label": "Multi-click (2)",
+     "description": "Allow double press and hold events, at the cost of a slightly slower response.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -18048,7 +18048,7 @@
     },
     {
      "key": "led_indicator",
-     "label": "Led indicator",
+     "label": "LED indicator",
      "description": "LED indicator",
      "group": "Configuration",
      "control": "toggle",
@@ -18072,8 +18072,8 @@
     },
     {
      "key": "flip_indicator_light",
-     "label": "Flip indicator light",
-     "description": "After turn on, the indicator light turns on while switch is off, and vice versa",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -18106,7 +18106,7 @@
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode, fast: only supports single click which will be send immediately after clicking, multi: supports more events like double and hold",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18139,7 +18139,7 @@
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18172,7 +18172,7 @@
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18195,8 +18195,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Operation mode, select \"command\" to enable bindings (wake up the device before changing modes!)",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18229,7 +18229,7 @@
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18252,8 +18252,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Operation mode, select \"command\" to enable bindings (wake up the device before changing modes!)",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18286,7 +18286,7 @@
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18309,8 +18309,8 @@
     },
     {
      "key": "operation_mode",
-     "label": "Operation mode",
-     "description": "Operation mode, select \"command\" to enable bindings (wake up the device before changing modes!)",
+     "label": "Button mode",
+     "description": "Decoupled: the button only sends an event and doesn't switch its relay. Use with smart bulbs so they stay powered.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18343,7 +18343,7 @@
     {
      "key": "click_mode",
      "label": "Click mode",
-     "description": "Click mode, fast: only supports single click which will be send immediately after clicking.multi: supports more events like double and hold",
+     "description": "Fast reacts instantly but only reports single presses. Multi waits briefly to detect double press and hold.",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -18375,8 +18375,8 @@
    "settings": [
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": null,
@@ -18472,8 +18472,8 @@
    "settings": [
     {
      "key": "led_disabled_night",
-     "label": "LED disabled night",
-     "description": "Enable/disable the LED at night",
+     "label": "LED indicator at night",
+     "description": "Turn off to keep the indicator LED dark during night hours.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -18486,18 +18486,18 @@
      "options": [
       {
        "label": "Off",
-       "raw": 0
+       "raw": 1
       },
       {
        "label": "On",
-       "raw": 1
+       "raw": 0
       }
      ]
     },
     {
      "key": "power_outage_memory",
-     "label": "Power outage memory",
-     "description": "Enable/disable the power outage memory, this recovers the on/off mode after power failure",
+     "label": "Restore state after power loss",
+     "description": "When power returns, switch back to the state before the outage.",
      "group": "Configuration",
      "control": "toggle",
      "target": {
@@ -18520,7 +18520,7 @@
     },
     {
      "key": "auto_off",
-     "label": "Auto OFF",
+     "label": "Auto off",
      "description": "Turn the device automatically off when attached device consumes less than 2W for 20 minutes",
      "group": "Configuration",
      "control": "toggle",
