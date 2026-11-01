@@ -75,7 +75,8 @@
   "siren_on: unsupported write shape"
  ],
  "SNZB-02UL": [
-  "remote_sensors_state: unsupported write shape"
+  "remote_sensors_state: unsupported write shape",
+  "weather: unsupported write shape"
  ],
  "S61SZBTPB": [
   "clear_history: unsupported write shape"

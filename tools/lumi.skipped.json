@@ -78,6 +78,9 @@
  "WP-P09D": [
   "identify: unsupported write shape"
  ],
+ "SP-P06E": [
+  "identify: unsupported write shape"
+ ],
  "CL-L02D": [
   "identify: unsupported write shape",
   "effect_colors: type list",

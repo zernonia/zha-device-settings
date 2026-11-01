@@ -1,6 +1,6 @@
 {
  "id": "sonoff",
- "name": "sonoff (generated from zigbee-herdsman-converters 26.119.0)",
+ "name": "sonoff (generated from zigbee-herdsman-converters 26.125.0)",
  "generated": true,
  "devices": [
   {
@@ -163,120 +163,15 @@
      }
     },
     {
-     "key": "weather",
-     "label": "Weather",
-     "description": "Weather shown on the E-ink screen. Selecting a value sends the default coordinates to the device and is applied on its next weather request. Note: wake up the device by pressing the button on the back before changing this value.",
+     "key": "periodic_weather_updates",
+     "label": "Periodic weather updates",
+     "description": "Enable weather updates every 4 hours. Note: This feature does not fetch weather data. A Blueprint or custom external converter is required to provide weather information. After enabling, press the device button to save the setting.",
      "group": "Configuration",
      "control": "select",
      "target": null,
      "options": [
       {
-       "label": "Sunny",
-       "writes": [
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20502,
-         "type": 43,
-         "manufacturer": null,
-         "value": 114057900
-        },
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20503,
-         "type": 43,
-         "manufacturer": null,
-         "value": 22543100
-        }
-       ]
-      },
-      {
-       "label": "Partly cloudy",
-       "writes": [
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20502,
-         "type": 43,
-         "manufacturer": null,
-         "value": 114057900
-        },
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20503,
-         "type": 43,
-         "manufacturer": null,
-         "value": 22543100
-        }
-       ]
-      },
-      {
-       "label": "Overcast",
-       "writes": [
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20502,
-         "type": 43,
-         "manufacturer": null,
-         "value": 114057900
-        },
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20503,
-         "type": 43,
-         "manufacturer": null,
-         "value": 22543100
-        }
-       ]
-      },
-      {
-       "label": "Rain",
-       "writes": [
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20502,
-         "type": 43,
-         "manufacturer": null,
-         "value": 114057900
-        },
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20503,
-         "type": 43,
-         "manufacturer": null,
-         "value": 22543100
-        }
-       ]
-      },
-      {
-       "label": "Snow",
-       "writes": [
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20502,
-         "type": 43,
-         "manufacturer": null,
-         "value": 114057900
-        },
-        {
-         "endpoint": 1,
-         "cluster": 64529,
-         "attribute": 20503,
-         "type": 43,
-         "manufacturer": null,
-         "value": 22543100
-        }
-       ]
-      },
-      {
-       "label": "Windy",
+       "label": "Enable",
        "writes": [
         {
          "endpoint": 1,
@@ -761,7 +656,7 @@
     {
      "key": "temperature_calibration",
      "label": "Temperature calibration",
-     "description": "Offset to add/subtract to the reported temperature. Note: wake up the device by pressing the button on the back before changing this value.",
+     "description": "Offset to add/subtract to the reported temperature. Note: wake up the device by pressing the button on the top before changing this value.",
      "group": "Configuration",
      "control": "number",
      "target": {
@@ -781,7 +676,7 @@
     {
      "key": "humidity_calibration",
      "label": "Humidity calibration",
-     "description": "Offset to add/subtract to the reported relative humidity. Note: wake up the device by pressing the button on the back before changing this value.",
+     "description": "Offset to add/subtract to the reported relative humidity. Note: wake up the device by pressing the button on the top before changing this value.",
      "group": "Configuration",
      "control": "number",
      "target": {

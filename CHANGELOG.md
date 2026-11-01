@@ -6,6 +6,9 @@ How to release: move the items under **Unreleased** into a new `## [x.y.z] - YYY
 
 ## [Unreleased]
 
+### Changed
+- Device definitions updated from Zigbee2MQTT's device library (26.125.0). Review the diff for new devices and settings worth naming here.
+
 ## [0.4.2] - 2026-10-15
 
 ### Changed

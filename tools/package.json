@@ -6,6 +6,6 @@
     "generate": "node generate.js"
   },
   "dependencies": {
-    "zigbee-herdsman-converters": "26.119.0"
+    "zigbee-herdsman-converters": "26.125.0"
   }
 }

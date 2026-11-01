@@ -227,6 +227,9 @@
  "E2435/E2491": [
   "identify: unsupported write shape"
  ],
+ "E2435-NA": [
+  "identify: unsupported write shape"
+ ],
  "E1757": [
   "identify: unsupported write shape"
  ],

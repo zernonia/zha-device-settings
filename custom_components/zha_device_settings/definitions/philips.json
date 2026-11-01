@@ -1,6 +1,6 @@
 {
  "id": "philips",
- "name": "philips (generated from zigbee-herdsman-converters 26.119.0)",
+ "name": "philips (generated from zigbee-herdsman-converters 26.125.0)",
  "generated": true,
  "devices": [
   {
@@ -5504,6 +5504,69 @@
   },
   {
    "models": [
+    "929004295101"
+   ],
+   "model": "929004295101",
+   "name": "Philips Hue Essential Flex lightstrip (5m)",
+   "settings": [
+    {
+     "key": "color_temp_startup",
+     "label": "Color temp startup",
+     "description": "Color temperature after cold power on of this light",
+     "group": "Controls",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 768,
+      "attribute": 16400,
+      "type": 33,
+      "manufacturer": null
+     },
+     "min": 153,
+     "max": 447,
+     "step": 1,
+     "unit": "mired",
+     "scale": 1,
+     "offset": 0,
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
     "929004294903"
    ],
    "model": "929004294903",
@@ -6328,7 +6391,8 @@
   },
   {
    "models": [
-    "LCX030"
+    "LCX030",
+    "LCX048"
    ],
    "model": "929004284702",
    "name": "Philips Hue Festavia permanent outdoor string lights",
@@ -32419,6 +32483,7 @@
   {
    "models": [
     "929004276602",
+    "929004276603",
     "929004276702",
     "929004276802"
    ],

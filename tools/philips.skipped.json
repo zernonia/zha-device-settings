@@ -3159,6 +3159,11 @@
   "effect_color: type text",
   "identify: unsupported write shape"
  ],
+ "929004295101": [
+  "identify: unsupported write shape",
+  "effect_speed: unsupported write shape",
+  "effect_color: type text"
+ ],
  "929004611002": [
   "gradient_scene: unsupported write shape",
   "gradient: type list",

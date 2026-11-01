@@ -1,6 +1,6 @@
 {
  "id": "innr",
- "name": "innr (generated from zigbee-herdsman-converters 26.119.0)",
+ "name": "innr (generated from zigbee-herdsman-converters 26.125.0)",
  "generated": true,
  "devices": [
   {
@@ -3237,48 +3237,6 @@
      "unit": "mired",
      "scale": 1,
      "offset": 0,
-     "zha_entity": true
-    }
-   ]
-  },
-  {
-   "models": [
-    "OPL 130 C"
-   ],
-   "model": "OPL 130 C",
-   "name": "Innr Outdoor smart pedestal light colour",
-   "settings": [
-    {
-     "key": "power_on_behavior",
-     "label": "Power-on behaviour",
-     "description": "What the relay does when power returns after an outage.",
-     "group": "Configuration",
-     "control": "select",
-     "target": {
-      "endpoint": 1,
-      "cluster": 6,
-      "attribute": 16387,
-      "type": 48,
-      "manufacturer": null
-     },
-     "options": [
-      {
-       "label": "Off",
-       "raw": 0
-      },
-      {
-       "label": "On",
-       "raw": 1
-      },
-      {
-       "label": "Toggle",
-       "raw": 2
-      },
-      {
-       "label": "Previous",
-       "raw": 255
-      }
-     ],
      "zha_entity": true
     }
    ]

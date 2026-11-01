@@ -1,6 +1,6 @@
 {
  "id": "lumi",
- "name": "lumi (generated from zigbee-herdsman-converters 26.119.0)",
+ "name": "lumi (generated from zigbee-herdsman-converters 26.125.0)",
  "generated": true,
  "devices": [
   {
@@ -2019,7 +2019,7 @@
     {
      "key": "detection_distance",
      "label": "Detection distance",
-     "description": "The sensor will be considered \"off\" within the set distance. Please press the device button before setting",
+     "description": "The sensor will be considered \"off\" within the set distance. Press the device button right before changing this value (this press triggers an \"action: single\" event).",
      "group": "Controls",
      "control": "select",
      "target": {
@@ -5095,6 +5095,163 @@
       },
       {
        "label": "Event",
+       "raw": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "models": [
+    "lumi.plug.aeu006"
+   ],
+   "model": "SP-P06E",
+   "name": "Aqara Outdoor plug H2 EU",
+   "settings": [
+    {
+     "key": "power_on_behavior",
+     "label": "Power-on behaviour",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64704,
+      "attribute": 1303,
+      "type": 32,
+      "manufacturer": 4447
+     },
+     "options": [
+      {
+       "label": "On",
+       "raw": 0
+      },
+      {
+       "label": "Previous",
+       "raw": 1
+      },
+      {
+       "label": "Off",
+       "raw": 2
+      },
+      {
+       "label": "Inverted",
+       "raw": 3
+      }
+     ]
+    },
+    {
+     "key": "overload_protection",
+     "label": "Overload protection",
+     "description": "Maximum allowed load, turns off if exceeded",
+     "group": "Configuration",
+     "control": "number",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64704,
+      "attribute": 523,
+      "type": 57,
+      "manufacturer": 4447
+     },
+     "min": 100,
+     "max": 3840,
+     "step": 1,
+     "unit": "W",
+     "scale": 1,
+     "offset": 0
+    },
+    {
+     "key": "led_indicator",
+     "label": "LED indicator",
+     "description": "LED indicator",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64704,
+      "attribute": 515,
+      "type": 16,
+      "manufacturer": 4447
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "flip_indicator_light",
+     "label": "Invert indicator LED",
+     "description": "Light the LED while the switch is off instead of on, so it's easy to find in the dark.",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64704,
+      "attribute": 240,
+      "type": 32,
+      "manufacturer": 4447
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "child_lock",
+     "label": "Child lock",
+     "description": "Disables the physical button",
+     "group": "Configuration",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64704,
+      "attribute": 645,
+      "type": 32,
+      "manufacturer": 4447
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      }
+     ]
+    },
+    {
+     "key": "charging_protection",
+     "label": "Charging protection",
+     "description": "Turn off the plug if the power is below 3W for half an hour",
+     "group": "Controls",
+     "control": "toggle",
+     "target": {
+      "endpoint": 1,
+      "cluster": 64704,
+      "attribute": 514,
+      "type": 16,
+      "manufacturer": 4447
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
        "raw": 1
       }
      ]

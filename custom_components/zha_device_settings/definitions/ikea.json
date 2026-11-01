@@ -1,6 +1,6 @@
 {
  "id": "ikea",
- "name": "ikea (generated from zigbee-herdsman-converters 26.119.0)",
+ "name": "ikea (generated from zigbee-herdsman-converters 26.125.0)",
  "generated": true,
  "devices": [
   {
@@ -1746,6 +1746,81 @@
   },
   {
    "models": [
+    "TOFSMYGGA plug outdoor"
+   ],
+   "model": "E2435-NA",
+   "name": "IKEA TOFSMYGGA 2-gang outdoor plug (Matter)",
+   "settings": [
+    {
+     "key": "power_on_behavior_1",
+     "label": "Power-on behaviour (1)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 1,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    },
+    {
+     "key": "power_on_behavior_2",
+     "label": "Power-on behaviour (2)",
+     "description": "What the relay does when power returns after an outage.",
+     "group": "Configuration",
+     "control": "select",
+     "target": {
+      "endpoint": 2,
+      "cluster": 6,
+      "attribute": 16387,
+      "type": 48,
+      "manufacturer": null
+     },
+     "options": [
+      {
+       "label": "Off",
+       "raw": 0
+      },
+      {
+       "label": "On",
+       "raw": 1
+      },
+      {
+       "label": "Toggle",
+       "raw": 2
+      },
+      {
+       "label": "Previous",
+       "raw": 255
+      }
+     ],
+     "zha_entity": true
+    }
+   ]
+  },
+  {
+   "models": [
     "GRILLPLATS Plug\u0000",
     "GRILLPLATS Plug"
    ],
@@ -2375,10 +2450,11 @@
     "TRADFRI bulb E26 CWS opal 600lm",
     "TRADFRI bulb E14 CWS opal 600lm",
     "TRADFRI bulb E12 CWS opal 600lm",
-    "TRADFRI bulb E27 C/WS opal 600"
+    "TRADFRI bulb E27 C/WS opal 600",
+    "TRADFRI bulb E17 CWS opal 600lm"
    ],
    "model": "LED1624G9",
-   "name": "IKEA TRADFRI bulb E12/E14/E26/E27, color/white spectrum, globe, opal, 600 lm",
+   "name": "IKEA TRADFRI bulb E12/E14/E17/E26/E27, color/white spectrum, globe, opal, 600 lm",
    "settings": [
     {
      "key": "color_temp_startup",
